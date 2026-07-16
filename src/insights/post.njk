@@ -1,0 +1,50 @@
+---
+pagination:
+  data: blogPosts
+  size: 1
+  alias: post
+permalink: "/insights/{{ post.slug.current }}/"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ (post.seo and post.seo.metaTitle) or post.title }}"
+  description: "{{ (post.seo and post.seo.metaDescription) or post.excerpt }}"
+  canonicalUrl: "https://www.aesc.co.in/insights/{{ post.slug.current }}/"
+  ogImage: "{{ post.heroImage | imageUrl({ w: 1200 }) | safe }}"
+  ogType: "article"
+  bodyClass: "insights-page"
+---
+
+<section class="athena-section home-banner-section insights-page-banner">
+  <div class="service-banner-content swiper-slide-active">
+    <div class="home-banner-bg" style="background-image: url('{{ post.heroImage | imageUrl({ w: 1600 }) }}');"></div>
+    <div class="container">
+      <div class="banner-content">
+        <div class="fade-up-effect">
+          <h2>{{ post.title }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="athena-section news-detail-page-section">
+  <div class="container">
+    <div class="news-detail-div">
+      <div class="section-head pb-4">
+        <div class="fade-up-effect">
+          <h2>{{ post.title }}</h2>
+        </div>
+      </div>
+      <div class="content">
+        {{ post.body | portableText | safe }}
+      </div>
+      <div class="post-meta pt-4">
+        <p>
+          {% if post.author %}<strong>{{ post.author.name }}</strong> &middot; {% endif %}
+          {{ post.publishedAt | date }}
+          {% if post.category %} &middot; {{ post.category.title }}{% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

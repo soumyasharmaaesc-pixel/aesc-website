@@ -1,0 +1,27 @@
+{
+  "name": "aesc-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AESC corporate site with Sanity-driven blog + programmatic SEO pages.",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "eleventy --serve --watch",
+    "build": "eleventy",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "cheerio": "^1.2.0",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "@portabletext/to-html": "^5.0.2",
+    "@sanity/client": "^7.23.0",
+    "@sanity/image-url": "^2.1.1",
+    "dotenv": "^17.4.2"
+  }
+}

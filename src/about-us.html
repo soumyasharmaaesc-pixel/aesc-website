@@ -1,0 +1,929 @@
+<!-- DEBUG-VIEW START 1 APPPATH/Views/about-us.php -->
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  id="debugbar_loader" data-time="1778672723" src="index.php%3Fdebugbar"></script><script type="text/javascript"  id="debugbar_dynamic_script"></script><style type="text/css"  id="debugbar_dynamic_style"></style><script class="kint-rich-script">void 0===window.kintShared&&(window.kintShared=function(){"use strict";var e={dedupe:function(e,n){return[].forEach.call(document.querySelectorAll(e),function(e){n&&n.ownerDocument.contains(n)||(n=e),e!==n&&e.parentNode.removeChild(e)}),n},runOnce:function(e){"complete"===document.readyState?e():window.addEventListener("load",e)}};return window.addEventListener("click",function(e){if(e.target.classList.contains("kint-ide-link")){var n=new XMLHttpRequest;n.open("GET",e.target.href),n.send(null),e.preventDefault()}}),e}());
+void 0===window.kintRich&&(window.kintRich=function(){"use strict";var n={selectText:function(e){var t=window.getSelection(),a=document.createRange();a.selectNodeContents(e),t.removeAllRanges(),t.addRange(a)},each:function(e,t){Array.prototype.slice.call(document.querySelectorAll(e),0).forEach(t)},hasClass:function(e,t){return!!e.classList&&(void 0===t&&(t="kint-show"),e.classList.contains(t))},addClass:function(e,t){void 0===t&&(t="kint-show"),e.classList.add(t)},removeClass:function(e,t){return void 0===t&&(t="kint-show"),e.classList.remove(t),e},toggle:function(e,t){var a=n.getChildren(e);a&&(void 0===t&&(t=n.hasClass(e)),t?n.removeClass(e):n.addClass(e),1===a.childNodes.length&&(a=a.childNodes[0].childNodes[0])&&n.hasClass(a,"kint-parent")&&n.toggle(a,t))},toggleChildren:function(e,t){var a=n.getChildren(e);if(a){var r=a.getElementsByClassName("kint-parent"),o=r.length;for(void 0===t&&(t=!n.hasClass(e));o--;)n.toggle(r[o],t)}},toggleAll:function(e){for(var t=document.getElementsByClassName("kint-parent"),a=t.length,r=!n.hasClass(e.parentNode);a--;)n.toggle(t[a],r)},switchTab:function(e){var t,a=e.previousSibling,r=0;for(n.removeClass(e.parentNode.getElementsByClassName("kint-active-tab")[0],"kint-active-tab"),n.addClass(e,"kint-active-tab");a;)1===a.nodeType&&r++,a=a.previousSibling;t=e.parentNode.nextSibling.childNodes;for(var o=0;o<t.length;o++)o===r?(t[o].style.display="block",1===t[o].childNodes.length&&(a=t[o].childNodes[0].childNodes[0])&&n.hasClass(a,"kint-parent")&&n.toggle(a,!1)):t[o].style.display="none"},mktag:function(e){return"<"+e+">"},openInNewWindow:function(e){var t=window.open();t&&(t.document.open(),t.document.write(n.mktag("html")+n.mktag("head")+n.mktag("title")+"Kint ("+(new Date).toISOString()+")"+n.mktag("/title")+n.mktag('meta charset="utf-8"')+document.getElementsByClassName("kint-rich-script")[0].outerHTML+document.getElementsByClassName("kint-rich-style")[0].outerHTML+n.mktag("/head")+n.mktag("body")+'<input style="width: 100%" placeholder="Take some notes!"><div class="kint-rich">'+e.parentNode.outerHTML+"</div>"+n.mktag("/body")),t.document.close())},sortTable:function(e,a){var t=e.tBodies[0];[].slice.call(e.tBodies[0].rows).sort(function(e,t){if(e=e.cells[a].textContent.trim().toLocaleLowerCase(),t=t.cells[a].textContent.trim().toLocaleLowerCase(),isNaN(e)||isNaN(t)){if(isNaN(e)&&!isNaN(t))return 1;if(isNaN(t)&&!isNaN(e))return-1}else e=parseFloat(e),t=parseFloat(t);return e<t?-1:t<e?1:0}).forEach(function(e){t.appendChild(e)})},showAccessPath:function(e){for(var t=e.childNodes,a=0;a<t.length;a++)if(n.hasClass(t[a],"access-path"))return void(n.hasClass(t[a],"kint-show")?n.removeClass(t[a]):(n.addClass(t[a]),n.selectText(t[a])))},showSearchBox:function(e){var t=e.querySelector(".kint-search");t&&(n.hasClass(t)?(n.removeClass(t),n.removeClass(e.parentNode,"kint-search-root")):(n.addClass(e),n.addClass(t),t.focus(),t.select(),n.search(t)))},search:function(e){var t=e.parentNode.parentNode;if(e.value.length){var a=n.findMatches(t,e.value);n.highlightMatches(t,a)}else n.removeClass(t,"kint-search-root")},findMatches:function(e,t){for(var a=null,r=0;r<e.children.length;r++)if("DD"===e.children[r].tagName){a=e.children[r];break}if(!a)return[];var o=a.querySelectorAll("dfn"),s=[];return t=t.toLowerCase(),[].forEach.call(o,function(e){-1!=e.innerText.toLowerCase().indexOf(t)&&s.push(e)}),s},highlightMatches:function(e,t){var a=e.querySelectorAll(".kint-search-match");[].forEach.call(a,function(e){n.removeClass(e,"kint-search-match")}),n.addClass(e,"kint-search-root");for(var r=0;r<t.length;r++){for(var o=t[r];o!=e;){if("DL"===o.tagName)n.addClass(o,"kint-search-match");else if("LI"===o.tagName){if(o.parentNode.previousElementSibling.classList.contains("kint-tabs")){var s=[].slice.call(o.parentNode.children).indexOf(o);n.addClass([].slice.call(o.parentNode.previousElementSibling.children)[s],"kint-search-match")}o=o.parentNode}o=o.parentNode}n.addClass(t[r],"kint-search-match")}},getParentByClass:function(e,t){for(void 0===t&&(t="kint-rich");(e=e.parentNode)&&!n.hasClass(e,t););return e},getParentHeader:function(e,t){for(var a=e.nodeName.toLowerCase();"dd"!==a&&"dt"!==a&&n.getParentByClass(e);)a=(e=e.parentNode).nodeName.toLowerCase();return n.getParentByClass(e)?("dd"===a&&t&&(e=e.previousElementSibling),e&&"dt"===e.nodeName.toLowerCase()&&n.hasClass(e,"kint-parent")?e:void 0):null},getChildren:function(e){for(;(e=e.nextElementSibling)&&"dd"!==e.nodeName.toLowerCase(););return e},initLoad:function(){n.style=window.kintShared.dedupe("style.kint-rich-style",n.style),n.script=window.kintShared.dedupe("script.kint-rich-script",n.script),n.folder=window.kintShared.dedupe(".kint-rich.kint-folder",n.folder);var e=document.querySelectorAll("input.kint-search");if([].forEach.call(e,function(a){function e(e){if(window.clearTimeout(r),a.value!==t){var t=a.value;r=window.setTimeout(function(){n.search(a)},500)}}var r=null;a.removeEventListener("keyup",e),a.addEventListener("keyup",e)}),n.folder){var t=n.folder.querySelector("dd");[].forEach.call(document.querySelectorAll(".kint-rich.kint-file"),function(e){e.parentNode!==n.folder&&t.appendChild(e)}),document.body.appendChild(n.folder),n.addClass(n.folder)}},keyboardNav:{targets:[],target:0,active:!1,fetchTargets:function(){n.keyboardNav.targets=[],n.each(".kint-rich nav, .kint-tabs>li:not(.kint-active-tab)",function(e){0===e.offsetWidth&&0===e.offsetHeight||n.keyboardNav.targets.push(e)})},sync:function(e){var t=document.querySelector(".kint-focused");if(t&&n.removeClass(t,"kint-focused"),n.keyboardNav.active){var a=n.keyboardNav.targets[n.keyboardNav.target];n.addClass(a,"kint-focused"),e||n.keyboardNav.scroll(a)}},scroll:function(e){var t=function(e){return e.offsetTop+(e.offsetParent?t(e.offsetParent):0)},a=t(e);if(n.folder){var r=n.folder.querySelector("dd.kint-folder");r.scrollTo(0,a-r.clientHeight/2)}else window.scrollTo(0,a-window.innerHeight/2)},moveCursor:function(e){for(n.keyboardNav.target+=e;n.keyboardNav.target<0;)n.keyboardNav.target+=n.keyboardNav.targets.length;for(;n.keyboardNav.target>=n.keyboardNav.targets.length;)n.keyboardNav.target-=n.keyboardNav.targets.length;n.keyboardNav.sync()},setCursor:function(e){n.keyboardNav.fetchTargets();for(var t=0;t<n.keyboardNav.targets.length;t++)if(e===n.keyboardNav.targets[t])return n.keyboardNav.target=t,!0;return!1}},mouseNav:{lastClickTarget:null,lastClickTimer:null,lastClickCount:0,renewLastClick:function(){window.clearTimeout(n.mouseNav.lastClickTimer),n.mouseNav.lastClickTimer=window.setTimeout(function(){n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickTimer=null,n.mouseNav.lastClickCount=0},250)}},style:null,script:null,folder:null};return window.addEventListener("click",function(e){var t=e.target,a=t.nodeName.toLowerCase();if(n.mouseNav.lastClickTarget&&n.mouseNav.lastClickTimer&&n.mouseNav.lastClickCount)return t=n.mouseNav.lastClickTarget,void(1===n.mouseNav.lastClickCount?(n.toggleChildren(t.parentNode),n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),n.mouseNav.lastClickCount++,n.mouseNav.renewLastClick()):(n.toggleAll(t),n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),n.keyboardNav.scroll(t),window.clearTimeout(n.mouseNav.lastClickTimer),n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickCount=0));if(n.getParentByClass(t)){if("dfn"===a)n.selectText(t);else if("th"===a)return void(e.ctrlKey||n.sortTable(t.parentNode.parentNode.parentNode,t.cellIndex));if((t=n.getParentHeader(t))&&(n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync(!0)),t=e.target,"li"===a&&"kint-tabs"===t.parentNode.className)"kint-active-tab"!==t.className&&n.switchTab(t),(t=n.getParentHeader(t,!0))&&(n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync(!0));else if("nav"===a)"footer"===t.parentNode.nodeName.toLowerCase()?(n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),t=t.parentNode,n.hasClass(t)?n.removeClass(t):n.addClass(t)):(n.toggle(t.parentNode),n.keyboardNav.fetchTargets(),n.mouseNav.lastClickCount=1,n.mouseNav.lastClickTarget=t,n.mouseNav.renewLastClick());else if(n.hasClass(t,"kint-popup-trigger")){var r=t.parentNode;if("footer"===r.nodeName.toLowerCase())r=r.previousSibling;else for(;r&&!n.hasClass(r,"kint-parent");)r=r.parentNode;n.openInNewWindow(r)}else n.hasClass(t,"kint-access-path-trigger")?n.showAccessPath(t.parentNode):n.hasClass(t,"kint-search-trigger")?n.showSearchBox(t.parentNode):n.hasClass(t,"kint-search")||("pre"===a&&3===e.detail?n.selectText(t):n.getParentByClass(t,"kint-source")&&3===e.detail?n.selectText(n.getParentByClass(t,"kint-source")):n.hasClass(t,"access-path")?n.selectText(t):"a"!==a&&(t=n.getParentHeader(t))&&(n.toggle(t),n.keyboardNav.fetchTargets()))}},!0),window.addEventListener("keydown",function(e){if(e.target===document.body&&!e.altKey&&!e.ctrlKey){if(68===e.keyCode){if(n.keyboardNav.active)n.keyboardNav.active=!1;else if(n.keyboardNav.active=!0,n.keyboardNav.fetchTargets(),0===n.keyboardNav.targets.length)return void(n.keyboardNav.active=!1);return n.keyboardNav.sync(),void e.preventDefault()}if(n.keyboardNav.active){if(9===e.keyCode)return n.keyboardNav.moveCursor(e.shiftKey?-1:1),void e.preventDefault();if(38===e.keyCode||75===e.keyCode)return n.keyboardNav.moveCursor(-1),void e.preventDefault();if(40===e.keyCode||74===e.keyCode)return n.keyboardNav.moveCursor(1),void e.preventDefault();var t=n.keyboardNav.targets[n.keyboardNav.target];if("li"===t.nodeName.toLowerCase()){if(32===e.keyCode||13===e.keyCode)return n.switchTab(t),n.keyboardNav.fetchTargets(),n.keyboardNav.sync(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode)return n.keyboardNav.moveCursor(1),void e.preventDefault();if(37===e.keyCode||72===e.keyCode)return n.keyboardNav.moveCursor(-1),void e.preventDefault()}if(t=t.parentNode,65===e.keyCode)return n.showAccessPath(t),void e.preventDefault();if("footer"===t.nodeName.toLowerCase()&&n.hasClass(t.parentNode,"kint-rich"))32===e.keyCode||13===e.keyCode?(n.hasClass(t)?n.removeClass(t):n.addClass(t),e.preventDefault()):37===e.keyCode||72===e.keyCode?(n.removeClass(t),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode||(n.addClass(t),e.preventDefault());else{if(32===e.keyCode||13===e.keyCode)return n.toggle(t),n.keyboardNav.fetchTargets(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode||37===e.keyCode||72===e.keyCode){var a=37===e.keyCode||72===e.keyCode;if(n.hasClass(t))n.toggleChildren(t,a),n.toggle(t,a);else{if(a){var r=n.getParentHeader(t.parentNode.parentNode,!0);r&&(t=r,n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync())}n.toggle(t,a)}return n.keyboardNav.fetchTargets(),void e.preventDefault()}}}}},!0),n}()),window.kintShared.runOnce(window.kintRich.initLoad);
+void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,window.addEventListener("load",function(){"use strict";var c={},i=Array.prototype.slice.call(document.querySelectorAll("[data-kint-microtime-group]"),0);i.forEach(function(i){if(i.querySelector(".kint-microtime-lap")){var t=i.getAttribute("data-kint-microtime-group"),e=parseFloat(i.querySelector(".kint-microtime-lap").innerHTML),r=parseFloat(i.querySelector(".kint-microtime-avg").innerHTML);void 0===c[t]&&(c[t]={}),(void 0===c[t].min||c[t].min>e)&&(c[t].min=e),(void 0===c[t].max||c[t].max<e)&&(c[t].max=e),c[t].avg=r}}),i.forEach(function(i){var t=i.querySelector(".kint-microtime-lap");if(null!==t){var e=parseFloat(t.textContent),r=i.dataset.kintMicrotimeGroup,o=c[r].avg,n=c[r].max,a=c[r].min;e===(i.querySelector(".kint-microtime-avg").textContent=o)&&e===a&&e===n||(t.style.background=o<e?"hsl("+(40-40*((e-o)/(n-o)))+", 100%, 65%)":"hsl("+(40+80*(o===a?0:(o-e)/(o-a)))+", 100%, 65%)")}})}));
+</script><style class="kint-rich-style">.kint-rich{font-size:13px;overflow-x:auto;white-space:nowrap;background:rgba(255,255,255,0.9)}.kint-rich.kint-folder{position:fixed;bottom:0;left:0;right:0;z-index:999999;width:100%;margin:0;display:none}.kint-rich.kint-folder.kint-show{display:block}.kint-rich.kint-folder dd.kint-folder{max-height:calc(100vh - 100px);padding-right:8px;overflow-y:scroll}.kint-rich::selection,.kint-rich::-moz-selection,.kint-rich::-webkit-selection{background:#aaa;color:#1d1e1e}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich,.kint-rich::before,.kint-rich::after,.kint-rich *,.kint-rich *::before,.kint-rich *::after{box-sizing:border-box;border-radius:0;color:#1d1e1e;float:none !important;font-family:Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;line-height:15px;margin:0;padding:0;text-align:left}.kint-rich{margin:8px 0}.kint-rich dt,.kint-rich dl{width:auto}.kint-rich dt,.kint-rich div.access-path{background:#f8f8f8;border:1px solid #d7d7d7;color:#1d1e1e;display:block;font-weight:bold;list-style:none outside none;overflow:auto;padding:4px}.kint-rich dt:hover,.kint-rich div.access-path:hover{border-color:#aaa}.kint-rich>dl dl{padding:0 0 0 12px}.kint-rich dt.kint-parent>nav,.kint-rich>footer>nav{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNTAiPjxwYXRoIGQ9Ik02IDdoMThsLTkgMTV6bTAgMzBoMThsLTkgMTV6bTAgNDVoMThsLTktMTV6bTAgMzBoMThsLTktMTV6bTAgMTJsMTggMThtLTE4IDBsMTgtMTgiIGZpbGw9IiM1NTUiLz48cGF0aCBkPSJNNiAxMjZsMTggMThtLTE4IDBsMTgtMTgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjNTU1Ii8+PC9zdmc+") no-repeat scroll 0 0/15px 75px transparent;cursor:pointer;display:inline-block;height:15px;width:15px;margin-right:3px;vertical-align:middle}.kint-rich dt.kint-parent:hover>nav,.kint-rich>footer>nav:hover{background-position:0 25%}.kint-rich dt.kint-parent.kint-show>nav,.kint-rich>footer.kint-show>nav{background-position:0 50%}.kint-rich dt.kint-parent.kint-show:hover>nav,.kint-rich>footer.kint-show>nav:hover{background-position:0 75%}.kint-rich dt.kint-parent.kint-locked>nav{background-position:0 100%}.kint-rich dt.kint-parent+dd{display:none;border-left:1px dashed #d7d7d7}.kint-rich dt.kint-parent.kint-show+dd{display:block}.kint-rich var,.kint-rich var a{color:#06f;font-style:normal}.kint-rich dt:hover var,.kint-rich dt:hover var a{color:red}.kint-rich dfn{font-style:normal;font-family:monospace;color:#1d1e1e}.kint-rich pre{color:#1d1e1e;margin:0 0 0 12px;padding:5px;overflow-y:hidden;border-top:0;border:1px solid #d7d7d7;background:#f8f8f8;display:block;word-break:normal}.kint-rich .kint-popup-trigger,.kint-rich .kint-access-path-trigger,.kint-rich .kint-search-trigger{background:rgba(29,30,30,0.8);border-radius:3px;height:16px;font-size:16px;margin-left:5px;font-weight:bold;width:16px;text-align:center;float:right !important;cursor:pointer;color:#f8f8f8;position:relative;overflow:hidden;line-height:17.6px}.kint-rich .kint-popup-trigger:hover,.kint-rich .kint-access-path-trigger:hover,.kint-rich .kint-search-trigger:hover{color:#1d1e1e;background:#f8f8f8}.kint-rich dt.kint-parent>.kint-popup-trigger{line-height:19.2px}.kint-rich .kint-search-trigger{font-size:20px}.kint-rich input.kint-search{display:none;border:1px solid #d7d7d7;border-top-width:0;border-bottom-width:0;padding:4px;float:right !important;margin:-4px 0;color:#1d1e1e;background:#f8f8f8;height:24px;width:160px;position:relative;z-index:100}.kint-rich input.kint-search.kint-show{display:block}.kint-rich .kint-search-root ul.kint-tabs>li:not(.kint-search-match){background:#f8f8f8;opacity:0.5}.kint-rich .kint-search-root dl:not(.kint-search-match){opacity:0.5}.kint-rich .kint-search-root dl:not(.kint-search-match)>dt{background:#f8f8f8}.kint-rich .kint-search-root dl:not(.kint-search-match) dl,.kint-rich .kint-search-root dl:not(.kint-search-match) ul.kint-tabs>li:not(.kint-search-match){opacity:1}.kint-rich div.access-path{background:#f8f8f8;display:none;margin-top:5px;padding:4px;white-space:pre}.kint-rich div.access-path.kint-show{display:block}.kint-rich footer{padding:0 3px 3px;font-size:9px;background:transparent}.kint-rich footer>.kint-popup-trigger{background:transparent;color:#1d1e1e}.kint-rich footer nav{height:10px;width:10px;background-size:10px 50px}.kint-rich footer>ol{display:none;margin-left:32px}.kint-rich footer.kint-show>ol{display:block}.kint-rich a{color:#1d1e1e;text-shadow:none;text-decoration:underline}.kint-rich a:hover{color:#1d1e1e;border-bottom:1px dotted #1d1e1e}.kint-rich ul{list-style:none;padding-left:12px}.kint-rich ul:not(.kint-tabs) li{border-left:1px dashed #d7d7d7}.kint-rich ul:not(.kint-tabs) li>dl{border-left:none}.kint-rich ul.kint-tabs{margin:0 0 0 12px;padding-left:0;background:#f8f8f8;border:1px solid #d7d7d7;border-top:0}.kint-rich ul.kint-tabs>li{background:#f8f8f8;border:1px solid #d7d7d7;cursor:pointer;display:inline-block;height:24px;margin:2px;padding:0 12px;vertical-align:top}.kint-rich ul.kint-tabs>li:hover,.kint-rich ul.kint-tabs>li.kint-active-tab:hover{border-color:#aaa;color:red}.kint-rich ul.kint-tabs>li.kint-active-tab{background:#f8f8f8;border-top:0;margin-top:-1px;height:27px;line-height:24px}.kint-rich ul.kint-tabs>li:not(.kint-active-tab){line-height:20px}.kint-rich ul.kint-tabs li+li{margin-left:0}.kint-rich ul:not(.kint-tabs)>li:not(:first-child){display:none}.kint-rich dt:hover+dd>ul>li.kint-active-tab{border-color:#aaa;color:red}.kint-rich dt>.kint-color-preview{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:10px;border:1px solid #d7d7d7;background-color:#ccc;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path fill="%23FFF" d="M0 0h1v2h1V1H0z"/></svg>');background-size:100%}.kint-rich dt>.kint-color-preview:hover{border-color:#aaa}.kint-rich dt>.kint-color-preview>div{width:100%;height:100%}.kint-rich table{border-collapse:collapse;empty-cells:show;border-spacing:0}.kint-rich table *{font-size:12px}.kint-rich table dt{background:none;padding:2px}.kint-rich table dt .kint-parent{min-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kint-rich table td,.kint-rich table th{border:1px solid #d7d7d7;padding:2px;vertical-align:center}.kint-rich table th{cursor:alias}.kint-rich table td:first-child,.kint-rich table th{font-weight:bold;background:#f8f8f8;color:#1d1e1e}.kint-rich table td{background:#f8f8f8;white-space:pre}.kint-rich table td>dl{padding:0}.kint-rich table pre{border-top:0;border-right:0}.kint-rich table thead th:first-child{background:none;border:0}.kint-rich table tr:hover>td{box-shadow:0 0 1px 0 #aaa inset}.kint-rich table tr:hover var{color:red}.kint-rich table ul.kint-tabs li.kint-active-tab{height:20px;line-height:17px}.kint-rich pre.kint-source{margin-left:-1px}.kint-rich pre.kint-source[data-kint-filename]:before{display:block;content:attr(data-kint-filename);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #f8f8f8}.kint-rich pre.kint-source>div:before{display:inline-block;content:counter(kint-l);counter-increment:kint-l;border-right:1px solid #aaa;padding-right:8px;margin-right:8px}.kint-rich pre.kint-source>div.kint-highlight{background:#f8f8f8}.kint-rich .kint-microtime-lap{text-shadow:-1px 0 #aaa,0 1px #aaa,1px 0 #aaa,0 -1px #aaa;color:#f8f8f8;font-weight:bold}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich dt{font-weight:normal}.kint-rich dt.kint-parent{margin-top:4px}.kint-rich dl dl{margin-top:4px;padding-left:25px;border-left:none}.kint-rich>dl>dt{background:#f8f8f8}.kint-rich ul{margin:0;padding-left:0}.kint-rich ul:not(.kint-tabs)>li{border-left:0}.kint-rich ul.kint-tabs{background:#f8f8f8;border:1px solid #d7d7d7;border-width:0 1px 1px 1px;padding:4px 0 0 12px;margin-left:-1px;margin-top:-1px}.kint-rich ul.kint-tabs li,.kint-rich ul.kint-tabs li+li{margin:0 0 0 4px}.kint-rich ul.kint-tabs li{border-bottom-width:0;height:25px}.kint-rich ul.kint-tabs li:first-child{margin-left:0}.kint-rich ul.kint-tabs li.kint-active-tab{border-top:1px solid #d7d7d7;background:#fff;font-weight:bold;padding-top:0;border-bottom:1px solid #fff !important;margin-bottom:-1px}.kint-rich ul.kint-tabs li.kint-active-tab:hover{border-bottom:1px solid #fff}.kint-rich ul>li>pre{border:1px solid #d7d7d7}.kint-rich dt:hover+dd>ul{border-color:#aaa}.kint-rich pre{background:#fff;margin-top:4px;margin-left:25px}.kint-rich .kint-source{margin-left:-1px}.kint-rich .kint-source .kint-highlight{background:#cfc}.kint-rich .kint-parent.kint-show>.kint-search{border-bottom-width:1px}.kint-rich table td{background:#fff}.kint-rich table td>dl{padding:0;margin:0}.kint-rich table td>dl>dt.kint-parent{margin:0}.kint-rich table td:first-child,.kint-rich table td,.kint-rich table th{padding:2px 4px}.kint-rich table dd,.kint-rich table dt{background:#fff}.kint-rich table tr:hover>td{box-shadow:none;background:#cfc}
+</style>
+
+	<meta charset="utf-8">
+	<title>Athena - About Us</title>
+
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="80x96" href="assets/images/favicon.ico">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<!-- Include Jquery and Bootstrap -->
+		
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Swiper Slider -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/toastr.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e324576f90f192340b679ea3/8706279ae665a2ad7c60d183a.js");</script>    
+</head>
+<body class="about-us-page"  data-spy="scroll" data-target="#list-example" data-offset="280">
+	
+	<header>
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-between">
+				<div class="logo">
+					<a href="index.html">
+					    <img src="admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png" class="img-fluid">
+						<img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid sticky-logo">
+					</a>
+				</div>
+				<div class="navigation">
+				    <div class="nav-open">
+				        <div class="hamburg-icon">
+	    			        <div class="line line-1"></div>
+	    			        <div class="line line-2"></div>
+	    			        <div class="line line-3"></div>
+	    			    </div>
+				    </div>
+					<nav>
+												<li >
+							<a href="about-us.html">About Us						
+							</a>
+						</li>
+												<li >
+							<a href="differentiator.html">Differentiator						
+							</a>
+						</li>
+												<li >
+							<a href="search-services.html">Search Services						
+							</a>
+						</li>
+												<li >
+							<a href="consulting-services.html">Consulting Services						
+							</a>
+						</li>
+												<li >
+							<a href="ScenarioExpertise.html">Scenario Expertise						
+							</a>
+						</li>
+												<li >
+							<a href="Insights.html">Insights						
+							</a>
+						</li>
+												<li >
+							<a href="career.html">Careers						
+							</a>
+						</li>
+												<!-- <li class="dropdown">
+							<a href="#">Search Services <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">Consulting Services <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+								
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">Scenario Experise <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+								
+							</div>
+						</li> -->
+						<!-- <li class="header-contact-btn">
+							<a href="#">Contact</a>
+						</li> -->
+					</nav>
+				</div>
+			</div>	
+		</div>	
+	</header>
+	
+	<script>
+	    $('.nav-open').click(function(){
+	        if($(this).hasClass('open')){
+	            $(this).removeClass('open')
+	            $('.navigation nav').slideUp()
+	        }
+	        else{
+	            $(this).addClass('open')
+	            $('.navigation nav').slideDown()
+	        }
+	    })
+	</script>	
+	<section class="athena-section home-banner-section about-page-banner">
+		<div class="service-banner-content swiper-slide-active">
+    		<div class="home-banner-bg" style="background-image: url('assets/images/about-hero.png');"></div>
+			<div class="container">
+				<div class="banner-content">
+				    <div class="fade-up-effect">
+						<h2>About Us</h2>
+					</div>
+					<div class="fade-up-effect">
+						<p> Athena is a new age Executive Search and HR Consulting firm, exclusively recognized for our tailor-made approach, unique methodologies and best-in-class global practices catered to deliver measurable results.               </p>
+					</div>
+				</div>
+				<div class="banner-image">
+				    <!--<img src="images/service-banner-img.svg" class="img-fluid">-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="athena-section about-section about-page-about-section">
+		<div class="container">
+			<div class="section-head">
+			    <div class="fade-up-effect">
+    				<h2>Athena is a Progressive and a New Age <br/> HR Consulting Firm</h2>
+				</div>
+				                         <div class="fade-up-effect" style="overflow: hidden; color: rgb(33, 37, 41); font-family: Poppins, sans-serif; font-size: 16px; text-align: center;"><div class="fade-up-effect" style="overflow: hidden;"><p style="margin-bottom: 0px; transition: all 1s ease 0.5s; transform: translateY(0px); color: rgb(120, 120, 120); line-height: 2; padding-bottom: 40px;">Athena is a progressive and new age HR Consulting firm. Since its inception in India in 2010, Athena has been pivotal in judiciously revolutionizing the executive search industry . It has defied the boundaries of conventional approach towards talent-oriented challenges by employing its unique solutions to accomplish corporate excellence.</p></div><div class="fade-up-effect" style="overflow: hidden;"><p style="margin-bottom: 0px; transition: all 1s ease 0.5s; transform: translateY(0px); color: rgb(120, 120, 120); line-height: 2; padding-bottom: 40px;">With an exceptional team of experts and highly driven work-ethic practices, our delivery capacity and ethos enable a global market coverage including the APAC, EMEA and the Americas.</p></div></div>                         				<!-- <div class="fade-up-effect">
+    				<p>With an exceptional team of experts and  highly  driven work-ethic  practices, Athena is  the  first and the  youngest   firm in  India  to   be   internationally  recognized  and  certified   by  the  Association of Executive Search Consultants (AESC), the global benchmarking  body for  the  executive   search and leadership consulting profession. Our delivery  capacity and ethos enable a global  market coverage including the APAC, EMEA and the Americas. </p>
+				</div> -->
+				<div class="about-page-svg">
+    				<img src="admin/upload/about/1635243826_ee2d6fce86696ee29687.gif" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="athena-section why-us-section">
+		<div class="container">
+		    <div class="row">
+    		    <div class="col-md-5">
+        		    <div class="why-us-left">
+        		        <div id="list-example" class="why-us-nav list-group">
+						        		            <li class="active"><a class="list-group-item list-group-item-action" href="about-us.html#list-item-1" scrollto="list-item-1"><div class="fade-up-effect"><span>Our Values</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="about-us.html#list-item-2" scrollto="list-item-2"><div class="fade-up-effect"><span>Experience</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="about-us.html#list-item-3" scrollto="list-item-3"><div class="fade-up-effect"><span>Commitment to Results</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="about-us.html#list-item-4" scrollto="list-item-4"><div class="fade-up-effect"><span>Philosophy</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="about-us.html#list-item-5" scrollto="list-item-5"><div class="fade-up-effect"><span>Expertise</span></div></a></li>
+        		                    		        </div>
+        		        <div class="why-us-btn fade-up-effect">
+        		            <!--<a href="#" class="theme-btn">Learn more 
+            					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+            					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+            					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+            					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					    </g>
+            					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					  </g>
+            					</svg>
+            				</a>-->
+        		        </div>
+        		    </div>
+    		    </div>
+    		    <div class="col-md-7">
+    		        <div class="why-us-right scrollspy-example">
+					    		            <li id="list-item-1" class="fade-up-effect">
+    		                <label>Our Values</label>
+    		                <p> <ul>
+	<li>
+		<p><b>EVOLVE & INNOVATE</b></p>
+
+		<p>Athena’s maverick services are a result of its core values to evolve and innovate. We are
+		committed to provide unique solutions to some of the most complex executive search challenges,
+		guided by conceptualisation and ideation.</p>
+	</li>
+	<li>
+		<p><b>TRUST & HONESTY</b></p>
+
+		<p>We firmly believe in building a relationship of trust with our clients and thus, maintain gold
+		standards of transparency in our services from concept to delivery.</p>
+	</li>
+	<li>
+		<p><b>KNOWLEDGE & EXPERIENCE</b></p>
+
+		<p>Athena has gained a wealth of experience and deep expertise in the executive search industry over
+		decades. With our passion for innovation, we consistently try to train ourselves towards growth
+		and development.</p>
+	</li>
+	<li>
+		<p><b>INCLUSION & DIVERSITY</b></p>
+
+		<p>We embrace and strongly uphold the idea of unity in diversity. As an inclusive and progressive
+		organization, we encourage diverse perspectives from all walks of life to build the best leadership
+		teams across the world.</p>
+	</li>
+	<li>
+		<p><b>DILIGENCE & PERFORMANCE</b></p>
+
+		<p>Our dedicated search professionals and talent management consultants put in immense
+		perseverance and diligence in all their endeavours. It is through these highly experienced talents
+		at Athena, that the organization’s performance transcends with every passing year.</p>
+	</li>
+</ul></p>
+    		            </li>
+						    		            <li id="list-item-2" class="fade-up-effect">
+    		                <label>Experience</label>
+    		                <p> <ul>
+	<li>
+
+		<p> • Athena takes pride in serving all its clients with equal intensity, dedication, and zeal, thus earning a relationship of trusted advisors to them.</p>
+	</li>
+	<li>
+
+		<p> • We have guided Fortune 100 companies, emerging businesses, large family offices, private equity-backed portfolio companies and leading multinational corporations to success. </p>
+	</li>
+	<li>
+
+		<p> • This business experience of managing intricate and diverse scenarios have been effectively utilized in the accurate scoping of the client’s expectations.</p>
+	</li>
+	<li>
+
+		<p> • Athena, in the last decade, has significantly transformed global businesses to address talent-oriented challenges through its avant-garde solutions and services, whilst meeting the client’s business priorities.</p>
+
+	<li>
+		
+</ul>   </p>
+    		            </li>
+						    		            <li id="list-item-3" class="fade-up-effect">
+    		                <label>Commitment to Results</label>
+    		                <p><p>We, at Athena, believe in delivering monumental results by employing rigorous quality standards and a stringent code of professional practice. We follow a customized approach to address our client’s specific needs while deploying advanced scientific assessment frameworks and technological tools to deliver. The milestones we have achieved are a testament to our commitment to results:</p>
+
+<ul class="list-decimal">
+	<li>98% completion ratio of mandates.</li>
+
+	<li>85% mandates completed under 90 days.</li>
+
+	<li>70% new engagements from repeat clientele.</li>
+
+	<li>Over 650 successful engagement in first 10 years of operation.</li>
+
+	<li>85% Executive Search engagements at CXO and Minus 1 level.</li>
+
+	<li>25% of Executive Search assignments with diversity candidates.</li>
+</ul>   </p>
+    		            </li>
+						    		            <li id="list-item-4" class="fade-up-effect">
+    		                <label>Philosophy</label>
+    		                <p> <ul>
+	<li>
+
+		<p> • Since its establishment in 2010, Athena’s foundational aim has been to defy the traditional, linear, and prosaic approach that prevailed in the executive search industry. </p>
+	</li>
+	<li>
+
+		<p> • Thus, our core belief to innovate and evolve has enabled us to become pioneers on a journey to deliver distinctive first-time solutions such as Persona Due Diligence, Talent Supply Chain Solution, and distinctive Compensation and Competitive Benchmarking, addressing some of the most complex talent management challenges.
+</p>
+	
+	</li>
+</ul>   </p>
+    		            </li>
+						    		            <li id="list-item-5" class="fade-up-effect">
+    		                <label>Expertise</label>
+    		                <p> <ul>
+	<li>
+
+		<p> • Athena’s experience leverages unprecedented solutions to even the most complex<br>challenges of Human Capital. </p>
+	</li>
+	<li>
+
+		<p> • In order to achieve our client’s business objectives, our trusted Talent Advisors and panel of experts address disparate problems and deliver stellar 
+                          results in varied Executive Search and Management Consulting scenarios, enabling organizations to achieve their talent agendas globally. </p>
+	</li>
+	<li>
+
+		<p> • With a progressive outlook and a strong commitment to creating solutions, Athena has partnered with several companies in diverse business scenarios involving India Entry and Expansion, Global Expansion, Mergers and Acquisitions, and Transformation and Turnaround.</p>
+	
+	</li>
+</ul>      </p>
+    		            </li>
+						    		          
+    		        </div>
+    		    </div>
+		    </div>
+		</div>
+		<div class="faded-icon">
+		    <svg xmlns="http://www.w3.org/2000/svg" width="478.449" height="493.442" viewBox="0 0 478.449 493.442">
+              <path id="Path_2461" data-name="Path 2461" d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)" fill="#fff" opacity="0.1"/>
+            </svg>
+		</div>
+	</section>
+	
+	<section class="athena-section meet-our-team-section">
+		<div class="container">
+			<div class="section-head split-head">
+    			<div class="head fade-up-effect">
+    				<h2>Meet Our Team</h2>
+    			</div>
+    			<div class="nav-arrows">
+    			    <div class="prev-arrow insights"><</div>
+    			    <div class="next-arrow insights">></div>
+    			</div>
+			</div>
+			<div class="our-experts-slider-sec">
+    			<div class="swiper our-experts-slider">
+        			<div class="swiper-wrapper">
+					            			<div class="swiper-slide">
+                			<div class="team-grid insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/bhavishya-sharma.jpg')">
+                    			    <div class="team-designation">
+                    			        <a href="LeadershipTeam.html" class="theme-btn">View More
+                        					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                        					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                        					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                        					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                        					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                        					    </g>
+                        					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                        					  </g>
+                        					</svg>
+                        				</a>
+                    				</div>
+                    			</div>
+                				<div class="insight-content">
+                				    <div class="type-text">Bhavishya Sharma</div>
+                				</div>
+                			</div>
+            			</div>
+            		
+        			</div>
+    			</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="athena-section awards-section">
+		<div class="container">
+			<!--<div class="split-head">-->
+    			<div class="section-head split-head">
+    			    <div class="head fade-up-effect">
+        				<h2>Achievements</h2>
+    				</div>
+    				<div class="nav-arrows">
+        			    <div class="prev-arrow awards"><</div>
+        			    <div class="next-arrow awards">></div>
+        			</div>
+    				<div class="para fade-up-effect">
+        				<!--<p>And employee engagement too–now  and in the  years to  come, whatever  the  future  holds. We understand people  like  no other firm, and that’s always our main focus.</p>-->
+    				</div>
+    			</div>
+			<!--</div>-->
+			<div class="awards-slider-div">
+			    <div class="swiper awards-slider">
+        			<div class="swiper-wrapper">
+
+					            			<div class="swiper-slide">
+                			<div class="awards-grid">
+                    			<div class="awards-bg" style="background-image: url('admin/upload/slider/1669966521_5ecd10de02c8b92f2c25.jpeg')"></div>
+                				<div class="awards-content">
+                				    <div class="awards-icon">
+                				        <svg xmlns="http://www.w3.org/2000/svg" width="103.964" height="86.875" viewBox="0 0 103.964 86.875">
+                                          <g id="award-star-with-olive-branches" transform="translate(0 0.665)">
+                                            <g id="Group_815" data-name="Group 815" transform="translate(0)">
+                                              <path id="Path_2017" data-name="Path 2017" d="M10.255,27.807a9.371,9.371,0,0,0-2.39-7.99,11.411,11.411,0,0,0-7.7-3.73S-.9,21.114,2.42,24.736A9.827,9.827,0,0,0,10.255,27.807Z" transform="translate(0 23.934)" fill="#ffb300"/>
+                                              <path id="Path_2018" data-name="Path 2018" d="M7.263,30.345a10.479,10.479,0,0,0,4.718-7.22,10.455,10.455,0,0,0-2.91-8.432,12.3,12.3,0,0,0-4.246,7.676A9.272,9.272,0,0,0,7.263,30.345Z" transform="translate(10.525 20.62)" fill="#ffb300"/>
+                                              <path id="Path_2019" data-name="Path 2019" d="M9.715,34.122a10.662,10.662,0,0,0,3.78-7.8,10.352,10.352,0,0,0-3.948-7.959A12.414,12.414,0,0,0,6.3,26.544,9.167,9.167,0,0,0,9.715,34.122Z" transform="translate(14.068 29.329)" fill="#ffb300"/>
+                                              <path id="Path_2020" data-name="Path 2020" d="M16.029,28.058a10.238,10.238,0,0,0-4.644-7.537,12.514,12.514,0,0,0-2.5,8.466A9.072,9.072,0,0,0,12.97,36.2,10.762,10.762,0,0,0,16.029,28.058Z" transform="translate(19.79 34.464)" fill="#ffb300"/>
+                                              <path id="Path_2021" data-name="Path 2021" d="M18.219,37.242a10.913,10.913,0,0,0,.692-8.709A9.893,9.893,0,0,0,12.382,22.7a12.722,12.722,0,0,0-.061,8.867A8.783,8.783,0,0,0,18.219,37.242Z" transform="translate(25.818 39.643)" fill="#ffb300"/>
+                                              <path id="Path_2022" data-name="Path 2022" d="M7.142,27.289a9.275,9.275,0,0,0,2.26-8.03,12.253,12.253,0,0,0-4.417-7.568A10.5,10.5,0,0,0,2.266,20.2,10.443,10.443,0,0,0,7.142,27.289Z" transform="translate(4.776 13.489)" fill="#ffb300"/>
+                                              <path id="Path_2023" data-name="Path 2023" d="M13.392,28.374a9.144,9.144,0,0,0-4.54-6.9,11.287,11.287,0,0,0-8.414-1.2s.4,5.134,4.6,7.568A9.716,9.716,0,0,0,13.392,28.374Z" transform="translate(0.978 33.079)" fill="#ffb300"/>
+                                              <path id="Path_2024" data-name="Path 2024" d="M16.6,29.3a8.914,8.914,0,0,0-5.9-5.674,11.271,11.271,0,0,0-8.46.776s1.491,4.911,6.1,6.315A9.723,9.723,0,0,0,16.6,29.3Z" transform="translate(5.025 40.695)" fill="#ffb300"/>
+                                              <path id="Path_2025" data-name="Path 2025" d="M19.631,29.267a8.6,8.6,0,0,0-7.263-3.541,11.519,11.519,0,0,0-7.839,3.409s2.846,4.219,7.642,4.094A9.983,9.983,0,0,0,19.631,29.267Z" transform="translate(10.118 46.821)" fill="#ffb300"/>
+                                              <path id="Path_2026" data-name="Path 2026" d="M15.373,27.583a11.675,11.675,0,0,0-7.386,4.368s3.3,3.834,8.055,3.115A10.117,10.117,0,0,0,22.989,30.2,8.509,8.509,0,0,0,15.373,27.583Z" transform="translate(17.843 50.99)" fill="#ffb300"/>
+                                              <path id="Path_2027" data-name="Path 2027" d="M5.807,17.127l-2.351-.1c-.006.27-.592,26.851,37.836,38.834l.673-2.349C5.373,42.1,5.765,18.136,5.807,17.127Z" transform="translate(7.719 26.169)" fill="#ffb300"/>
+                                              <path id="Path_2028" data-name="Path 2028" d="M29.076,27.833a9.818,9.818,0,0,0,7.836-3.078c3.324-3.618,2.257-8.648,2.257-8.648a11.453,11.453,0,0,0-7.706,3.733A9.36,9.36,0,0,0,29.076,27.833Z" transform="translate(64.632 23.979)" fill="#ffb300"/>
+                                              <path id="Path_2029" data-name="Path 2029" d="M25.255,23.141a10.489,10.489,0,0,0,4.718,7.22,9.277,9.277,0,0,0,2.442-7.969,12.286,12.286,0,0,0-4.246-7.676A10.444,10.444,0,0,0,25.255,23.141Z" transform="translate(56.2 20.675)" fill="#ffb300"/>
+                                              <path id="Path_2030" data-name="Path 2030" d="M27.577,18.379a10.361,10.361,0,0,0-3.952,7.959,10.681,10.681,0,0,0,3.78,7.8,9.182,9.182,0,0,0,3.418-7.578A12.465,12.465,0,0,0,27.577,18.379Z" transform="translate(52.772 29.376)" fill="#ffb300"/>
+                                              <path id="Path_2031" data-name="Path 2031" d="M21.088,28.086a10.749,10.749,0,0,0,3.059,8.128,9.072,9.072,0,0,0,4.081-7.206,12.547,12.547,0,0,0-2.5-8.469A10.271,10.271,0,0,0,21.088,28.086Z" transform="translate(47.053 34.507)" fill="#ffb300"/>
+                                              <path id="Path_2032" data-name="Path 2032" d="M18.741,28.557a10.907,10.907,0,0,0,.692,8.705,8.781,8.781,0,0,0,5.9-5.671,12.722,12.722,0,0,0-.065-8.871A9.911,9.911,0,0,0,18.741,28.557Z" transform="translate(40.491 39.69)" fill="#ffb300"/>
+                                              <path id="Path_2033" data-name="Path 2033" d="M30.127,27.312a10.454,10.454,0,0,0,4.88-7.092,10.5,10.5,0,0,0-2.723-8.509,12.225,12.225,0,0,0-4.414,7.568A9.272,9.272,0,0,0,30.127,27.312Z" transform="translate(61.918 13.537)" fill="#ffb300"/>
+                                              <path id="Path_2034" data-name="Path 2034" d="M32.243,21.5a9.135,9.135,0,0,0-4.54,6.9,9.71,9.71,0,0,0,8.356-.53c4.2-2.434,4.6-7.571,4.6-7.571A11.26,11.26,0,0,0,32.243,21.5Z" transform="translate(61.885 33.126)" fill="#ffb300"/>
+                                              <path id="Path_2035" data-name="Path 2035" d="M31.353,23.652a8.914,8.914,0,0,0-5.9,5.674,9.763,9.763,0,0,0,8.262,1.421c4.608-1.4,6.1-6.315,6.1-6.315A11.265,11.265,0,0,0,31.353,23.652Z" transform="translate(56.87 40.747)" fill="#ffb300"/>
+                                              <path id="Path_2036" data-name="Path 2036" d="M30.211,25.747a8.6,8.6,0,0,0-7.263,3.544,9.986,9.986,0,0,0,7.46,3.963c4.8.122,7.642-4.094,7.642-4.094A11.511,11.511,0,0,0,30.211,25.747Z" transform="translate(51.263 46.871)" fill="#ffb300"/>
+                                              <path id="Path_2037" data-name="Path 2037" d="M27.134,27.6a8.5,8.5,0,0,0-7.612,2.609,10.125,10.125,0,0,0,6.943,4.871c4.757.719,8.055-3.119,8.055-3.119A11.681,11.681,0,0,0,27.134,27.6Z" transform="translate(43.61 51.037)" fill="#ffb300"/>
+                                              <path id="Path_2038" data-name="Path 2038" d="M55.295,17.048l-2.354.1c.042,1.016.433,24.971-36.157,36.384l.673,2.346C55.886,43.9,55.3,17.318,55.295,17.048Z" transform="translate(37.492 26.214)" fill="#ffb300"/>
+                                              <path id="Path_2039" data-name="Path 2039" d="M45.294,50.064,43.178,32.1,54.7,19.881l-16.512-2.3L30.708,2.451V2.376L23.214,17.523,6.7,19.825l11.52,12.223-2.113,17.96,14.584-8.271v.048Z" transform="translate(21.279 -2.376)" fill="none" stroke="#ffb300" stroke-width="3"/>
+                                            </g>
+                                          </g>
+                                        </svg>
+                				    </div>
+                				    <div class="awards-head">100 Best Consulting Firm</div>
+                				    <div class="awards-text">Only retained executive search firm to be an employee-owned organization, transferring the impact of a highly responsible, accountable, and committed team to client outcomes          </div>
+                				</div>
+                			</div>
+            			</div>
+            			            			<div class="swiper-slide">
+                			<div class="awards-grid">
+                    			<div class="awards-bg" style="background-image: url('admin/upload/slider/1669966118_dc2dca5d2531d6745552.jpeg')"></div>
+                				<div class="awards-content">
+                				    <div class="awards-icon">
+                				        <svg xmlns="http://www.w3.org/2000/svg" width="103.964" height="86.875" viewBox="0 0 103.964 86.875">
+                                          <g id="award-star-with-olive-branches" transform="translate(0 0.665)">
+                                            <g id="Group_815" data-name="Group 815" transform="translate(0)">
+                                              <path id="Path_2017" data-name="Path 2017" d="M10.255,27.807a9.371,9.371,0,0,0-2.39-7.99,11.411,11.411,0,0,0-7.7-3.73S-.9,21.114,2.42,24.736A9.827,9.827,0,0,0,10.255,27.807Z" transform="translate(0 23.934)" fill="#ffb300"/>
+                                              <path id="Path_2018" data-name="Path 2018" d="M7.263,30.345a10.479,10.479,0,0,0,4.718-7.22,10.455,10.455,0,0,0-2.91-8.432,12.3,12.3,0,0,0-4.246,7.676A9.272,9.272,0,0,0,7.263,30.345Z" transform="translate(10.525 20.62)" fill="#ffb300"/>
+                                              <path id="Path_2019" data-name="Path 2019" d="M9.715,34.122a10.662,10.662,0,0,0,3.78-7.8,10.352,10.352,0,0,0-3.948-7.959A12.414,12.414,0,0,0,6.3,26.544,9.167,9.167,0,0,0,9.715,34.122Z" transform="translate(14.068 29.329)" fill="#ffb300"/>
+                                              <path id="Path_2020" data-name="Path 2020" d="M16.029,28.058a10.238,10.238,0,0,0-4.644-7.537,12.514,12.514,0,0,0-2.5,8.466A9.072,9.072,0,0,0,12.97,36.2,10.762,10.762,0,0,0,16.029,28.058Z" transform="translate(19.79 34.464)" fill="#ffb300"/>
+                                              <path id="Path_2021" data-name="Path 2021" d="M18.219,37.242a10.913,10.913,0,0,0,.692-8.709A9.893,9.893,0,0,0,12.382,22.7a12.722,12.722,0,0,0-.061,8.867A8.783,8.783,0,0,0,18.219,37.242Z" transform="translate(25.818 39.643)" fill="#ffb300"/>
+                                              <path id="Path_2022" data-name="Path 2022" d="M7.142,27.289a9.275,9.275,0,0,0,2.26-8.03,12.253,12.253,0,0,0-4.417-7.568A10.5,10.5,0,0,0,2.266,20.2,10.443,10.443,0,0,0,7.142,27.289Z" transform="translate(4.776 13.489)" fill="#ffb300"/>
+                                              <path id="Path_2023" data-name="Path 2023" d="M13.392,28.374a9.144,9.144,0,0,0-4.54-6.9,11.287,11.287,0,0,0-8.414-1.2s.4,5.134,4.6,7.568A9.716,9.716,0,0,0,13.392,28.374Z" transform="translate(0.978 33.079)" fill="#ffb300"/>
+                                              <path id="Path_2024" data-name="Path 2024" d="M16.6,29.3a8.914,8.914,0,0,0-5.9-5.674,11.271,11.271,0,0,0-8.46.776s1.491,4.911,6.1,6.315A9.723,9.723,0,0,0,16.6,29.3Z" transform="translate(5.025 40.695)" fill="#ffb300"/>
+                                              <path id="Path_2025" data-name="Path 2025" d="M19.631,29.267a8.6,8.6,0,0,0-7.263-3.541,11.519,11.519,0,0,0-7.839,3.409s2.846,4.219,7.642,4.094A9.983,9.983,0,0,0,19.631,29.267Z" transform="translate(10.118 46.821)" fill="#ffb300"/>
+                                              <path id="Path_2026" data-name="Path 2026" d="M15.373,27.583a11.675,11.675,0,0,0-7.386,4.368s3.3,3.834,8.055,3.115A10.117,10.117,0,0,0,22.989,30.2,8.509,8.509,0,0,0,15.373,27.583Z" transform="translate(17.843 50.99)" fill="#ffb300"/>
+                                              <path id="Path_2027" data-name="Path 2027" d="M5.807,17.127l-2.351-.1c-.006.27-.592,26.851,37.836,38.834l.673-2.349C5.373,42.1,5.765,18.136,5.807,17.127Z" transform="translate(7.719 26.169)" fill="#ffb300"/>
+                                              <path id="Path_2028" data-name="Path 2028" d="M29.076,27.833a9.818,9.818,0,0,0,7.836-3.078c3.324-3.618,2.257-8.648,2.257-8.648a11.453,11.453,0,0,0-7.706,3.733A9.36,9.36,0,0,0,29.076,27.833Z" transform="translate(64.632 23.979)" fill="#ffb300"/>
+                                              <path id="Path_2029" data-name="Path 2029" d="M25.255,23.141a10.489,10.489,0,0,0,4.718,7.22,9.277,9.277,0,0,0,2.442-7.969,12.286,12.286,0,0,0-4.246-7.676A10.444,10.444,0,0,0,25.255,23.141Z" transform="translate(56.2 20.675)" fill="#ffb300"/>
+                                              <path id="Path_2030" data-name="Path 2030" d="M27.577,18.379a10.361,10.361,0,0,0-3.952,7.959,10.681,10.681,0,0,0,3.78,7.8,9.182,9.182,0,0,0,3.418-7.578A12.465,12.465,0,0,0,27.577,18.379Z" transform="translate(52.772 29.376)" fill="#ffb300"/>
+                                              <path id="Path_2031" data-name="Path 2031" d="M21.088,28.086a10.749,10.749,0,0,0,3.059,8.128,9.072,9.072,0,0,0,4.081-7.206,12.547,12.547,0,0,0-2.5-8.469A10.271,10.271,0,0,0,21.088,28.086Z" transform="translate(47.053 34.507)" fill="#ffb300"/>
+                                              <path id="Path_2032" data-name="Path 2032" d="M18.741,28.557a10.907,10.907,0,0,0,.692,8.705,8.781,8.781,0,0,0,5.9-5.671,12.722,12.722,0,0,0-.065-8.871A9.911,9.911,0,0,0,18.741,28.557Z" transform="translate(40.491 39.69)" fill="#ffb300"/>
+                                              <path id="Path_2033" data-name="Path 2033" d="M30.127,27.312a10.454,10.454,0,0,0,4.88-7.092,10.5,10.5,0,0,0-2.723-8.509,12.225,12.225,0,0,0-4.414,7.568A9.272,9.272,0,0,0,30.127,27.312Z" transform="translate(61.918 13.537)" fill="#ffb300"/>
+                                              <path id="Path_2034" data-name="Path 2034" d="M32.243,21.5a9.135,9.135,0,0,0-4.54,6.9,9.71,9.71,0,0,0,8.356-.53c4.2-2.434,4.6-7.571,4.6-7.571A11.26,11.26,0,0,0,32.243,21.5Z" transform="translate(61.885 33.126)" fill="#ffb300"/>
+                                              <path id="Path_2035" data-name="Path 2035" d="M31.353,23.652a8.914,8.914,0,0,0-5.9,5.674,9.763,9.763,0,0,0,8.262,1.421c4.608-1.4,6.1-6.315,6.1-6.315A11.265,11.265,0,0,0,31.353,23.652Z" transform="translate(56.87 40.747)" fill="#ffb300"/>
+                                              <path id="Path_2036" data-name="Path 2036" d="M30.211,25.747a8.6,8.6,0,0,0-7.263,3.544,9.986,9.986,0,0,0,7.46,3.963c4.8.122,7.642-4.094,7.642-4.094A11.511,11.511,0,0,0,30.211,25.747Z" transform="translate(51.263 46.871)" fill="#ffb300"/>
+                                              <path id="Path_2037" data-name="Path 2037" d="M27.134,27.6a8.5,8.5,0,0,0-7.612,2.609,10.125,10.125,0,0,0,6.943,4.871c4.757.719,8.055-3.119,8.055-3.119A11.681,11.681,0,0,0,27.134,27.6Z" transform="translate(43.61 51.037)" fill="#ffb300"/>
+                                              <path id="Path_2038" data-name="Path 2038" d="M55.295,17.048l-2.354.1c.042,1.016.433,24.971-36.157,36.384l.673,2.346C55.886,43.9,55.3,17.318,55.295,17.048Z" transform="translate(37.492 26.214)" fill="#ffb300"/>
+                                              <path id="Path_2039" data-name="Path 2039" d="M45.294,50.064,43.178,32.1,54.7,19.881l-16.512-2.3L30.708,2.451V2.376L23.214,17.523,6.7,19.825l11.52,12.223-2.113,17.96,14.584-8.271v.048Z" transform="translate(21.279 -2.376)" fill="none" stroke="#ffb300" stroke-width="3"/>
+                                            </g>
+                                          </g>
+                                        </svg>
+                				    </div>
+                				    <div class="awards-head">100 Best Consulting Firm</div>
+                				    <div class="awards-text">Successfully delivered C-level engagements and consulting assignments in global markets including APAC, EMEA, and AMERICAS     </div>
+                				</div>
+                			</div>
+            			</div>
+            			            			<div class="swiper-slide">
+                			<div class="awards-grid">
+                    			<div class="awards-bg" style="background-image: url('admin/upload/slider/1669966082_0b4558e4620f16d13ee0.jpeg')"></div>
+                				<div class="awards-content">
+                				    <div class="awards-icon">
+                				        <svg xmlns="http://www.w3.org/2000/svg" width="103.964" height="86.875" viewBox="0 0 103.964 86.875">
+                                          <g id="award-star-with-olive-branches" transform="translate(0 0.665)">
+                                            <g id="Group_815" data-name="Group 815" transform="translate(0)">
+                                              <path id="Path_2017" data-name="Path 2017" d="M10.255,27.807a9.371,9.371,0,0,0-2.39-7.99,11.411,11.411,0,0,0-7.7-3.73S-.9,21.114,2.42,24.736A9.827,9.827,0,0,0,10.255,27.807Z" transform="translate(0 23.934)" fill="#ffb300"/>
+                                              <path id="Path_2018" data-name="Path 2018" d="M7.263,30.345a10.479,10.479,0,0,0,4.718-7.22,10.455,10.455,0,0,0-2.91-8.432,12.3,12.3,0,0,0-4.246,7.676A9.272,9.272,0,0,0,7.263,30.345Z" transform="translate(10.525 20.62)" fill="#ffb300"/>
+                                              <path id="Path_2019" data-name="Path 2019" d="M9.715,34.122a10.662,10.662,0,0,0,3.78-7.8,10.352,10.352,0,0,0-3.948-7.959A12.414,12.414,0,0,0,6.3,26.544,9.167,9.167,0,0,0,9.715,34.122Z" transform="translate(14.068 29.329)" fill="#ffb300"/>
+                                              <path id="Path_2020" data-name="Path 2020" d="M16.029,28.058a10.238,10.238,0,0,0-4.644-7.537,12.514,12.514,0,0,0-2.5,8.466A9.072,9.072,0,0,0,12.97,36.2,10.762,10.762,0,0,0,16.029,28.058Z" transform="translate(19.79 34.464)" fill="#ffb300"/>
+                                              <path id="Path_2021" data-name="Path 2021" d="M18.219,37.242a10.913,10.913,0,0,0,.692-8.709A9.893,9.893,0,0,0,12.382,22.7a12.722,12.722,0,0,0-.061,8.867A8.783,8.783,0,0,0,18.219,37.242Z" transform="translate(25.818 39.643)" fill="#ffb300"/>
+                                              <path id="Path_2022" data-name="Path 2022" d="M7.142,27.289a9.275,9.275,0,0,0,2.26-8.03,12.253,12.253,0,0,0-4.417-7.568A10.5,10.5,0,0,0,2.266,20.2,10.443,10.443,0,0,0,7.142,27.289Z" transform="translate(4.776 13.489)" fill="#ffb300"/>
+                                              <path id="Path_2023" data-name="Path 2023" d="M13.392,28.374a9.144,9.144,0,0,0-4.54-6.9,11.287,11.287,0,0,0-8.414-1.2s.4,5.134,4.6,7.568A9.716,9.716,0,0,0,13.392,28.374Z" transform="translate(0.978 33.079)" fill="#ffb300"/>
+                                              <path id="Path_2024" data-name="Path 2024" d="M16.6,29.3a8.914,8.914,0,0,0-5.9-5.674,11.271,11.271,0,0,0-8.46.776s1.491,4.911,6.1,6.315A9.723,9.723,0,0,0,16.6,29.3Z" transform="translate(5.025 40.695)" fill="#ffb300"/>
+                                              <path id="Path_2025" data-name="Path 2025" d="M19.631,29.267a8.6,8.6,0,0,0-7.263-3.541,11.519,11.519,0,0,0-7.839,3.409s2.846,4.219,7.642,4.094A9.983,9.983,0,0,0,19.631,29.267Z" transform="translate(10.118 46.821)" fill="#ffb300"/>
+                                              <path id="Path_2026" data-name="Path 2026" d="M15.373,27.583a11.675,11.675,0,0,0-7.386,4.368s3.3,3.834,8.055,3.115A10.117,10.117,0,0,0,22.989,30.2,8.509,8.509,0,0,0,15.373,27.583Z" transform="translate(17.843 50.99)" fill="#ffb300"/>
+                                              <path id="Path_2027" data-name="Path 2027" d="M5.807,17.127l-2.351-.1c-.006.27-.592,26.851,37.836,38.834l.673-2.349C5.373,42.1,5.765,18.136,5.807,17.127Z" transform="translate(7.719 26.169)" fill="#ffb300"/>
+                                              <path id="Path_2028" data-name="Path 2028" d="M29.076,27.833a9.818,9.818,0,0,0,7.836-3.078c3.324-3.618,2.257-8.648,2.257-8.648a11.453,11.453,0,0,0-7.706,3.733A9.36,9.36,0,0,0,29.076,27.833Z" transform="translate(64.632 23.979)" fill="#ffb300"/>
+                                              <path id="Path_2029" data-name="Path 2029" d="M25.255,23.141a10.489,10.489,0,0,0,4.718,7.22,9.277,9.277,0,0,0,2.442-7.969,12.286,12.286,0,0,0-4.246-7.676A10.444,10.444,0,0,0,25.255,23.141Z" transform="translate(56.2 20.675)" fill="#ffb300"/>
+                                              <path id="Path_2030" data-name="Path 2030" d="M27.577,18.379a10.361,10.361,0,0,0-3.952,7.959,10.681,10.681,0,0,0,3.78,7.8,9.182,9.182,0,0,0,3.418-7.578A12.465,12.465,0,0,0,27.577,18.379Z" transform="translate(52.772 29.376)" fill="#ffb300"/>
+                                              <path id="Path_2031" data-name="Path 2031" d="M21.088,28.086a10.749,10.749,0,0,0,3.059,8.128,9.072,9.072,0,0,0,4.081-7.206,12.547,12.547,0,0,0-2.5-8.469A10.271,10.271,0,0,0,21.088,28.086Z" transform="translate(47.053 34.507)" fill="#ffb300"/>
+                                              <path id="Path_2032" data-name="Path 2032" d="M18.741,28.557a10.907,10.907,0,0,0,.692,8.705,8.781,8.781,0,0,0,5.9-5.671,12.722,12.722,0,0,0-.065-8.871A9.911,9.911,0,0,0,18.741,28.557Z" transform="translate(40.491 39.69)" fill="#ffb300"/>
+                                              <path id="Path_2033" data-name="Path 2033" d="M30.127,27.312a10.454,10.454,0,0,0,4.88-7.092,10.5,10.5,0,0,0-2.723-8.509,12.225,12.225,0,0,0-4.414,7.568A9.272,9.272,0,0,0,30.127,27.312Z" transform="translate(61.918 13.537)" fill="#ffb300"/>
+                                              <path id="Path_2034" data-name="Path 2034" d="M32.243,21.5a9.135,9.135,0,0,0-4.54,6.9,9.71,9.71,0,0,0,8.356-.53c4.2-2.434,4.6-7.571,4.6-7.571A11.26,11.26,0,0,0,32.243,21.5Z" transform="translate(61.885 33.126)" fill="#ffb300"/>
+                                              <path id="Path_2035" data-name="Path 2035" d="M31.353,23.652a8.914,8.914,0,0,0-5.9,5.674,9.763,9.763,0,0,0,8.262,1.421c4.608-1.4,6.1-6.315,6.1-6.315A11.265,11.265,0,0,0,31.353,23.652Z" transform="translate(56.87 40.747)" fill="#ffb300"/>
+                                              <path id="Path_2036" data-name="Path 2036" d="M30.211,25.747a8.6,8.6,0,0,0-7.263,3.544,9.986,9.986,0,0,0,7.46,3.963c4.8.122,7.642-4.094,7.642-4.094A11.511,11.511,0,0,0,30.211,25.747Z" transform="translate(51.263 46.871)" fill="#ffb300"/>
+                                              <path id="Path_2037" data-name="Path 2037" d="M27.134,27.6a8.5,8.5,0,0,0-7.612,2.609,10.125,10.125,0,0,0,6.943,4.871c4.757.719,8.055-3.119,8.055-3.119A11.681,11.681,0,0,0,27.134,27.6Z" transform="translate(43.61 51.037)" fill="#ffb300"/>
+                                              <path id="Path_2038" data-name="Path 2038" d="M55.295,17.048l-2.354.1c.042,1.016.433,24.971-36.157,36.384l.673,2.346C55.886,43.9,55.3,17.318,55.295,17.048Z" transform="translate(37.492 26.214)" fill="#ffb300"/>
+                                              <path id="Path_2039" data-name="Path 2039" d="M45.294,50.064,43.178,32.1,54.7,19.881l-16.512-2.3L30.708,2.451V2.376L23.214,17.523,6.7,19.825l11.52,12.223-2.113,17.96,14.584-8.271v.048Z" transform="translate(21.279 -2.376)" fill="none" stroke="#ffb300" stroke-width="3"/>
+                                            </g>
+                                          </g>
+                                        </svg>
+                				    </div>
+                				    <div class="awards-head">100 Best Consulting Firm</div>
+                				    <div class="awards-text">Fastest TAT in the executive search industry with an average delivery on C-Suite searches under 30 days     </div>
+                				</div>
+                			</div>
+            			</div>
+            			            			<div class="swiper-slide">
+                			<div class="awards-grid">
+                    			<div class="awards-bg" style="background-image: url('admin/upload/slider/1669966052_0051a3797529a3a206e3.jpeg')"></div>
+                				<div class="awards-content">
+                				    <div class="awards-icon">
+                				        <svg xmlns="http://www.w3.org/2000/svg" width="103.964" height="86.875" viewBox="0 0 103.964 86.875">
+                                          <g id="award-star-with-olive-branches" transform="translate(0 0.665)">
+                                            <g id="Group_815" data-name="Group 815" transform="translate(0)">
+                                              <path id="Path_2017" data-name="Path 2017" d="M10.255,27.807a9.371,9.371,0,0,0-2.39-7.99,11.411,11.411,0,0,0-7.7-3.73S-.9,21.114,2.42,24.736A9.827,9.827,0,0,0,10.255,27.807Z" transform="translate(0 23.934)" fill="#ffb300"/>
+                                              <path id="Path_2018" data-name="Path 2018" d="M7.263,30.345a10.479,10.479,0,0,0,4.718-7.22,10.455,10.455,0,0,0-2.91-8.432,12.3,12.3,0,0,0-4.246,7.676A9.272,9.272,0,0,0,7.263,30.345Z" transform="translate(10.525 20.62)" fill="#ffb300"/>
+                                              <path id="Path_2019" data-name="Path 2019" d="M9.715,34.122a10.662,10.662,0,0,0,3.78-7.8,10.352,10.352,0,0,0-3.948-7.959A12.414,12.414,0,0,0,6.3,26.544,9.167,9.167,0,0,0,9.715,34.122Z" transform="translate(14.068 29.329)" fill="#ffb300"/>
+                                              <path id="Path_2020" data-name="Path 2020" d="M16.029,28.058a10.238,10.238,0,0,0-4.644-7.537,12.514,12.514,0,0,0-2.5,8.466A9.072,9.072,0,0,0,12.97,36.2,10.762,10.762,0,0,0,16.029,28.058Z" transform="translate(19.79 34.464)" fill="#ffb300"/>
+                                              <path id="Path_2021" data-name="Path 2021" d="M18.219,37.242a10.913,10.913,0,0,0,.692-8.709A9.893,9.893,0,0,0,12.382,22.7a12.722,12.722,0,0,0-.061,8.867A8.783,8.783,0,0,0,18.219,37.242Z" transform="translate(25.818 39.643)" fill="#ffb300"/>
+                                              <path id="Path_2022" data-name="Path 2022" d="M7.142,27.289a9.275,9.275,0,0,0,2.26-8.03,12.253,12.253,0,0,0-4.417-7.568A10.5,10.5,0,0,0,2.266,20.2,10.443,10.443,0,0,0,7.142,27.289Z" transform="translate(4.776 13.489)" fill="#ffb300"/>
+                                              <path id="Path_2023" data-name="Path 2023" d="M13.392,28.374a9.144,9.144,0,0,0-4.54-6.9,11.287,11.287,0,0,0-8.414-1.2s.4,5.134,4.6,7.568A9.716,9.716,0,0,0,13.392,28.374Z" transform="translate(0.978 33.079)" fill="#ffb300"/>
+                                              <path id="Path_2024" data-name="Path 2024" d="M16.6,29.3a8.914,8.914,0,0,0-5.9-5.674,11.271,11.271,0,0,0-8.46.776s1.491,4.911,6.1,6.315A9.723,9.723,0,0,0,16.6,29.3Z" transform="translate(5.025 40.695)" fill="#ffb300"/>
+                                              <path id="Path_2025" data-name="Path 2025" d="M19.631,29.267a8.6,8.6,0,0,0-7.263-3.541,11.519,11.519,0,0,0-7.839,3.409s2.846,4.219,7.642,4.094A9.983,9.983,0,0,0,19.631,29.267Z" transform="translate(10.118 46.821)" fill="#ffb300"/>
+                                              <path id="Path_2026" data-name="Path 2026" d="M15.373,27.583a11.675,11.675,0,0,0-7.386,4.368s3.3,3.834,8.055,3.115A10.117,10.117,0,0,0,22.989,30.2,8.509,8.509,0,0,0,15.373,27.583Z" transform="translate(17.843 50.99)" fill="#ffb300"/>
+                                              <path id="Path_2027" data-name="Path 2027" d="M5.807,17.127l-2.351-.1c-.006.27-.592,26.851,37.836,38.834l.673-2.349C5.373,42.1,5.765,18.136,5.807,17.127Z" transform="translate(7.719 26.169)" fill="#ffb300"/>
+                                              <path id="Path_2028" data-name="Path 2028" d="M29.076,27.833a9.818,9.818,0,0,0,7.836-3.078c3.324-3.618,2.257-8.648,2.257-8.648a11.453,11.453,0,0,0-7.706,3.733A9.36,9.36,0,0,0,29.076,27.833Z" transform="translate(64.632 23.979)" fill="#ffb300"/>
+                                              <path id="Path_2029" data-name="Path 2029" d="M25.255,23.141a10.489,10.489,0,0,0,4.718,7.22,9.277,9.277,0,0,0,2.442-7.969,12.286,12.286,0,0,0-4.246-7.676A10.444,10.444,0,0,0,25.255,23.141Z" transform="translate(56.2 20.675)" fill="#ffb300"/>
+                                              <path id="Path_2030" data-name="Path 2030" d="M27.577,18.379a10.361,10.361,0,0,0-3.952,7.959,10.681,10.681,0,0,0,3.78,7.8,9.182,9.182,0,0,0,3.418-7.578A12.465,12.465,0,0,0,27.577,18.379Z" transform="translate(52.772 29.376)" fill="#ffb300"/>
+                                              <path id="Path_2031" data-name="Path 2031" d="M21.088,28.086a10.749,10.749,0,0,0,3.059,8.128,9.072,9.072,0,0,0,4.081-7.206,12.547,12.547,0,0,0-2.5-8.469A10.271,10.271,0,0,0,21.088,28.086Z" transform="translate(47.053 34.507)" fill="#ffb300"/>
+                                              <path id="Path_2032" data-name="Path 2032" d="M18.741,28.557a10.907,10.907,0,0,0,.692,8.705,8.781,8.781,0,0,0,5.9-5.671,12.722,12.722,0,0,0-.065-8.871A9.911,9.911,0,0,0,18.741,28.557Z" transform="translate(40.491 39.69)" fill="#ffb300"/>
+                                              <path id="Path_2033" data-name="Path 2033" d="M30.127,27.312a10.454,10.454,0,0,0,4.88-7.092,10.5,10.5,0,0,0-2.723-8.509,12.225,12.225,0,0,0-4.414,7.568A9.272,9.272,0,0,0,30.127,27.312Z" transform="translate(61.918 13.537)" fill="#ffb300"/>
+                                              <path id="Path_2034" data-name="Path 2034" d="M32.243,21.5a9.135,9.135,0,0,0-4.54,6.9,9.71,9.71,0,0,0,8.356-.53c4.2-2.434,4.6-7.571,4.6-7.571A11.26,11.26,0,0,0,32.243,21.5Z" transform="translate(61.885 33.126)" fill="#ffb300"/>
+                                              <path id="Path_2035" data-name="Path 2035" d="M31.353,23.652a8.914,8.914,0,0,0-5.9,5.674,9.763,9.763,0,0,0,8.262,1.421c4.608-1.4,6.1-6.315,6.1-6.315A11.265,11.265,0,0,0,31.353,23.652Z" transform="translate(56.87 40.747)" fill="#ffb300"/>
+                                              <path id="Path_2036" data-name="Path 2036" d="M30.211,25.747a8.6,8.6,0,0,0-7.263,3.544,9.986,9.986,0,0,0,7.46,3.963c4.8.122,7.642-4.094,7.642-4.094A11.511,11.511,0,0,0,30.211,25.747Z" transform="translate(51.263 46.871)" fill="#ffb300"/>
+                                              <path id="Path_2037" data-name="Path 2037" d="M27.134,27.6a8.5,8.5,0,0,0-7.612,2.609,10.125,10.125,0,0,0,6.943,4.871c4.757.719,8.055-3.119,8.055-3.119A11.681,11.681,0,0,0,27.134,27.6Z" transform="translate(43.61 51.037)" fill="#ffb300"/>
+                                              <path id="Path_2038" data-name="Path 2038" d="M55.295,17.048l-2.354.1c.042,1.016.433,24.971-36.157,36.384l.673,2.346C55.886,43.9,55.3,17.318,55.295,17.048Z" transform="translate(37.492 26.214)" fill="#ffb300"/>
+                                              <path id="Path_2039" data-name="Path 2039" d="M45.294,50.064,43.178,32.1,54.7,19.881l-16.512-2.3L30.708,2.451V2.376L23.214,17.523,6.7,19.825l11.52,12.223-2.113,17.96,14.584-8.271v.048Z" transform="translate(21.279 -2.376)" fill="none" stroke="#ffb300" stroke-width="3"/>
+                                            </g>
+                                          </g>
+                                        </svg>
+                				    </div>
+                				    <div class="awards-head">100 Best Consulting Firm</div>
+                				    <div class="awards-text">Processes complying with industry best standards and abiding by the AESC’s Code of Professional Practices     </div>
+                				</div>
+                			</div>
+            			</div>
+            			            			<div class="swiper-slide">
+                			<div class="awards-grid">
+                    			<div class="awards-bg" style="background-image: url('admin/upload/slider/1669965702_86a861c90424bdccc358.jpeg')"></div>
+                				<div class="awards-content">
+                				    <div class="awards-icon">
+                				        <svg xmlns="http://www.w3.org/2000/svg" width="103.964" height="86.875" viewBox="0 0 103.964 86.875">
+                                          <g id="award-star-with-olive-branches" transform="translate(0 0.665)">
+                                            <g id="Group_815" data-name="Group 815" transform="translate(0)">
+                                              <path id="Path_2017" data-name="Path 2017" d="M10.255,27.807a9.371,9.371,0,0,0-2.39-7.99,11.411,11.411,0,0,0-7.7-3.73S-.9,21.114,2.42,24.736A9.827,9.827,0,0,0,10.255,27.807Z" transform="translate(0 23.934)" fill="#ffb300"/>
+                                              <path id="Path_2018" data-name="Path 2018" d="M7.263,30.345a10.479,10.479,0,0,0,4.718-7.22,10.455,10.455,0,0,0-2.91-8.432,12.3,12.3,0,0,0-4.246,7.676A9.272,9.272,0,0,0,7.263,30.345Z" transform="translate(10.525 20.62)" fill="#ffb300"/>
+                                              <path id="Path_2019" data-name="Path 2019" d="M9.715,34.122a10.662,10.662,0,0,0,3.78-7.8,10.352,10.352,0,0,0-3.948-7.959A12.414,12.414,0,0,0,6.3,26.544,9.167,9.167,0,0,0,9.715,34.122Z" transform="translate(14.068 29.329)" fill="#ffb300"/>
+                                              <path id="Path_2020" data-name="Path 2020" d="M16.029,28.058a10.238,10.238,0,0,0-4.644-7.537,12.514,12.514,0,0,0-2.5,8.466A9.072,9.072,0,0,0,12.97,36.2,10.762,10.762,0,0,0,16.029,28.058Z" transform="translate(19.79 34.464)" fill="#ffb300"/>
+                                              <path id="Path_2021" data-name="Path 2021" d="M18.219,37.242a10.913,10.913,0,0,0,.692-8.709A9.893,9.893,0,0,0,12.382,22.7a12.722,12.722,0,0,0-.061,8.867A8.783,8.783,0,0,0,18.219,37.242Z" transform="translate(25.818 39.643)" fill="#ffb300"/>
+                                              <path id="Path_2022" data-name="Path 2022" d="M7.142,27.289a9.275,9.275,0,0,0,2.26-8.03,12.253,12.253,0,0,0-4.417-7.568A10.5,10.5,0,0,0,2.266,20.2,10.443,10.443,0,0,0,7.142,27.289Z" transform="translate(4.776 13.489)" fill="#ffb300"/>
+                                              <path id="Path_2023" data-name="Path 2023" d="M13.392,28.374a9.144,9.144,0,0,0-4.54-6.9,11.287,11.287,0,0,0-8.414-1.2s.4,5.134,4.6,7.568A9.716,9.716,0,0,0,13.392,28.374Z" transform="translate(0.978 33.079)" fill="#ffb300"/>
+                                              <path id="Path_2024" data-name="Path 2024" d="M16.6,29.3a8.914,8.914,0,0,0-5.9-5.674,11.271,11.271,0,0,0-8.46.776s1.491,4.911,6.1,6.315A9.723,9.723,0,0,0,16.6,29.3Z" transform="translate(5.025 40.695)" fill="#ffb300"/>
+                                              <path id="Path_2025" data-name="Path 2025" d="M19.631,29.267a8.6,8.6,0,0,0-7.263-3.541,11.519,11.519,0,0,0-7.839,3.409s2.846,4.219,7.642,4.094A9.983,9.983,0,0,0,19.631,29.267Z" transform="translate(10.118 46.821)" fill="#ffb300"/>
+                                              <path id="Path_2026" data-name="Path 2026" d="M15.373,27.583a11.675,11.675,0,0,0-7.386,4.368s3.3,3.834,8.055,3.115A10.117,10.117,0,0,0,22.989,30.2,8.509,8.509,0,0,0,15.373,27.583Z" transform="translate(17.843 50.99)" fill="#ffb300"/>
+                                              <path id="Path_2027" data-name="Path 2027" d="M5.807,17.127l-2.351-.1c-.006.27-.592,26.851,37.836,38.834l.673-2.349C5.373,42.1,5.765,18.136,5.807,17.127Z" transform="translate(7.719 26.169)" fill="#ffb300"/>
+                                              <path id="Path_2028" data-name="Path 2028" d="M29.076,27.833a9.818,9.818,0,0,0,7.836-3.078c3.324-3.618,2.257-8.648,2.257-8.648a11.453,11.453,0,0,0-7.706,3.733A9.36,9.36,0,0,0,29.076,27.833Z" transform="translate(64.632 23.979)" fill="#ffb300"/>
+                                              <path id="Path_2029" data-name="Path 2029" d="M25.255,23.141a10.489,10.489,0,0,0,4.718,7.22,9.277,9.277,0,0,0,2.442-7.969,12.286,12.286,0,0,0-4.246-7.676A10.444,10.444,0,0,0,25.255,23.141Z" transform="translate(56.2 20.675)" fill="#ffb300"/>
+                                              <path id="Path_2030" data-name="Path 2030" d="M27.577,18.379a10.361,10.361,0,0,0-3.952,7.959,10.681,10.681,0,0,0,3.78,7.8,9.182,9.182,0,0,0,3.418-7.578A12.465,12.465,0,0,0,27.577,18.379Z" transform="translate(52.772 29.376)" fill="#ffb300"/>
+                                              <path id="Path_2031" data-name="Path 2031" d="M21.088,28.086a10.749,10.749,0,0,0,3.059,8.128,9.072,9.072,0,0,0,4.081-7.206,12.547,12.547,0,0,0-2.5-8.469A10.271,10.271,0,0,0,21.088,28.086Z" transform="translate(47.053 34.507)" fill="#ffb300"/>
+                                              <path id="Path_2032" data-name="Path 2032" d="M18.741,28.557a10.907,10.907,0,0,0,.692,8.705,8.781,8.781,0,0,0,5.9-5.671,12.722,12.722,0,0,0-.065-8.871A9.911,9.911,0,0,0,18.741,28.557Z" transform="translate(40.491 39.69)" fill="#ffb300"/>
+                                              <path id="Path_2033" data-name="Path 2033" d="M30.127,27.312a10.454,10.454,0,0,0,4.88-7.092,10.5,10.5,0,0,0-2.723-8.509,12.225,12.225,0,0,0-4.414,7.568A9.272,9.272,0,0,0,30.127,27.312Z" transform="translate(61.918 13.537)" fill="#ffb300"/>
+                                              <path id="Path_2034" data-name="Path 2034" d="M32.243,21.5a9.135,9.135,0,0,0-4.54,6.9,9.71,9.71,0,0,0,8.356-.53c4.2-2.434,4.6-7.571,4.6-7.571A11.26,11.26,0,0,0,32.243,21.5Z" transform="translate(61.885 33.126)" fill="#ffb300"/>
+                                              <path id="Path_2035" data-name="Path 2035" d="M31.353,23.652a8.914,8.914,0,0,0-5.9,5.674,9.763,9.763,0,0,0,8.262,1.421c4.608-1.4,6.1-6.315,6.1-6.315A11.265,11.265,0,0,0,31.353,23.652Z" transform="translate(56.87 40.747)" fill="#ffb300"/>
+                                              <path id="Path_2036" data-name="Path 2036" d="M30.211,25.747a8.6,8.6,0,0,0-7.263,3.544,9.986,9.986,0,0,0,7.46,3.963c4.8.122,7.642-4.094,7.642-4.094A11.511,11.511,0,0,0,30.211,25.747Z" transform="translate(51.263 46.871)" fill="#ffb300"/>
+                                              <path id="Path_2037" data-name="Path 2037" d="M27.134,27.6a8.5,8.5,0,0,0-7.612,2.609,10.125,10.125,0,0,0,6.943,4.871c4.757.719,8.055-3.119,8.055-3.119A11.681,11.681,0,0,0,27.134,27.6Z" transform="translate(43.61 51.037)" fill="#ffb300"/>
+                                              <path id="Path_2038" data-name="Path 2038" d="M55.295,17.048l-2.354.1c.042,1.016.433,24.971-36.157,36.384l.673,2.346C55.886,43.9,55.3,17.318,55.295,17.048Z" transform="translate(37.492 26.214)" fill="#ffb300"/>
+                                              <path id="Path_2039" data-name="Path 2039" d="M45.294,50.064,43.178,32.1,54.7,19.881l-16.512-2.3L30.708,2.451V2.376L23.214,17.523,6.7,19.825l11.52,12.223-2.113,17.96,14.584-8.271v.048Z" transform="translate(21.279 -2.376)" fill="none" stroke="#ffb300" stroke-width="3"/>
+                                            </g>
+                                          </g>
+                                        </svg>
+                				    </div>
+                				    <div class="awards-head">100 Best Consulting Firm</div>
+                				    <div class="awards-text">A diversified portfolio of services covering critical and strategic business scenarios                                      </div>
+                				</div>
+                			</div>
+            			</div>
+            			        			</div>
+    			</div>
+			</div>
+		</div>
+		<div class="awards-bg-pattern">
+		    <img src="assets/images/awards-bg-patter.png">
+		</div>
+	</section>
+
+	<section class="athena-section get-in-touch-section">
+		<div class="container-fluid">
+	        <div class="section-head">
+    	        <div class="fade-up-effect">
+    	            <h2>How Can We Help You?</h2>
+	            </div>
+	            <div class="fade-up-effect">
+    	            <p>Get in touch with us or find an office closest to you.</p>
+	            </div>
+	            <div class="btn fade-up-effect">
+		            <a href="contact-us.html" class="theme-btn">Get in Touch
+    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+				</div>
+				<div class="btn fade-up-effect">
+    				<a href="contact-us.html#find-us-location" class="theme-btn">Find Our Office
+    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+		        </div>
+	        </div>
+		</div>
+	</section>
+	
+	
+	<footer>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class="left">
+                <div class="footer-logo">
+                    <img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid">
+                </div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-info">
+                        <p class="footer-link">Subscribe</p>
+                        <p class="footer-info">Select topics and stay current with our latest insights</p>
+                    </div>
+                    <form action="https://www.aesc.co.in/index.php/insert-user" id="form-filter" class="subscribe" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+  
+                    <div class="footer-subscribe-input">
+                        <input type="email"  name="email_id" class="form-control" required name="subscribe" placeholder="Email Address">
+                        <button class="subscribe-btn">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <div class="footer-logo">
+                        <div class="global-partners-block" style="display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Global Partners</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener" aria-label="Visit Penrhyn International" style="display:block;"><img src="assets/images/penrhyn-logo.png" class="img-fluid" alt="Penrhyn International" style="margin:0;max-height:85px;"></a></div>
+                        <div class="powered-by-block" style="margin-left:30px;display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" aria-label="Visit TheHireHub.ai" style="display:block;"><img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai" style="margin:0;height:54px;max-width:240px;object-fit:contain;display:block;"></a></div>
+                    </div>
+                    <div class="footer-quick-links">
+                        <div class="footer-bold-links">
+                                                    <li><a href="about-us.html">About us</a></li>
+                            
+                                                        <li><a href="LeadershipTeam.html"> Leadership Team</a></li>
+                            
+                                                        <li><a href="LifeatAthena.html">Life@Athena</a></li>
+                            
+                                                        <li><a href="contact-us.html">Contact Us</a></li>
+                            
+                                                    </div>
+                        <div class="footer-regular-links">
+                                                    <li><a href="ScenarioExpertise.html">Scenario Expertise</a></li>
+                           
+                                                        <li><a href="consulting-services.html">Consulting Services</a></li>
+                           
+                                                        <li><a href="search-services.html">Search Services</a></li>
+                           
+                                                    </div>
+                    </div>
+                    <div class="footer-social-logo">
+                    <!--    <img src="/images/footer-social.jpg" class="img-fluid">-->
+                                    <a href="https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/" target="_blank">
+                    <i class="fab fa-linkedin" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://twitter.com/aescindia/" target="_blank">
+                    <i class="fab fa-twitter" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://www.instagram.com/athena_aesc/?utm_medium=copy_link" target="_blank">
+                    <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://www.youtube.com/@athenaexecutivesearchconsu3242/featured" target="_blank">
+                    <i class="fab fa-youtube" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                   <!--     <a href="https://twitter.com/aescindia/" target="_blank"  >-->
+               <!--  <i class="fab fa-twitter-square" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
+               <!--  </a>-->
+               <!--<a href="https://instagram.com/athena_aesc?utm_medium=copy_link" target="_blank" >   -->
+               <!--   <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
+               <!--    </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>© Copyright Athena Executive Search & Consulting. All Rights Reserved.</p>
+            <!--<p>Designed By <a href="#" style="color: #010534;">CyberWorx</a></p>-->
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/toastr.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    
+	<script>
+// 	var getHeaderHeight = $('header').height();
+gsap.registerPlugin(ScrollTrigger);
+            // gsap.to(".why-us-right", {
+            //     scrollTrigger: {
+            // 	  trigger: ".why-us-right",
+            //       toggleActions: "restart none none reverse",
+            //       id: "pin",
+            // // 	  markers:true,
+            //       pin: '.why-us-section',
+            //       pinSpacing: true,
+            //       start: `top 120`,
+            //       end:"150%",
+            //       scrub: .5,
+            //       ease: "power2",
+            //     },
+            //     yPercent: -85,
+            // });
+            
+            
+            var whySectionScroll = $('.why-us-section').offset().top;
+            
+            var getHeaderHeight = $('header').height();
+        	    
+            $('.why-us-nav li').click(function(){
+                $('.why-us-nav li a').removeClass('active')
+                $('.why-us-right li').removeClass('active')
+                $(this).find('a').addClass('active')
+                if($(this).find('a').attr('scrollto') == 'list-item-1'){
+                    $('#list-item-1').addClass('active')
+                    // $(window).scrollTop(`${whySectionScroll + (1/100*whySectionScroll)}`)
+                    $(window).scrollTop($('#list-item-1').offset().top - getHeaderHeight)
+                    
+                    // gsap.to(".why-us-right", {
+                    //     yPercent: -10,
+                    // });
+                }
+                if($(this).find('a').attr('scrollto') == 'list-item-2'){
+                    $('#list-item-2').addClass('active')
+                    // $(window).scrollTop(`${whySectionScroll + (18/100*whySectionScroll)}`)
+                    $(window).scrollTop($('#list-item-2').offset().top - getHeaderHeight)
+                    // gsap.to(".why-us-right", {
+                    //     yPercent: -25,
+                    // });
+                }
+                if($(this).find('a').attr('scrollto') == 'list-item-3'){
+                    $('#list-item-3').addClass('active')
+                    // $(window).scrollTop(`${whySectionScroll + (40/100*whySectionScroll)}`)
+                    $(window).scrollTop($('#list-item-3').offset().top - getHeaderHeight)
+                    // gsap.to(".why-us-right", {
+                    //     yPercent: -40,
+                    // });
+                }
+                if($(this).find('a').attr('scrollto') == 'list-item-4'){
+                    $('#list-item-4').addClass('active')
+                    // $(window).scrollTop(`${whySectionScroll + (80/100*whySectionScroll)}`)
+                    $(window).scrollTop($('#list-item-4').offset().top - getHeaderHeight)
+                    // gsap.to(".why-us-right", {
+                    //     yPercent: -60,
+                    // });
+                }
+                if($(this).find('a').attr('scrollto') == 'list-item-5'){
+                    $('#list-item-5').addClass('active')
+                    // $(window).scrollTop(`${whySectionScroll + (whySectionScroll + 60)}`)
+                    $(window).scrollTop($('#list-item-5').offset().top - getHeaderHeight)
+                    // gsap.to(".why-us-right", {
+                    //     yPercent: -60,
+                    // });
+                }
+                console.log(whySectionScroll)
+            })
+            
+	$(window).on('load',function(){
+	    
+	    setTimeout(function(){
+	        
+	    },1000)
+    	
+        $('.hover-group').hover(function(){
+            var serviceName = $(this).attr('data-name')
+            $('.hover-group').removeClass('active')
+            $(this).addClass('active')
+            
+            $('.service-text [toggle="service"]').each(function(){
+                var activeService = $(this).attr('service-toggle')
+                if(serviceName == activeService){
+                    $(this).addClass('active')
+                }
+                else{
+                    $(this).removeClass('active')
+                }
+            })
+            
+        })
+    	
+        
+    // 	$(window).on('load', function(){
+    	  
+    	    
+          var swiper = new Swiper(".awards-slider", {
+        //   	slidesPerView: 4,
+            // spaceBetween: 10,
+          	speed: 800,
+          	autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+            navigation: {
+    	        nextEl: '.awards.next-arrow',
+    	        prevEl: '.awards.prev-arrow',
+    	    },
+    	    breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1025: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                }
+            }
+          });
+          
+          var swiper = new Swiper(".our-experts-slider", {
+            // slidesPerView: 4,
+            // spaceBetween: 10,
+          	speed: 800,
+          	autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+            navigation: {
+    	        nextEl: '.next-arrow.insights',
+    	        prevEl: '.prev-arrow.insights',
+    	    },
+    	    breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1025: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                }
+            }
+          });
+          
+            $.fn.isInViewport = function() {
+                var elementTop = $(this).offset().top + $(window).height() / 4.5;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var viewportTop = $(window).scrollTop() ;
+                var viewportBottom = viewportTop + $(window).height();
+                return elementTop < viewportBottom;
+            };
+        
+        
+            
+            $(window).scroll(function(){
+                
+                if($(window).scrollTop() > 0){
+                    $('header').addClass('sticky')
+                }
+                else{
+                    $('header').removeClass('sticky')
+                }
+                
+                $('.athena-section').each(function(){
+                    if($(this).isInViewport()){
+                        $(this).addClass('active')
+                    }
+                    else{
+                        // $(this).removeClass('active')
+                    }
+                })
+                
+            })
+            
+            
+            $('.athena-section').each(function(){
+                if($(this).isInViewport()){
+                    $(this).addClass('active')
+                }
+                else{
+                    // $(this).removeClass('active')
+                }
+            })
+            
+            if($(window).scrollTop() > 0){
+                $('header').addClass('sticky')
+            }
+            
+        // })
+    
+	})
+    </script>
+</body>
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH/Views/about-us.php -->

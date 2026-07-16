@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+
+# Word/Office lock files
+~$*
+*.docx
+!content-brief-rebuild.docx
+!developer-brief-live-site-fixes.docx
+!aesc-audit-2026-05.docx
+
+# Debug leftovers
+index.php?debugbar
+
+# Other tooling
+graphify-out/
+deploy-ready/
+.superpowers/

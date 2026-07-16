@@ -1,0 +1,60 @@
+---
+permalink: "/insights/index.html"
+layout: layouts/base.njk
+title: "Insights — AESC"
+description: "Reports, blogs, and thought leadership from AESC."
+canonicalUrl: "https://www.aesc.co.in/insights/"
+ogType: "website"
+bodyClass: "insights-page"
+---
+
+<section class="athena-section home-banner-section insights-page-banner">
+  <div class="service-banner-content swiper-slide-active">
+    <div class="home-banner-bg" style="background-image: url('/assets/images/insights-hero.png');"></div>
+    <div class="container">
+      <div class="banner-content">
+        <div class="fade-up-effect">
+          <h2>Insights</h2>
+        </div>
+      </div>
+      <div class="banner-image"></div>
+    </div>
+  </div>
+</section>
+
+<section class="athena-section insights-page-section">
+  <div class="container">
+    <div class="insights-filter-btn-div">
+      <a href="javascript:void(0);" class="filter-btn active" data-id="all">All</a>
+      <a href="javascript:void(0);" class="filter-btn" data-id="insight-3">Reports/Blogs</a>
+    </div>
+    <div class="row blg">
+      {% for post in blogPosts %}
+        <div class="insights-div active" data-class="insight-3">
+          <a href="{{ post.url }}" style="text-decoration:none;">
+            <div class="insight-grid">
+              <div class="insight-bg" style="background-image: url('{{ post.heroImage | imageUrl({ w: 800 }) }}')"></div>
+              <div class="insight-content">
+                <div class="type-text">{% if post.category %}{{ post.category.title }}{% else %}Insights{% endif %}</div>
+                <div class="insight-head">{{ post.title }}</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var id = btn.getAttribute('data-id');
+      document.querySelectorAll('.insights-div').forEach(function(el) {
+        el.style.display = (id === 'all' || el.getAttribute('data-class') === id) ? '' : 'none';
+      });
+    });
+  });
+</script>

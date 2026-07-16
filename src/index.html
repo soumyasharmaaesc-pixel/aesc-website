@@ -1,0 +1,1999 @@
+<!-- DEBUG-VIEW START 1 APPPATH/Views/index.php -->
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  id="debugbar_loader" data-time="1778672720" src="index.php%3Fdebugbar"></script><script type="text/javascript"  id="debugbar_dynamic_script"></script><style type="text/css"  id="debugbar_dynamic_style"></style><script class="kint-rich-script">void 0===window.kintShared&&(window.kintShared=function(){"use strict";var e={dedupe:function(e,n){return[].forEach.call(document.querySelectorAll(e),function(e){n&&n.ownerDocument.contains(n)||(n=e),e!==n&&e.parentNode.removeChild(e)}),n},runOnce:function(e){"complete"===document.readyState?e():window.addEventListener("load",e)}};return window.addEventListener("click",function(e){if(e.target.classList.contains("kint-ide-link")){var n=new XMLHttpRequest;n.open("GET",e.target.href),n.send(null),e.preventDefault()}}),e}());
+void 0===window.kintRich&&(window.kintRich=function(){"use strict";var n={selectText:function(e){var t=window.getSelection(),a=document.createRange();a.selectNodeContents(e),t.removeAllRanges(),t.addRange(a)},each:function(e,t){Array.prototype.slice.call(document.querySelectorAll(e),0).forEach(t)},hasClass:function(e,t){return!!e.classList&&(void 0===t&&(t="kint-show"),e.classList.contains(t))},addClass:function(e,t){void 0===t&&(t="kint-show"),e.classList.add(t)},removeClass:function(e,t){return void 0===t&&(t="kint-show"),e.classList.remove(t),e},toggle:function(e,t){var a=n.getChildren(e);a&&(void 0===t&&(t=n.hasClass(e)),t?n.removeClass(e):n.addClass(e),1===a.childNodes.length&&(a=a.childNodes[0].childNodes[0])&&n.hasClass(a,"kint-parent")&&n.toggle(a,t))},toggleChildren:function(e,t){var a=n.getChildren(e);if(a){var r=a.getElementsByClassName("kint-parent"),o=r.length;for(void 0===t&&(t=!n.hasClass(e));o--;)n.toggle(r[o],t)}},toggleAll:function(e){for(var t=document.getElementsByClassName("kint-parent"),a=t.length,r=!n.hasClass(e.parentNode);a--;)n.toggle(t[a],r)},switchTab:function(e){var t,a=e.previousSibling,r=0;for(n.removeClass(e.parentNode.getElementsByClassName("kint-active-tab")[0],"kint-active-tab"),n.addClass(e,"kint-active-tab");a;)1===a.nodeType&&r++,a=a.previousSibling;t=e.parentNode.nextSibling.childNodes;for(var o=0;o<t.length;o++)o===r?(t[o].style.display="block",1===t[o].childNodes.length&&(a=t[o].childNodes[0].childNodes[0])&&n.hasClass(a,"kint-parent")&&n.toggle(a,!1)):t[o].style.display="none"},mktag:function(e){return"<"+e+">"},openInNewWindow:function(e){var t=window.open();t&&(t.document.open(),t.document.write(n.mktag("html")+n.mktag("head")+n.mktag("title")+"Kint ("+(new Date).toISOString()+")"+n.mktag("/title")+n.mktag('meta charset="utf-8"')+document.getElementsByClassName("kint-rich-script")[0].outerHTML+document.getElementsByClassName("kint-rich-style")[0].outerHTML+n.mktag("/head")+n.mktag("body")+'<input style="width: 100%" placeholder="Take some notes!"><div class="kint-rich">'+e.parentNode.outerHTML+"</div>"+n.mktag("/body")),t.document.close())},sortTable:function(e,a){var t=e.tBodies[0];[].slice.call(e.tBodies[0].rows).sort(function(e,t){if(e=e.cells[a].textContent.trim().toLocaleLowerCase(),t=t.cells[a].textContent.trim().toLocaleLowerCase(),isNaN(e)||isNaN(t)){if(isNaN(e)&&!isNaN(t))return 1;if(isNaN(t)&&!isNaN(e))return-1}else e=parseFloat(e),t=parseFloat(t);return e<t?-1:t<e?1:0}).forEach(function(e){t.appendChild(e)})},showAccessPath:function(e){for(var t=e.childNodes,a=0;a<t.length;a++)if(n.hasClass(t[a],"access-path"))return void(n.hasClass(t[a],"kint-show")?n.removeClass(t[a]):(n.addClass(t[a]),n.selectText(t[a])))},showSearchBox:function(e){var t=e.querySelector(".kint-search");t&&(n.hasClass(t)?(n.removeClass(t),n.removeClass(e.parentNode,"kint-search-root")):(n.addClass(e),n.addClass(t),t.focus(),t.select(),n.search(t)))},search:function(e){var t=e.parentNode.parentNode;if(e.value.length){var a=n.findMatches(t,e.value);n.highlightMatches(t,a)}else n.removeClass(t,"kint-search-root")},findMatches:function(e,t){for(var a=null,r=0;r<e.children.length;r++)if("DD"===e.children[r].tagName){a=e.children[r];break}if(!a)return[];var o=a.querySelectorAll("dfn"),s=[];return t=t.toLowerCase(),[].forEach.call(o,function(e){-1!=e.innerText.toLowerCase().indexOf(t)&&s.push(e)}),s},highlightMatches:function(e,t){var a=e.querySelectorAll(".kint-search-match");[].forEach.call(a,function(e){n.removeClass(e,"kint-search-match")}),n.addClass(e,"kint-search-root");for(var r=0;r<t.length;r++){for(var o=t[r];o!=e;){if("DL"===o.tagName)n.addClass(o,"kint-search-match");else if("LI"===o.tagName){if(o.parentNode.previousElementSibling.classList.contains("kint-tabs")){var s=[].slice.call(o.parentNode.children).indexOf(o);n.addClass([].slice.call(o.parentNode.previousElementSibling.children)[s],"kint-search-match")}o=o.parentNode}o=o.parentNode}n.addClass(t[r],"kint-search-match")}},getParentByClass:function(e,t){for(void 0===t&&(t="kint-rich");(e=e.parentNode)&&!n.hasClass(e,t););return e},getParentHeader:function(e,t){for(var a=e.nodeName.toLowerCase();"dd"!==a&&"dt"!==a&&n.getParentByClass(e);)a=(e=e.parentNode).nodeName.toLowerCase();return n.getParentByClass(e)?("dd"===a&&t&&(e=e.previousElementSibling),e&&"dt"===e.nodeName.toLowerCase()&&n.hasClass(e,"kint-parent")?e:void 0):null},getChildren:function(e){for(;(e=e.nextElementSibling)&&"dd"!==e.nodeName.toLowerCase(););return e},initLoad:function(){n.style=window.kintShared.dedupe("style.kint-rich-style",n.style),n.script=window.kintShared.dedupe("script.kint-rich-script",n.script),n.folder=window.kintShared.dedupe(".kint-rich.kint-folder",n.folder);var e=document.querySelectorAll("input.kint-search");if([].forEach.call(e,function(a){function e(e){if(window.clearTimeout(r),a.value!==t){var t=a.value;r=window.setTimeout(function(){n.search(a)},500)}}var r=null;a.removeEventListener("keyup",e),a.addEventListener("keyup",e)}),n.folder){var t=n.folder.querySelector("dd");[].forEach.call(document.querySelectorAll(".kint-rich.kint-file"),function(e){e.parentNode!==n.folder&&t.appendChild(e)}),document.body.appendChild(n.folder),n.addClass(n.folder)}},keyboardNav:{targets:[],target:0,active:!1,fetchTargets:function(){n.keyboardNav.targets=[],n.each(".kint-rich nav, .kint-tabs>li:not(.kint-active-tab)",function(e){0===e.offsetWidth&&0===e.offsetHeight||n.keyboardNav.targets.push(e)})},sync:function(e){var t=document.querySelector(".kint-focused");if(t&&n.removeClass(t,"kint-focused"),n.keyboardNav.active){var a=n.keyboardNav.targets[n.keyboardNav.target];n.addClass(a,"kint-focused"),e||n.keyboardNav.scroll(a)}},scroll:function(e){var t=function(e){return e.offsetTop+(e.offsetParent?t(e.offsetParent):0)},a=t(e);if(n.folder){var r=n.folder.querySelector("dd.kint-folder");r.scrollTo(0,a-r.clientHeight/2)}else window.scrollTo(0,a-window.innerHeight/2)},moveCursor:function(e){for(n.keyboardNav.target+=e;n.keyboardNav.target<0;)n.keyboardNav.target+=n.keyboardNav.targets.length;for(;n.keyboardNav.target>=n.keyboardNav.targets.length;)n.keyboardNav.target-=n.keyboardNav.targets.length;n.keyboardNav.sync()},setCursor:function(e){n.keyboardNav.fetchTargets();for(var t=0;t<n.keyboardNav.targets.length;t++)if(e===n.keyboardNav.targets[t])return n.keyboardNav.target=t,!0;return!1}},mouseNav:{lastClickTarget:null,lastClickTimer:null,lastClickCount:0,renewLastClick:function(){window.clearTimeout(n.mouseNav.lastClickTimer),n.mouseNav.lastClickTimer=window.setTimeout(function(){n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickTimer=null,n.mouseNav.lastClickCount=0},250)}},style:null,script:null,folder:null};return window.addEventListener("click",function(e){var t=e.target,a=t.nodeName.toLowerCase();if(n.mouseNav.lastClickTarget&&n.mouseNav.lastClickTimer&&n.mouseNav.lastClickCount)return t=n.mouseNav.lastClickTarget,void(1===n.mouseNav.lastClickCount?(n.toggleChildren(t.parentNode),n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),n.mouseNav.lastClickCount++,n.mouseNav.renewLastClick()):(n.toggleAll(t),n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),n.keyboardNav.scroll(t),window.clearTimeout(n.mouseNav.lastClickTimer),n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickTarget=null,n.mouseNav.lastClickCount=0));if(n.getParentByClass(t)){if("dfn"===a)n.selectText(t);else if("th"===a)return void(e.ctrlKey||n.sortTable(t.parentNode.parentNode.parentNode,t.cellIndex));if((t=n.getParentHeader(t))&&(n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync(!0)),t=e.target,"li"===a&&"kint-tabs"===t.parentNode.className)"kint-active-tab"!==t.className&&n.switchTab(t),(t=n.getParentHeader(t,!0))&&(n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync(!0));else if("nav"===a)"footer"===t.parentNode.nodeName.toLowerCase()?(n.keyboardNav.setCursor(t),n.keyboardNav.sync(!0),t=t.parentNode,n.hasClass(t)?n.removeClass(t):n.addClass(t)):(n.toggle(t.parentNode),n.keyboardNav.fetchTargets(),n.mouseNav.lastClickCount=1,n.mouseNav.lastClickTarget=t,n.mouseNav.renewLastClick());else if(n.hasClass(t,"kint-popup-trigger")){var r=t.parentNode;if("footer"===r.nodeName.toLowerCase())r=r.previousSibling;else for(;r&&!n.hasClass(r,"kint-parent");)r=r.parentNode;n.openInNewWindow(r)}else n.hasClass(t,"kint-access-path-trigger")?n.showAccessPath(t.parentNode):n.hasClass(t,"kint-search-trigger")?n.showSearchBox(t.parentNode):n.hasClass(t,"kint-search")||("pre"===a&&3===e.detail?n.selectText(t):n.getParentByClass(t,"kint-source")&&3===e.detail?n.selectText(n.getParentByClass(t,"kint-source")):n.hasClass(t,"access-path")?n.selectText(t):"a"!==a&&(t=n.getParentHeader(t))&&(n.toggle(t),n.keyboardNav.fetchTargets()))}},!0),window.addEventListener("keydown",function(e){if(e.target===document.body&&!e.altKey&&!e.ctrlKey){if(68===e.keyCode){if(n.keyboardNav.active)n.keyboardNav.active=!1;else if(n.keyboardNav.active=!0,n.keyboardNav.fetchTargets(),0===n.keyboardNav.targets.length)return void(n.keyboardNav.active=!1);return n.keyboardNav.sync(),void e.preventDefault()}if(n.keyboardNav.active){if(9===e.keyCode)return n.keyboardNav.moveCursor(e.shiftKey?-1:1),void e.preventDefault();if(38===e.keyCode||75===e.keyCode)return n.keyboardNav.moveCursor(-1),void e.preventDefault();if(40===e.keyCode||74===e.keyCode)return n.keyboardNav.moveCursor(1),void e.preventDefault();var t=n.keyboardNav.targets[n.keyboardNav.target];if("li"===t.nodeName.toLowerCase()){if(32===e.keyCode||13===e.keyCode)return n.switchTab(t),n.keyboardNav.fetchTargets(),n.keyboardNav.sync(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode)return n.keyboardNav.moveCursor(1),void e.preventDefault();if(37===e.keyCode||72===e.keyCode)return n.keyboardNav.moveCursor(-1),void e.preventDefault()}if(t=t.parentNode,65===e.keyCode)return n.showAccessPath(t),void e.preventDefault();if("footer"===t.nodeName.toLowerCase()&&n.hasClass(t.parentNode,"kint-rich"))32===e.keyCode||13===e.keyCode?(n.hasClass(t)?n.removeClass(t):n.addClass(t),e.preventDefault()):37===e.keyCode||72===e.keyCode?(n.removeClass(t),e.preventDefault()):39!==e.keyCode&&76!==e.keyCode||(n.addClass(t),e.preventDefault());else{if(32===e.keyCode||13===e.keyCode)return n.toggle(t),n.keyboardNav.fetchTargets(),void e.preventDefault();if(39===e.keyCode||76===e.keyCode||37===e.keyCode||72===e.keyCode){var a=37===e.keyCode||72===e.keyCode;if(n.hasClass(t))n.toggleChildren(t,a),n.toggle(t,a);else{if(a){var r=n.getParentHeader(t.parentNode.parentNode,!0);r&&(t=r,n.keyboardNav.setCursor(t.querySelector("nav")),n.keyboardNav.sync())}n.toggle(t,a)}return n.keyboardNav.fetchTargets(),void e.preventDefault()}}}}},!0),n}()),window.kintShared.runOnce(window.kintRich.initLoad);
+void 0===window.kintMicrotimeInitialized&&(window.kintMicrotimeInitialized=1,window.addEventListener("load",function(){"use strict";var c={},i=Array.prototype.slice.call(document.querySelectorAll("[data-kint-microtime-group]"),0);i.forEach(function(i){if(i.querySelector(".kint-microtime-lap")){var t=i.getAttribute("data-kint-microtime-group"),e=parseFloat(i.querySelector(".kint-microtime-lap").innerHTML),r=parseFloat(i.querySelector(".kint-microtime-avg").innerHTML);void 0===c[t]&&(c[t]={}),(void 0===c[t].min||c[t].min>e)&&(c[t].min=e),(void 0===c[t].max||c[t].max<e)&&(c[t].max=e),c[t].avg=r}}),i.forEach(function(i){var t=i.querySelector(".kint-microtime-lap");if(null!==t){var e=parseFloat(t.textContent),r=i.dataset.kintMicrotimeGroup,o=c[r].avg,n=c[r].max,a=c[r].min;e===(i.querySelector(".kint-microtime-avg").textContent=o)&&e===a&&e===n||(t.style.background=o<e?"hsl("+(40-40*((e-o)/(n-o)))+", 100%, 65%)":"hsl("+(40+80*(o===a?0:(o-e)/(o-a)))+", 100%, 65%)")}})}));
+</script><style class="kint-rich-style">.kint-rich{font-size:13px;overflow-x:auto;white-space:nowrap;background:rgba(255,255,255,0.9)}.kint-rich.kint-folder{position:fixed;bottom:0;left:0;right:0;z-index:999999;width:100%;margin:0;display:none}.kint-rich.kint-folder.kint-show{display:block}.kint-rich.kint-folder dd.kint-folder{max-height:calc(100vh - 100px);padding-right:8px;overflow-y:scroll}.kint-rich::selection,.kint-rich::-moz-selection,.kint-rich::-webkit-selection{background:#aaa;color:#1d1e1e}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich,.kint-rich::before,.kint-rich::after,.kint-rich *,.kint-rich *::before,.kint-rich *::after{box-sizing:border-box;border-radius:0;color:#1d1e1e;float:none !important;font-family:Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;line-height:15px;margin:0;padding:0;text-align:left}.kint-rich{margin:8px 0}.kint-rich dt,.kint-rich dl{width:auto}.kint-rich dt,.kint-rich div.access-path{background:#f8f8f8;border:1px solid #d7d7d7;color:#1d1e1e;display:block;font-weight:bold;list-style:none outside none;overflow:auto;padding:4px}.kint-rich dt:hover,.kint-rich div.access-path:hover{border-color:#aaa}.kint-rich>dl dl{padding:0 0 0 12px}.kint-rich dt.kint-parent>nav,.kint-rich>footer>nav{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMCAxNTAiPjxwYXRoIGQ9Ik02IDdoMThsLTkgMTV6bTAgMzBoMThsLTkgMTV6bTAgNDVoMThsLTktMTV6bTAgMzBoMThsLTktMTV6bTAgMTJsMTggMThtLTE4IDBsMTgtMTgiIGZpbGw9IiM1NTUiLz48cGF0aCBkPSJNNiAxMjZsMTggMThtLTE4IDBsMTgtMTgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjNTU1Ii8+PC9zdmc+") no-repeat scroll 0 0/15px 75px transparent;cursor:pointer;display:inline-block;height:15px;width:15px;margin-right:3px;vertical-align:middle}.kint-rich dt.kint-parent:hover>nav,.kint-rich>footer>nav:hover{background-position:0 25%}.kint-rich dt.kint-parent.kint-show>nav,.kint-rich>footer.kint-show>nav{background-position:0 50%}.kint-rich dt.kint-parent.kint-show:hover>nav,.kint-rich>footer.kint-show>nav:hover{background-position:0 75%}.kint-rich dt.kint-parent.kint-locked>nav{background-position:0 100%}.kint-rich dt.kint-parent+dd{display:none;border-left:1px dashed #d7d7d7}.kint-rich dt.kint-parent.kint-show+dd{display:block}.kint-rich var,.kint-rich var a{color:#06f;font-style:normal}.kint-rich dt:hover var,.kint-rich dt:hover var a{color:red}.kint-rich dfn{font-style:normal;font-family:monospace;color:#1d1e1e}.kint-rich pre{color:#1d1e1e;margin:0 0 0 12px;padding:5px;overflow-y:hidden;border-top:0;border:1px solid #d7d7d7;background:#f8f8f8;display:block;word-break:normal}.kint-rich .kint-popup-trigger,.kint-rich .kint-access-path-trigger,.kint-rich .kint-search-trigger{background:rgba(29,30,30,0.8);border-radius:3px;height:16px;font-size:16px;margin-left:5px;font-weight:bold;width:16px;text-align:center;float:right !important;cursor:pointer;color:#f8f8f8;position:relative;overflow:hidden;line-height:17.6px}.kint-rich .kint-popup-trigger:hover,.kint-rich .kint-access-path-trigger:hover,.kint-rich .kint-search-trigger:hover{color:#1d1e1e;background:#f8f8f8}.kint-rich dt.kint-parent>.kint-popup-trigger{line-height:19.2px}.kint-rich .kint-search-trigger{font-size:20px}.kint-rich input.kint-search{display:none;border:1px solid #d7d7d7;border-top-width:0;border-bottom-width:0;padding:4px;float:right !important;margin:-4px 0;color:#1d1e1e;background:#f8f8f8;height:24px;width:160px;position:relative;z-index:100}.kint-rich input.kint-search.kint-show{display:block}.kint-rich .kint-search-root ul.kint-tabs>li:not(.kint-search-match){background:#f8f8f8;opacity:0.5}.kint-rich .kint-search-root dl:not(.kint-search-match){opacity:0.5}.kint-rich .kint-search-root dl:not(.kint-search-match)>dt{background:#f8f8f8}.kint-rich .kint-search-root dl:not(.kint-search-match) dl,.kint-rich .kint-search-root dl:not(.kint-search-match) ul.kint-tabs>li:not(.kint-search-match){opacity:1}.kint-rich div.access-path{background:#f8f8f8;display:none;margin-top:5px;padding:4px;white-space:pre}.kint-rich div.access-path.kint-show{display:block}.kint-rich footer{padding:0 3px 3px;font-size:9px;background:transparent}.kint-rich footer>.kint-popup-trigger{background:transparent;color:#1d1e1e}.kint-rich footer nav{height:10px;width:10px;background-size:10px 50px}.kint-rich footer>ol{display:none;margin-left:32px}.kint-rich footer.kint-show>ol{display:block}.kint-rich a{color:#1d1e1e;text-shadow:none;text-decoration:underline}.kint-rich a:hover{color:#1d1e1e;border-bottom:1px dotted #1d1e1e}.kint-rich ul{list-style:none;padding-left:12px}.kint-rich ul:not(.kint-tabs) li{border-left:1px dashed #d7d7d7}.kint-rich ul:not(.kint-tabs) li>dl{border-left:none}.kint-rich ul.kint-tabs{margin:0 0 0 12px;padding-left:0;background:#f8f8f8;border:1px solid #d7d7d7;border-top:0}.kint-rich ul.kint-tabs>li{background:#f8f8f8;border:1px solid #d7d7d7;cursor:pointer;display:inline-block;height:24px;margin:2px;padding:0 12px;vertical-align:top}.kint-rich ul.kint-tabs>li:hover,.kint-rich ul.kint-tabs>li.kint-active-tab:hover{border-color:#aaa;color:red}.kint-rich ul.kint-tabs>li.kint-active-tab{background:#f8f8f8;border-top:0;margin-top:-1px;height:27px;line-height:24px}.kint-rich ul.kint-tabs>li:not(.kint-active-tab){line-height:20px}.kint-rich ul.kint-tabs li+li{margin-left:0}.kint-rich ul:not(.kint-tabs)>li:not(:first-child){display:none}.kint-rich dt:hover+dd>ul>li.kint-active-tab{border-color:#aaa;color:red}.kint-rich dt>.kint-color-preview{width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:10px;border:1px solid #d7d7d7;background-color:#ccc;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path fill="%23FFF" d="M0 0h1v2h1V1H0z"/></svg>');background-size:100%}.kint-rich dt>.kint-color-preview:hover{border-color:#aaa}.kint-rich dt>.kint-color-preview>div{width:100%;height:100%}.kint-rich table{border-collapse:collapse;empty-cells:show;border-spacing:0}.kint-rich table *{font-size:12px}.kint-rich table dt{background:none;padding:2px}.kint-rich table dt .kint-parent{min-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kint-rich table td,.kint-rich table th{border:1px solid #d7d7d7;padding:2px;vertical-align:center}.kint-rich table th{cursor:alias}.kint-rich table td:first-child,.kint-rich table th{font-weight:bold;background:#f8f8f8;color:#1d1e1e}.kint-rich table td{background:#f8f8f8;white-space:pre}.kint-rich table td>dl{padding:0}.kint-rich table pre{border-top:0;border-right:0}.kint-rich table thead th:first-child{background:none;border:0}.kint-rich table tr:hover>td{box-shadow:0 0 1px 0 #aaa inset}.kint-rich table tr:hover var{color:red}.kint-rich table ul.kint-tabs li.kint-active-tab{height:20px;line-height:17px}.kint-rich pre.kint-source{margin-left:-1px}.kint-rich pre.kint-source[data-kint-filename]:before{display:block;content:attr(data-kint-filename);margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #f8f8f8}.kint-rich pre.kint-source>div:before{display:inline-block;content:counter(kint-l);counter-increment:kint-l;border-right:1px solid #aaa;padding-right:8px;margin-right:8px}.kint-rich pre.kint-source>div.kint-highlight{background:#f8f8f8}.kint-rich .kint-microtime-lap{text-shadow:-1px 0 #aaa,0 1px #aaa,1px 0 #aaa,0 -1px #aaa;color:#f8f8f8;font-weight:bold}.kint-rich .kint-focused{box-shadow:0 0 3px 2px red}.kint-rich dt{font-weight:normal}.kint-rich dt.kint-parent{margin-top:4px}.kint-rich dl dl{margin-top:4px;padding-left:25px;border-left:none}.kint-rich>dl>dt{background:#f8f8f8}.kint-rich ul{margin:0;padding-left:0}.kint-rich ul:not(.kint-tabs)>li{border-left:0}.kint-rich ul.kint-tabs{background:#f8f8f8;border:1px solid #d7d7d7;border-width:0 1px 1px 1px;padding:4px 0 0 12px;margin-left:-1px;margin-top:-1px}.kint-rich ul.kint-tabs li,.kint-rich ul.kint-tabs li+li{margin:0 0 0 4px}.kint-rich ul.kint-tabs li{border-bottom-width:0;height:25px}.kint-rich ul.kint-tabs li:first-child{margin-left:0}.kint-rich ul.kint-tabs li.kint-active-tab{border-top:1px solid #d7d7d7;background:#fff;font-weight:bold;padding-top:0;border-bottom:1px solid #fff !important;margin-bottom:-1px}.kint-rich ul.kint-tabs li.kint-active-tab:hover{border-bottom:1px solid #fff}.kint-rich ul>li>pre{border:1px solid #d7d7d7}.kint-rich dt:hover+dd>ul{border-color:#aaa}.kint-rich pre{background:#fff;margin-top:4px;margin-left:25px}.kint-rich .kint-source{margin-left:-1px}.kint-rich .kint-source .kint-highlight{background:#cfc}.kint-rich .kint-parent.kint-show>.kint-search{border-bottom-width:1px}.kint-rich table td{background:#fff}.kint-rich table td>dl{padding:0;margin:0}.kint-rich table td>dl>dt.kint-parent{margin:0}.kint-rich table td:first-child,.kint-rich table td,.kint-rich table th{padding:2px 4px}.kint-rich table dd,.kint-rich table dt{background:#fff}.kint-rich table tr:hover>td{box-shadow:none;background:#cfc}
+</style>
+
+	<meta charset="utf-8">
+	<title>Athena - Homepage</title>
+
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="80x96" href="assets/images/favicon.ico">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<!-- Include Jquery and Bootstrap -->
+		
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Swiper Slider -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/toastr.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e324576f90f192340b679ea3/8706279ae665a2ad7c60d183a.js");</script>    
+</head>
+
+<body data-spy="scroll" data-target="#list-example" data-offset="280">
+	
+	<header>
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-between">
+				<div class="logo">
+					<a href="index.html">
+					    <img src="admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png" class="img-fluid">
+						<img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid sticky-logo">
+					</a>
+				</div>
+				<div class="navigation">
+				    <div class="nav-open">
+				        <div class="hamburg-icon">
+	    			        <div class="line line-1"></div>
+	    			        <div class="line line-2"></div>
+	    			        <div class="line line-3"></div>
+	    			    </div>
+				    </div>
+					<nav>
+												<li >
+							<a href="about-us.html">About Us						
+							</a>
+						</li>
+												<li >
+							<a href="differentiator.html">Differentiator						
+							</a>
+						</li>
+												<li >
+							<a href="search-services.html">Search Services						
+							</a>
+						</li>
+												<li >
+							<a href="consulting-services.html">Consulting Services						
+							</a>
+						</li>
+												<li >
+							<a href="ScenarioExpertise.html">Scenario Expertise						
+							</a>
+						</li>
+												<li >
+							<a href="Insights.html">Insights						
+							</a>
+						</li>
+												<li >
+							<a href="career.html">Careers						
+							</a>
+						</li>
+												<!-- <li class="dropdown">
+							<a href="#">Search Services <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">Consulting Services <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+								
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">Scenario Experise <i class="fa fa-chevron-down"></i></a>
+							<div class="dropdown-menu">
+								
+							</div>
+						</li> -->
+						<!-- <li class="header-contact-btn">
+							<a href="#">Contact</a>
+						</li> -->
+					</nav>
+				</div>
+			</div>	
+		</div>	
+	</header>
+	
+	<script>
+	    $('.nav-open').click(function(){
+	        if($(this).hasClass('open')){
+	            $(this).removeClass('open')
+	            $('.navigation nav').slideUp()
+	        }
+	        else{
+	            $(this).addClass('open')
+	            $('.navigation nav').slideDown()
+	        }
+	    })
+	</script>	
+	<style>
+		.thh-announcement-bar {
+			background: #ffffff;
+			border-bottom: 2px solid transparent;
+			border-image: linear-gradient(90deg, #95C7FF 0%, #B7F7F3 50%, #D1B5FF 100%) 1;
+			padding: 10px 0;
+			text-align: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 10000;
+			box-shadow: 0 1px 8px rgba(43,123,211,0.08);
+		}
+		.thh-announcement-bar a.thh-logo-link {
+			display: inline-flex;
+			align-items: center;
+			text-decoration: none;
+		}
+		.thh-announcement-bar a.thh-logo-link img {
+			height: 22px;
+			object-fit: contain;
+		}
+		.thh-announcement-bar a.thh-logo-link:hover img {
+			opacity: 0.85;
+		}
+		.thh-announcement-bar a.thh-learn-more {
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+			color: #fff;
+			background: #2B7BD3;
+			font-size: 12px;
+			font-weight: 600;
+			font-family: 'Poppins', sans-serif;
+			text-decoration: none;
+			padding: 4px 14px;
+			border-radius: 4px;
+			transition: background 0.2s, gap 0.2s;
+		}
+		.thh-announcement-bar a.thh-learn-more:hover {
+			background: #0A396D;
+			gap: 8px;
+			color: #fff;
+		}
+		/* Push header down to account for fixed bar */
+		header {
+			margin-top: 44px;
+		}
+		/* Homepage: solid white header band by default (matches scrolled/sticky look).
+		   Show the full-text Athena logo (the asset stored as ".sticky-logo") from first load,
+		   tall enough that the white band wraps around the whole logo. */
+		body header {
+			background-color: #ffffff;
+			box-shadow: 0 0 10px #00000012;
+			padding: 6px 0;
+		}
+		body header .navigation li a {
+			color: #000000;
+		}
+		body header .navigation {
+			border-bottom-color: #000000;
+		}
+		body header .navigation li a:hover {
+			color: #fcb040;
+		}
+		/* The "regular" logo file is just the orange-A icon; hide it.
+		   The "sticky-logo" file is the full logo with text — make it the visible, in-flow logo. */
+		body header .logo img:not(.sticky-logo) { display: none; }
+		body header .logo .sticky-logo {
+			position: static;
+			opacity: 1;
+			display: block;
+			width: auto;
+			height: 95px;
+			max-width: none;
+		}
+		@media (max-width: 768px) {
+			.thh-announcement-bar .thh-inner {
+				flex-direction: column !important;
+				gap: 6px !important;
+			}
+			.thh-announcement-bar .thh-separator {
+				display: none !important;
+			}
+			.thh-announcement-bar .thh-tagline {
+				display: none !important;
+			}
+			header {
+				margin-top: 60px;
+			}
+		}
+	</style>
+	<!-- TheHireHub.ai Partnership Banner -->
+	<section class="thh-announcement-bar">
+		<div class="container">
+			<div class="thh-inner" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px;">
+				<span style="
+					color: #373737;
+					font-size: 14px;
+					font-weight: 500;
+					font-family: 'Poppins', sans-serif;
+				">Athena is now powered by</span>
+				<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="thh-logo-link">
+					<img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai">
+				</a>
+				<span class="thh-separator" style="color: #d0d0d0; margin: 0 2px; font-size: 14px;">|</span>
+				<span class="thh-tagline" style="
+					color: #0A396D;
+					font-size: 13px;
+					font-family: 'Poppins', sans-serif;
+					font-weight: 400;
+				">AI-driven executive search. Same trusted expertise, now amplified.</span>
+				<a href="thehirehub-partnership.html" class="thh-learn-more">Know More
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		/* Banner override — image-driven slides; preserves swiper behaviour */
+		.home-banner-section {
+			height: auto; min-height: 0; display: block; color: inherit;
+			padding-top: 142px; /* clear fixed announcement bar (44px) + header (98px) */
+		}
+		.home-banner-section .home-banner { width: 100%; position: relative; }
+		.home-banner-section .swiper-slide { background: #f5f5f5; }
+		.home-banner-section .banner-image-wrap {
+			position: relative;
+			width: 100%;
+			height: calc(100vh - 142px);
+			line-height: 0;
+		}
+		.home-banner-section .banner-image-wrap img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		@media (max-width: 768px) {
+			.home-banner-section { padding-top: 158px; }
+			.home-banner-section .banner-image-wrap { height: calc(100vh - 158px); }
+		}
+		.home-banner-section .banner-hotspot {
+			position: absolute;
+			display: block;
+			z-index: 5;
+			cursor: pointer;
+			border-radius: 4px;
+			background: transparent;
+			transition: background 0.2s;
+		}
+		.home-banner-section .banner-hotspot:hover { background: rgba(255,255,255,0.08); }
+		.home-banner-section .swiper-pagination {
+			position: absolute;
+			left: 0; right: 0; bottom: 24px;
+			text-align: center;
+			z-index: 10;
+		}
+	</style>
+	<section class="home-banner-section">
+		<div class="swiper home-banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="banner-image-wrap">
+						<img src="assets/images/banner-slide-2.png" alt="Innovation in Executive Search">
+						<a class="banner-hotspot" href="thehirehub-partnership.html" aria-label="Know More"
+						   style="left:12%;top:76%;width:19%;height:13%;"></a>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="banner-image-wrap">
+						<img src="assets/images/banner-slide-1.png" alt="Leadership that moves businesses forward">
+						<a class="banner-hotspot" href="search-services.html" aria-label="Explore Our Services"
+						   style="left:7%;top:75%;width:18%;height:13%;"></a>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="banner-image-wrap">
+						<img src="assets/images/banner-slide-3.png" alt="Dedicated to Ethical and Professional Excellence">
+					</div>
+				</div>
+				<input type="hidden" name="xyz" id="duration" value="4000" />
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</section>
+
+	<section class="athena-section about-section">
+		<div class="container">
+			<div class="section-head">
+			    <div class="fade-up-effect">
+    				<h2>Athena is a Leading Consulting Firm</h2>
+				</div>
+				<div class="fade-up-effect">
+    				<p><p><span style="color: rgb(33, 37, 41); font-family: Poppins, sans-serif; font-size: 16px; text-align: center;">Athena is a leading consulting firm specializing in Executive Search and Talent Management . We add value to companies that are investing in leadership capital to achieve corporate excellence . Our endeavour to address challenges across a wide spectrum of talent management issues has helped us launch various new practices and solutions enabling us to offer very distinctive and unique service offerings to our clients.</span><br></p>                                                                                         </p>
+				</div>
+				<div class="fade-up-effect">
+    				<a href="about-us.html" class="theme-btn">Learn More    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="athena-section services-section">
+		<div class="container">
+			<div class="section-head">
+			    <div class="fade-up-effect">
+    				<h2>Services Offered</h2>
+    			</div>
+			</div>
+		</div>
+		<div class="services-offered-row">
+			<div class="container">
+				<div class="row">
+									<div class="col-md-4">
+						<div class="service-grid">
+						    <a href="ScenarioExpertise.html" class="cover-link"></a>
+							<div class="icon">
+								<!-- <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+								  <path id="Path_2438" data-name="Path 2438" d="M-2585.089,42.6l-8.139,16.209h-4.1l12.244-25.183,12.174,25.183h-4.174Z" transform="translate(2617.924 -59.324) rotate(-1)" fill="#0026f6"/>
+								  <g id="Ellipse_46" data-name="Ellipse 46" fill="none" stroke="#082ae4" stroke-width="2">
+								    <circle cx="34" cy="34" r="34" stroke="none"/>
+								    <circle cx="34" cy="34" r="33" fill="none"/>
+								  </g>
+								</svg> -->
+								<img src="admin/upload/slider/1635238470_d1188d2fc685c5db51b9.svg" >
+							</div>
+							<div class="text">
+						
+								<h4>Scenario Expertise</h4>
+
+								<div class="service-listing">
+																
+									<li>Transformation and Transition</li>
+																	
+									<li>International Expansion</li>
+																	
+									<li>India Entry</li>
+																	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="service-grid">
+						    <a href="consulting-services.html" class="cover-link"></a>
+							<div class="icon">
+								<!-- <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+								  <path id="Path_2438" data-name="Path 2438" d="M-2585.089,42.6l-8.139,16.209h-4.1l12.244-25.183,12.174,25.183h-4.174Z" transform="translate(2617.924 -59.324) rotate(-1)" fill="#0026f6"/>
+								  <g id="Ellipse_46" data-name="Ellipse 46" fill="none" stroke="#082ae4" stroke-width="2">
+								    <circle cx="34" cy="34" r="34" stroke="none"/>
+								    <circle cx="34" cy="34" r="33" fill="none"/>
+								  </g>
+								</svg> -->
+								<img src="admin/upload/slider/1635238462_2213e5f634c57f7bca05.svg" >
+							</div>
+							<div class="text">
+						
+								<h4>Consulting Services</h4>
+
+								<div class="service-listing">
+																
+									<li>Compensation Benchmarking</li>
+																	
+									<li>Persona Due Diligence</li>
+																	
+									<li>Market Intelligence</li>
+																	
+									<li>Talent Mapping</li>
+																	</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="service-grid">
+						    <a href="search-services.html" class="cover-link"></a>
+							<div class="icon">
+								<!-- <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+								  <path id="Path_2438" data-name="Path 2438" d="M-2585.089,42.6l-8.139,16.209h-4.1l12.244-25.183,12.174,25.183h-4.174Z" transform="translate(2617.924 -59.324) rotate(-1)" fill="#0026f6"/>
+								  <g id="Ellipse_46" data-name="Ellipse 46" fill="none" stroke="#082ae4" stroke-width="2">
+								    <circle cx="34" cy="34" r="34" stroke="none"/>
+								    <circle cx="34" cy="34" r="33" fill="none"/>
+								  </g>
+								</svg> -->
+								<img src="admin/upload/slider/1634559205_7c82dd8b274694de8167.svg" >
+							</div>
+							<div class="text">
+						
+								<h4>Search Services</h4>
+
+								<div class="service-listing">
+																
+									<li>Diversity Search</li>
+																	
+									<li>Board Member Search</li>
+																	
+									<li>Executive Search</li>
+																	</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-md-4">
+						<div class="service-grid">
+							<div class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="79" height="68" viewBox="0 0 79 68">
+								  <g id="Group_242" data-name="Group 242" transform="translate(-962 -1461)">
+								    <g id="Polygon_6" data-name="Polygon 6" transform="translate(962 1461)" fill="#fff">
+								      <path d="M 77.26264953613281 67 L 1.737353086471558 67 L 39.5 1.990886330604553 L 77.26264953613281 67 Z" stroke="none"/>
+								      <path d="M 39.5 3.981773376464844 L 3.474708557128906 66 L 75.52529144287109 66 L 39.5 3.981773376464844 M 39.5 0 L 79 68 L 0 68 L 39.5 0 Z" stroke="none" fill="#0025ef"/>
+								    </g>
+								    <path id="Path_2440" data-name="Path 2440" d="M-2585.089,42.6l-8.139,16.209h-4.1l12.244-25.183,12.174,25.183h-4.174Z" transform="translate(3585.423 1406.478) rotate(-1)" fill="#0026f6"/>
+								  </g>
+								</svg>
+
+							</div>
+							<div class="text">
+								<h4>Consulting Services</h4>
+								<div class="service-listing">
+									<li>Talent Mapping</li>
+									<li>Persona Due Deligence</li>
+									<li>Compensation and Benchmarking</li>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="service-grid">
+							<div class="icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+								  <g id="Group_243" data-name="Group 243" transform="translate(-561 -1461)">
+								    <g id="Rectangle_60" data-name="Rectangle 60" transform="translate(561 1461)" fill="none" stroke="#0024e7" stroke-width="2">
+								      <path d="M20,0H68a0,0,0,0,1,0,0V48A20,20,0,0,1,48,68H0a0,0,0,0,1,0,0V20A20,20,0,0,1,20,0Z" stroke="none"/>
+								      <path d="M20,1H66a1,1,0,0,1,1,1V48A19,19,0,0,1,48,67H2a1,1,0,0,1-1-1V20A19,19,0,0,1,20,1Z" fill="none"/>
+								    </g>
+								    <path id="Path_2439" data-name="Path 2439" d="M-2585.089,42.6l-8.139,16.209h-4.1l12.244-25.183,12.174,25.183h-4.174Z" transform="translate(3178.924 1401.676) rotate(-1)" fill="#0026f6"/>
+								  </g>
+								</svg>
+
+							</div>
+							<div class="text">
+								<h4>Scenario Expertise</h4>
+								<div class="service-listing">
+									<li>India Entry</li>
+									<li>International Expansion</li>
+									<li>Transformation and Transition</li>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="athena-section why-us-section">
+		<div class="container">
+		    <div class="row">
+    		    <div class="col-md-5">
+        		    <div class="why-us-left">
+					
+        		        <div id="list-example" class="why-us-nav list-group">
+						        		            <li class="active"><a class="list-group-item list-group-item-action" href="index.html#list-item-1" scrollto="list-item-1"><div class="fade-up-effect"><span>Achievements</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="index.html#list-item-2" scrollto="list-item-2"><div class="fade-up-effect"><span>Strength</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="index.html#list-item-3" scrollto="list-item-3"><div class="fade-up-effect"><span>Our Vision</span></div></a></li>
+        		                    		            <li class=""><a class="list-group-item list-group-item-action" href="index.html#list-item-4" scrollto="list-item-4"><div class="fade-up-effect"><span>Why Us?</span></div></a></li>
+        		            						</div>
+        		        <div class="why-us-btn fade-up-effect">
+        		            <!--<a href="#" class="theme-btn">Learn more 
+            					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+            					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+            					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+            					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					    </g>
+            					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+            					  </g>
+            					</svg>
+            				</a>-->
+        		        </div>
+        		    </div>
+    		    </div>
+    		    <div class="col-md-7">
+    		        <div class="why-us-right scrollspy-example">
+    		            <!--<li class="active fade-up-effect">-->
+    		                <!--<label><span>Athena was started with the mission to break past the linear approach and lacklustre solutioning.</span></label>-->
+    		            <!--</li>-->
+						    		            <li id="list-item-1" class="fade-up-effect">
+    		                <label>Achievements</label>
+    		                <p><p class="MsoNormal"><span lang="EN-IN">Athena’s belief system and heritage of
+seamless collaboration, innovation and diversification have enabled it to
+emerge as a single source for a wide range of talent management consulting
+services.</span></p><p class="MsoNormal"><span lang="EN-IN"><br></span></p><p>• Our expertise
+expands to APAC, EMEA and the American markets</p><p><br></p><p>• We are globally
+recognized by the Association of Executive Search and Leadership Consultants
+(AESC)</p><p><br></p><p>• We have executed
+450+ executive search assignments across industries and functional areas</p><p><br></p><p>• We have delivered
+250+ HR Consulting assignments on critical growth</p><ul>
+</ul><ul class="why-us-list--cust mt-4">
+</ul>            </p>
+    		            </li>
+						    		            <li id="list-item-2" class="fade-up-effect">
+    		                <label>Strength</label>
+    		                <p><p class="MsoNormal"><span lang="EN-IN">We,
+at Athena, strive to revolutionize global businesses by executing holistic
+modern solutions to deliver direct impact, driven by innovation,
+conceptualization and ideation.</span></p><p class="MsoNormal"><span lang="EN-IN"><br></span></p><p class="MsoNormal">Our unique and tailor-made approach in
+accelerating the growth of our clients emerges from our commitment towards
+entrepreneurship, novelty, ethics and professional excellence.</p><p class="MsoNormal"><br></p><p class="MsoNormal"><span lang="EN-IN">Athena endorses a global network of over 350
+consultants across 45 countries along with an array of scenario-specific
+services including India Entry, International Expansion and Transformation and
+Transition.<br></span></p> </p>
+    		            </li>
+						    		            <li id="list-item-3" class="fade-up-effect">
+    		                <label>Our Vision</label>
+    		                <p><p class="MsoNormal"><span lang="EN-IN">Athena began its journey with a mission to
+break past the conventional linear approach and lackluster solutioning, which
+was prevalent in the Indian executive search industry. Abiding by our core values
+to evolve and innovate, we have emerged as India’s premier independent boutique
+firm to be certified and recognized by AESC.<br>
+<br>
+Our vision, thus, lies in our devotedness to continue this journey with the
+same passion, vigor and discipline as we aspire to become one of the most
+prestigious and leading firms in the executive search industry worldwide.<o:p></o:p></span></p></p>
+    		            </li>
+						    		            <li id="list-item-4" class="fade-up-effect">
+    		                <label>Why Us?</label>
+    		                <p><ul class="why-us-list--cust">
+	<li>Globally
+acclaimed business methodologies and practices delivered in a tailor-made model</li><li>Cloud-based
+platform ensuring complete transparency, real-time reporting, monitoring, and
+advanced analytics throughout the search lifecycle</li><li>International
+standards of corporate excellence, ethics, candidate care and client services</li><li>Committed to
+providing the most effective growth strategies covering a unique bouquet of
+services addressing some of the most critical talent management issues in
+distinct scenarios</li><li>Unrivalled global
+coverage with the capability to reach executive talent worldwide through our network
+of 350+ consultants across 45 countries</li>
+</ul>    </p>
+    		            </li>
+						    		            <!-- <li id="list-item-2" class="fade-up-effect">
+    		                <label>Our Vision</label>
+    		                <p>Our strengths  lie  in  designing  and  creating  new  age  solutions that   have  addressed  critical  and  unique  talent  management issues driven by principles  of  entrepreneurship ,  innovation  and dedicated to ethical and professional excellence.</p>
+    		            </li>
+    		            <li id="list-item-3" class="fade-up-effect">
+    		                <label>Strength</label>
+    		                <p>Athena  is  a  leading  consulting  firm  specializing   in   Executive Search  and  Talent  Management. We  add value  to  companies  that  are  investing   in  leadership  capital  to  achieve  corporate excellence.</p>
+    		            </li>
+    		            <li id="list-item-4" class="fade-up-effect">
+    		                <label>Achievements</label>
+    		                <p>Our strengths  lie  in  designing  and  creating  new  age  solutions that   have  addressed  critical  and  unique  talent  management issues driven by principles  of  entrepreneurship ,  innovation  and dedicated to ethical and professional excellence.</p>
+    		            </li> -->
+    		        </div>
+    		    </div>
+		    </div>
+		</div>
+		<div class="faded-icon">
+		    <svg xmlns="http://www.w3.org/2000/svg" width="478.449" height="493.442" viewBox="0 0 478.449 493.442">
+              <path id="Path_2461" data-name="Path 2461" d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)" fill="#fff" opacity="0.1"/>
+            </svg>
+		</div>
+	</section>
+	
+	<section class="athena-section featured-insights-section">
+		<div class="container">
+			<div class="section-head split-head">
+    			<div class="head fade-up-effect">
+    				<h2>Featured Insights</h2>
+    			</div>
+    			<div class="nav-arrows">
+    			    <div class="prev-arrow prev-arrow-insights"><</div>
+    			    <div class="next-arrow next-arrow-insights">></div>
+    			</div>
+			</div>
+			<div class="featured-insights-slider-sec">
+    			<div class="swiper featured-insights-slider">
+        			<div class="swiper-wrapper">
+					            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1707399861_7be6e97aa4567cff3ace.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1707399861_1c346daa871add79fedf.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Oct 14th 2023 to Oct 20th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1707395074_c5806c93080a48943ee2.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1707395019_fe010232f65e4d1a40e9.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Oct 7th 2023 to Oct 13th 2023  </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1696926599_e7bd2d46ac4caad56ece.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1696926599_875156d4f7cd2cfbbf95.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Sep 30th to Oct 6th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1696926495_111a295855f3947ed5b8.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1696926495_a35038319a9b3d6ef9b3.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Sep 23th to 29th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1696926402_a33e3a95b4128d6a7c48.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1696926402_5ff1391d8b0d5c5b7563.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Sep 16th to 22nd 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1696926237_99956a194d187abc6e2d.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1696926237_989a19d69e854025ce86.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Sep 9th to 15th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1696925957_94227e6223958384e975.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Sep 2nd to 8th 2023   </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1693838408_ed3cd887c3ba409bfe2d.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693838408_daeb5957a35f4886601c.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Aug 26th to Sep 1st 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1693838270_9e7aaea8717ab850a47f.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693838270_ee29bdd36425a29f91eb.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Aug 19th to 25th 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=77.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693837974_fd908118548c7fe5e2a5.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head"> ✨ Feature 12 with Sudeep Luthra ✨ </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=76.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693837661_3ec46a249baea06bafcb.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 11 with Prashant Srivastava ✨</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=75.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693836787_875e039f997bfa3e9e7d.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 10 with Sudhir Mishra ✨     </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=74.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693836167_97a186e0fb23718a1c98.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head"> ✨ Feature 9 with Monika Srivastava ✨        </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=73.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693834393_d96a0adea7d72d1e4e6a.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head"> ✨ Feature 8 with Manish Chadha ✨    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=72.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693833433_d73ec0d74982ed6dac04.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 7 with Jaspal Singh ✨  </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=71.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693832365_b6b7cb4a557d307c9c9f.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 6 with Sanjay Mathur ✨    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=70.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693831344_6b47254ee0773d0625c9.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">  ✨ Feature 5 with Manish Kotwani ✨    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=69.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693830634_68ec79ffe94720fa8f87.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head"> ✨ Feature 4 with Arun Paul ✨            </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=68.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693830336_0e03b42530bc92b4cf9c.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head"> ✨ Feature 3 with Priyanka Shetty ✨    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=67.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693829593_2e475979894301337197.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 2 with Anil Gaur ✨     </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=66.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1693829371_ace7cc7eda708dee95ae.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">HR Leaders Spotlight</div>
+                				    <div class="insight-head">✨ Feature 1 with Rajat Bhatia ✨    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692719075_773ae865bab363bf492e.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692719075_9ff4b80e0cf66fde2d40.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Aug 12th to 18th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718978_d5e932ead1467252d483.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718978_31b0b10b92d58c6b87cb.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Aug 5th to 11th 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718864_760c8e428861928eacf4.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718864_17209e03c9cf8953ed55.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jul 29th to Aug 4th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718776_4226f8aa114de3326c64.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718776_93f8c0df6b7877d093ba.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Jul 22nd to 28th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718611_f30ec6abd6e4c089e263.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718611_e67f764271a03f3c24db.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jul 15th to 21st 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718295_dd970d7b3ec158083bee.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718200_3a330c7a08c87a2823e3.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jul 8th to 14th 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692718123_02ca37075570258aa39d.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692718123_f322f2bc1f08eeafc862.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jun 24th to Jul 7th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692717956_e991956e1c5cf977bb11.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692717956_0ee9dc52fdba14c90d11.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jun 17th to 23rd 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692717757_3576e1df3bd9582dae1a.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692717757_2d2403944c7cc652b0e4.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jun 10th to 16th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692717637_b9b03843f1b2f17cd898.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jun 3rd to 9th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692717057_25309a69c0b292276451.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> May 27th to Jun 2nd 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716900_0ca81f5e88c28a2e62c5.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716900_fe330b4724fafe0cd74f.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> May 20th to 26th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716762_ccdb6112b13a9c013492.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716762_51ad5b9283ddbc4baa3e.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> May 13th to 19th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716625_8c36059b08e88f415d97.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716625_7ff9a9e3866b6203e66b.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> May 6th to 12th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716410_97bac4c3bf5d75db4b6d.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716410_a31ae404dd27a5c92c97.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Apr 29th to May 5th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716299_11390ba900e4d2972cd5.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716299_36c7f79bf49c525fa36c.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Apr 22nd to 28th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716183_814338a083c1928fd60c.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716183_5e545adf4a0cd9f2fc33.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Apr 15th to 21st 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692716066_759d2cbc36666862cbcf.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692716066_75243f7ab879fb2de6c6.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Apr 8th to 14th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692715898_adfec1fe53060e53d287.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692715898_eb08bc8836f4ca26940d.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Apr 1st to 7th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700462_eec11fc78fa19da3243c.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700462_5b8d87e8069c2704cfbf.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Mar 25th to 31st 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700389_407ac02e67014d9690ac.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700389_38c4244dfcf19dc35b8a.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Mar 18th to 24th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700301_bba5ad5739f017944629.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700301_e38335488213ccd6b8d4.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Mar 11th to 17th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700202_95dfb0c8c6154fbd2722.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700201_a6e18802705ad16644f6.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Mar 4th to 10th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700082_d22aa1c59559cad4be16.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700082_2aa71de978a61bc0bd83.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Feb 25th to Mar 3rd 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692700000_17f41fdea48d6c9e2308.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692700000_150d5144e88e98366380.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Feb 18th to 24th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692699862_da4ccdf829a3185a9ccf.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692699862_e5c020dbea39ae399069.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Feb 11th to 17th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692699727_a3a48cc9a62c99cf796f.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692699727_f32e0a25d550b60f876b.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Feb 4th to 10th 2023 </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692699520_5778ffdc3dd35b1272d1.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692699520_227b666f54d0c78c2ef8.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jan 28th to Feb 3rd 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692699361_0fd357a7c8867d31987c.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692699361_6154cc946e2c455833fa.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jan 21st to 27th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692699112_6a45f00680d5e8f20239.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692699112_b1e1f812055b7177d0ea.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jan 14th to 20th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692698927_194733dfef92b1f09c88.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692698927_72afd30e9883148a1276.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jan 7th to 13th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692698833_0d1c4ce0f473bb5e27e8.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692698833_5e5eecb5295aa3033ba3.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Jan 1st to 6th 2023</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/upload/slider/1692698150_c3cd9ab5fa217279eded.pdf" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692698150_b9bf5150711782b5f2fd.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head"> Dec 16th to 31st 2022</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1685513163_4fd7fd9d7385cb2594fd.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Climate Technology Report </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1680159259_eae16ed2480744c00e8b.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Is India on track to produce future ESG leaders?    </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=29.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1652857280_089714f8681d92bc5a95.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> The HR Reset: How Midsize Businesses Can Prioritize Intelligent Technology     </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=28.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1690203378_b1e941d44bc234477bb1.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Personalized Candidate Experience- Need Of The Hour!  </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=27.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1643658741_ca9a1c14b3786af7bfbb.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> How Search Partners Are Reinforcing Organizational Culture </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=26.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1690203244_ea44574e323de8356618.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Learning To Stay Positive in Tough Times  </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=25.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1690203155_5e66271f4bdb3f7b6b71.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Life After Lockdown- what after it ends? </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=24.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1690203106_4e79be3608998dcabc5d.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> Isolation Disruption Creates Once-In-A-Lifetime Opportunity  </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=22.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1643655645_2c4f0e2a983febc1300b.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> RETURN TO BUSINESS POST COVID'19- RESTART OR RESET?</div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=20.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1690203033_7e60ed7b8410e0722b70.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> How is it like to work in an Executive Search firm? - An insight by employee        </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="insight-details%3Fid=18.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1689925840_405827c35260bee63814.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Reports/Blogs</div>
+                				    <div class="insight-head"> The Role of Leaders in Disability Management           </div>
+                				</div>
+                			</div>
+            			</div>
+						            			<div class="swiper-slide">
+            			       
+                			<div class="insight-grid">
+                			  <a target="_blank" href="admin/index.html" class="cover-link"></a>
+                    			<div class="insight-bg" style="background-image: url('admin/upload/slider/1692697973_f463f09f64f24ec4a78b.png')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">M&A Updates</div>
+                				    <div class="insight-head">Dec 1st to 15th 2022     </div>
+                				</div>
+                			</div>
+            			</div>
+						
+            			<!-- <div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('images/insights-2.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Report</div>
+                				    <div class="insight-head">From farm to sky: Feedstocks fuel India’s path to cleaner skies</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('images/insights-3.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Blog</div>
+                				    <div class="insight-head">AI-powered decision making for the bank of the future</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/insights-4.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">News & Events</div>
+                				    <div class="insight-head">How a steel plant in India tapped the value of data—and won global acclaim</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/insights-1.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Article</div>
+                				    <div class="insight-head">Unlocking value through divestitures: Can Indian firms seize the moment?</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/insights-2.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Report</div>
+                				    <div class="insight-head">From farm to sky: Feedstocks fuel India’s path to cleaner skies</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/insights-3.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">Blog</div>
+                				    <div class="insight-head">AI-powered decision making for the bank of the future</div>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                    			<div class="insight-bg" style="background-image: url('assets/images/insights-4.jpg')"></div>
+                				<div class="insight-content">
+                				    <div class="type-text">News & Events</div>
+                				    <div class="insight-head">How a steel plant in India tapped the value of data—and won global acclaim</div>
+                				</div>
+                			</div>
+            			</div> -->
+
+        			</div>
+    			</div>
+    			<div class="text-center">
+        			<a href="Insights.html" class="theme-btn mt-5">View All 
+    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+    			</div>
+			</div>
+			<div class="background-items">
+			    <div class="left">
+			        <img src="assets/images/featured-insights-left.svg">
+			    </div>
+			    <div class="right">
+			        <img src="assets/images/featured-insights-right.svg">
+			    </div>
+			</div>
+		</div>
+	</section>
+		<section class="athena-section join-us-section">
+		<div class="container-fluid">
+		    <div class="row">
+    		    <div class="col-lg-6 col-sm-12" style="background-color: #f9f9f9;">
+        		    <div class="join-us-left">
+        		        <div class="section-head">
+        		            <div class="fade-up-effect">
+            		            <h2>Come Join Us</h2>
+        		            </div>
+        		            <div class="fade-up-effect">
+            		            <p>Come to Athena to do the best work, with the best teams and truly be at your best.</p>
+        		            </div>
+        		            	        		            <div class="btn fade-up-effect">
+            		            <a href="career.html" class="theme-btn">Career 
+                					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					    </g>
+                					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					  </g>
+                					</svg>
+                				</a>
+            				</div>
+            				            				<div class="btn fade-up-effect">
+                			  <a href="LifeatAthena.html" class="theme-btn">Life at Athena 
+                					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					    </g>
+                					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                					  </g>
+                					</svg>
+                				</a>
+            		        </div>
+            		                		        </div>
+        		    </div>
+    		    </div>
+    		        		    <div class="col-lg-6 col-sm-12 px-0">
+    		        <div class="join-us-right roll-over-effect">
+        		        <div class="swiper join-us-slider">
+            		        <div class="swiper-wrapper">
+            		                            		        <div class="swiper-slide">
+                		            <div class="join-us-bg" style="background-image: url(admin/uploads/home/banner/1637666497home-join%20us.jpg)"></div>
+                		        </div>
+                		        
+            		        </div>
+        		        </div>
+        		            		        </div>
+    		    </div>
+    		    		    </div>
+		</div>
+	</section>
+		<section class="athena-section news-events-section">
+		<div class="container">
+			<div class="section-head split-head">
+    			<div class="head fade-up-effect">
+    				<h2>News and Events</h2>
+    			</div>
+    			<div class="nav-arrows">
+    			    <div class="prev-arrow prev-arrow-news"><</div>
+    			    <div class="next-arrow next-arrow-news">></div>
+    			</div>
+			</div>
+			<div class="featured-insights-slider-sec">
+    			<div class="swiper news-event-slider">
+        			<div class="swiper-wrapper">
+					            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636957211_bcc15253092672f64cc4.docx" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">HIRING TRENDS IN THE PREVAILING TIMES</div>
+                				    <div class="insight-text">  
+The COVID-19 pandemic disrupted markets, industries globally during 2020. The short-term conseque</div>
+                				    <a href="admin/upload/news/1636957211_bcc15253092672f64cc4.docx" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636957138_ad829146231bad00d9f1.docx" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">IDEA</div>
+                				    <div class="insight-text">  As a working professional who has grown through the ranks from a researcher to being a part of the </div>
+                				    <a href="admin/upload/news/1636957138_ad829146231bad00d9f1.docx" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636956951_c664fa599baf74429fa8.docx" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">LinkedIn Post</div>
+                				    <div class="insight-text">  Is the current digital &amp; technology hiring scenario sustainable in the long run?     </div>
+                				    <a href="admin/upload/news/1636956951_c664fa599baf74429fa8.docx" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636955449_577c35f0037904d40cbc.pdf" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">RETURN TO BUSINESS  POST COVID-19</div>
+                				    <div class="insight-text">  RESTART OR RESET?
+</div>
+                				    <a href="admin/upload/news/1636955449_577c35f0037904d40cbc.pdf" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636955374_c91880c8ce53179a2db7.pdf" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">Traits and Characteristics of a Successful CHRO</div>
+                				    <div class="insight-text">  Chief Human Resource Officers (CHRO) are serving in 
+critical roles and can be instrumental in hel</div>
+                				    <a href="admin/upload/news/1636955374_c91880c8ce53179a2db7.pdf" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            			<div class="swiper-slide">
+                			<div class="insight-grid">
+                			    <a target="_blank" href="admin/upload/news/1636957795_6370f7668c309ba61a55.pdf" class="cover-link"></a>
+                				<div class="insight-content">
+                				    <div class="insight-head">Athena Executive Search & Consulting Announces Empanelment as a Member Firm with the Global Association of Executive Search Consultants - AESC</div>
+                				    <div class="insight-text">  New Delhi, Delhi, India:  Athena Executive Search & Consulting, a leading boutique retained search </div>
+                				    <a href="admin/upload/news/1636957795_6370f7668c309ba61a55.pdf" class="theme-btn">Read more                    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+                    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+                    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+                    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					    </g>
+                    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+                    					  </g>
+                    					</svg>
+                    				</a>
+                				</div>
+                			</div>
+            			</div>
+            		
+        			</div>
+    			</div>
+    			<div class="text-center">
+        			<a href="news.html" class="theme-btn mt-5">View All 
+    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+    			</div>
+			</div>
+			<div class="background-items">
+			    <div class="left">
+			        <img src="assets/images/news-events-left.svg">
+			    </div>
+			    <div class="right">
+			        <img src="assets/images/news-events-right.svg">
+			    </div>
+			</div>
+		</div>
+	</section>
+
+
+	
+		
+	<section class="athena-section get-in-touch-section">
+		<div class="container-fluid">
+	        <div class="section-head">
+    	        <div class="fade-up-effect">
+    	            <h2>How Can We Help You?</h2>
+	            </div>
+	            <div class="fade-up-effect">
+    	            <p>Get in touch with us or find an office closest to you.</p>
+	            </div>
+	            	            <div class="btn fade-up-effect">
+		            <a href="contact-us.html" class="theme-btn">Get in Touch    					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+				</div>
+								 				<div class="btn fade-up-effect">
+    				<a href="contact-us.html#find-us-location" class="theme-btn">Find Our Office     					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
+    					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
+    					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					    </g>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#0028ff" stroke-linecap="round" stroke-width="3"/>
+    					  </g>
+    					</svg>
+    				</a>
+		        </div>
+		        	        </div>
+		</div>
+	</section>
+		<footer>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class="left">
+                <div class="footer-logo">
+                    <img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid">
+                </div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-info">
+                        <p class="footer-link">Subscribe</p>
+                        <p class="footer-info">Select topics and stay current with our latest insights</p>
+                    </div>
+                    <form action="https://www.aesc.co.in/index.php/insert-user" id="form-filter" class="subscribe" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+  
+                    <div class="footer-subscribe-input">
+                        <input type="email"  name="email_id" class="form-control" required name="subscribe" placeholder="Email Address">
+                        <button class="subscribe-btn">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <div class="footer-logo">
+                        <div class="global-partners-block" style="display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Global Partners</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener" aria-label="Visit Penrhyn International" style="display:block;"><img src="assets/images/penrhyn-logo.png" class="img-fluid" alt="Penrhyn International" style="margin:0;max-height:85px;"></a></div>
+                        <div class="powered-by-block" style="margin-left:30px;display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" aria-label="Visit TheHireHub.ai" style="display:block;"><img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai" style="margin:0;height:54px;max-width:240px;object-fit:contain;display:block;"></a></div>
+                    </div>
+                    <div class="footer-quick-links">
+                        <div class="footer-bold-links">
+                                                    <li><a href="about-us.html">About us</a></li>
+                            
+                                                        <li><a href="LeadershipTeam.html"> Leadership Team</a></li>
+                            
+                                                        <li><a href="LifeatAthena.html">Life@Athena</a></li>
+                            
+                                                        <li><a href="contact-us.html">Contact Us</a></li>
+                            
+                                                    </div>
+                        <div class="footer-regular-links">
+                                                    <li><a href="ScenarioExpertise.html">Scenario Expertise</a></li>
+                           
+                                                        <li><a href="consulting-services.html">Consulting Services</a></li>
+                           
+                                                        <li><a href="search-services.html">Search Services</a></li>
+                           
+                                                    </div>
+                    </div>
+                    <div class="footer-social-logo">
+                    <!--    <img src="/images/footer-social.jpg" class="img-fluid">-->
+                                    <a href="https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/" target="_blank">
+                    <i class="fab fa-linkedin" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://twitter.com/aescindia/" target="_blank">
+                    <i class="fab fa-twitter" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://www.instagram.com/athena_aesc/?utm_medium=copy_link" target="_blank">
+                    <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                    <a href="https://www.youtube.com/@athenaexecutivesearchconsu3242/featured" target="_blank">
+                    <i class="fab fa-youtube" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    
+                    
+                                   <!--     <a href="https://twitter.com/aescindia/" target="_blank"  >-->
+               <!--  <i class="fab fa-twitter-square" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
+               <!--  </a>-->
+               <!--<a href="https://instagram.com/athena_aesc?utm_medium=copy_link" target="_blank" >   -->
+               <!--   <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
+               <!--    </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>© Copyright Athena Executive Search & Consulting. All Rights Reserved.</p>
+            <!--<p>Designed By <a href="#" style="color: #010534;">CyberWorx</a></p>-->
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/toastr.min.js"></script>	
+	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+	<script>
+// 	var getHeaderHeight = $('header').height();
+	
+	gsap.registerPlugin(ScrollTrigger);
+    // gsap.to(".why-us-right", {
+    //     scrollTrigger: {
+    // 	  trigger: ".why-us-right",
+    //       toggleActions: "restart none none reverse",
+    //       id: "pin",
+    // // 	  markers:true,
+    //       pin: '.why-us-section',
+    //       pinSpacing: true,
+    //       start: `top 120`,
+    //       end:"180%",
+    //       scrub: .5,
+    //       ease: "power2",
+    //     },
+    //     yPercent: -80,
+    // });
+    
+    var whySectionScroll = $('.why-us-section').offset().top;
+    var getHeaderHeight = $('header').height();
+	    
+    
+    $('.why-us-nav li').click(function(){
+        $('.why-us-nav li a').removeClass('active')
+        $('.why-us-right li').removeClass('active')
+        $(this).find('a').addClass('active')
+        if($(this).find('a').attr('scrollto') == 'list-item-1'){
+            $('#list-item-1').addClass('active')
+            // $(window).scrollTop(`${whySectionScroll + (1/100*whySectionScroll)}`)
+            // $(window).scrollTop(`${whySectionScroll - 150}`)
+            $(window).scrollTop($('#list-item-1').offset().top - getHeaderHeight)
+            
+            // gsap.to(".why-us-right", {
+            //     yPercent: -10,
+            // });
+        }
+        if($(this).find('a').attr('scrollto') == 'list-item-2'){
+            $('#list-item-2').addClass('active')
+            // $(window).scrollTop(`${whySectionScroll + (20/100*whySectionScroll)}`)
+            $(window).scrollTop($('#list-item-2').offset().top - getHeaderHeight)
+            // gsap.to(".why-us-right", {
+            //     yPercent: -25,
+            // });
+        }
+        if($(this).find('a').attr('scrollto') == 'list-item-3'){
+            $('#list-item-3').addClass('active')
+            // $(window).scrollTop(`${whySectionScroll + (35/100*whySectionScroll)}`)
+            $(window).scrollTop($('#list-item-3').offset().top - getHeaderHeight)
+            // gsap.to(".why-us-right", {
+            //     yPercent: -40,
+            // });
+        }
+        if($(this).find('a').attr('scrollto') == 'list-item-4'){
+            $('#list-item-4').addClass('active')
+            // $(window).scrollTop(`${whySectionScroll + (55/100*whySectionScroll)}`)
+            $(window).scrollTop($('#list-item-4').offset().top - getHeaderHeight)
+            // gsap.to(".why-us-right", {
+            //     yPercent: -60,
+            // });
+        }
+    })
+    
+    
+	$(window).on('load', function(){
+	    
+	    var getWhyUsHeight = $('.why-us-left').height()
+	   // $('.why-us-section').height(`${getWhyUsHeight + 80}`)
+	   // alert(getWhyUsHeight)
+	    
+	    var getHeaderHeight = $('header').height();
+	    
+	    $('.why-us-left').css('top',`${getHeaderHeight}px`)
+	   // $('body').attr('data-offset',`${getHeaderHeight+150}`)
+	   // $('body').attr('data-spy',`scroll`)
+	   // $('body').attr('data-target',`#list-example`)
+	   //   data-offset="130"
+	     
+// 	    $('[data-spy="scroll"]').each(function(){
+// 	    	var $spy = $(this).scrollspy('refresh');
+// 		});
+    
+//         $("body").scrollspy({target: "#list-example"});
+	    
+	     var time = $("#duration").val();
+      var swiper_home = new Swiper(".home-banner", {
+      	speed: 800,
+      	loop: true,
+      	effect: 'fade',
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      var swiper = new Swiper(".join-us-slider", {
+      	speed: 800,
+      	autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+	        nextEl: '.join-us-next',
+	        prevEl: '.join-us-prev',
+	    },
+	    
+      });
+      var swiper = new Swiper(".featured-insights-slider", {
+        // slidesPerView: 4,
+        // spaceBetween: 10,
+      	speed: 800,
+      	autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+	        nextEl: '.next-arrow-insights',
+	        prevEl: '.prev-arrow-insights',
+	    },
+	    breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1025: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+            }
+        }
+      });
+      var swiper = new Swiper(".news-event-slider", {
+        // slidesPerView: 3,
+        // spaceBetween: 30,
+      	speed: 800,
+      	autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+	        nextEl: '.next-arrow-news',
+	        prevEl: '.prev-arrow-news',
+	    },
+	    breakpoints: {
+            320: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+            },
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 2,
+            },
+            1025: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            }
+        }
+      });
+      
+        $.fn.isInViewport = function() {
+            var elementTop = $(this).offset().top + $(window).height() / 4.5;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop() ;
+            var viewportBottom = viewportTop + $(window).height();
+            return elementTop < viewportBottom;
+        };
+    
+    
+        
+        $(window).scroll(function(){
+            
+            if($(window).scrollTop() > 0){
+                $('header').addClass('sticky')
+            }
+            else{
+                $('header').removeClass('sticky')
+            }
+            
+            $('.athena-section').each(function(){
+                if($(this).isInViewport()){
+                    $(this).addClass('active')
+                }
+                else{
+                    // $(this).removeClass('active')
+                }
+            })
+            
+        })
+        
+        
+        $('.athena-section').each(function(){
+            if($(this).isInViewport()){
+                $(this).addClass('active')
+            }
+            else{
+                // $(this).removeClass('active')
+            }
+        })
+        
+        if($(window).scrollTop() > 0){
+            $('header').addClass('sticky')
+        }
+        
+    })
+    
+    
+    </script>
+</body>
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH/Views/index.php -->

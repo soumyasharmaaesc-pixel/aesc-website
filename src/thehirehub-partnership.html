@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+	<meta charset="utf-8">
+	<title>Athena × TheHireHub.ai — A Partnership Powering Executive Search in India</title>
+	<meta name="description" content="Athena Executive Search has partnered with TheHireHub.ai to bring AI-powered sourcing, intelligent matching, and data-backed insights to every executive search engagement in India.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://www.aesc.co.in/thehirehub-partnership">
+	<link rel="icon" type="image/png" sizes="80x96" href="assets/images/favicon.ico">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.aesc.co.in/thehirehub-partnership">
+	<meta property="og:title" content="Athena × TheHireHub.ai — A Partnership Powering Executive Search in India">
+	<meta property="og:description" content="Athena's 17+ years of executive search expertise, paired with TheHireHub.ai's intelligent talent platform. Faster shortlists, deeper insights, better hires.">
+	<meta property="og:image" content="https://www.aesc.co.in/assets/images/thehirehub-logo.png">
+	<meta property="og:site_name" content="Athena Executive Search & Consulting">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Athena × TheHireHub.ai — A Partnership Powering Executive Search in India">
+	<meta name="twitter:description" content="Athena's 17+ years of executive search expertise, paired with TheHireHub.ai's intelligent talent platform.">
+	<meta name="twitter:image" content="https://www.aesc.co.in/assets/images/thehirehub-logo.png">
+
+	<!-- Organization schema -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "name": "Athena Executive Search & Consulting",
+	  "alternateName": ["Athena Executive Search", "AESC India"],
+	  "url": "https://www.aesc.co.in",
+	  "logo": "https://www.aesc.co.in/admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png",
+	  "description": "Retained executive search and leadership consulting firm headquartered in India, specialising in CEO, CXO, CHRO, and board-level hiring.",
+	  "areaServed": {"@type":"Country","name":"India"},
+	  "sameAs": [
+	    "https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/",
+	    "https://twitter.com/aescindia/",
+	    "https://www.instagram.com/athena_aesc/",
+	    "https://www.youtube.com/@athenaexecutivesearchconsu3242/featured"
+	  ]
+	}
+	</script>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/toastr.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<style>
+		/* Force nav bar dark background so white links are always readable */
+		header:not(.sticky) {
+			background: #0A396D;
+		}
+		header:not(.sticky) .navigation {
+			border-bottom-color: rgba(255,255,255,0.2);
+		}
+
+		/* Partnership Hero — Diagonal Split */
+		.partnership-hero {
+			position: relative;
+			overflow: hidden;
+			min-height: 600px;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+		}
+		.partnership-hero > .split-dark,
+		.partnership-hero > .split-light,
+		.partnership-hero > .split-seam {
+			grid-area: 1 / 1;
+		}
+		/* Two full-height overlay layers in the same grid cell, each clipped
+		   to one side of the BG. Both layers share identical dimensions, so
+		   clip-path % slopes match the BG exactly. */
+		.partnership-hero .hero-layer {
+			grid-area: 1 / 1;
+			display: flex;
+			align-items: center;
+			padding: 220px 0 80px;
+			width: 100%;
+			z-index: 3;
+		}
+		.partnership-hero .hero-layer-dark {
+			clip-path: polygon(0 0, 51vw 0, 46vw 100%, 0 100%);
+		}
+		.partnership-hero .hero-layer-light {
+			clip-path: polygon(51vw 0, 100% 0, 100% 100%, 46vw 100%);
+		}
+		.partnership-hero .hero-layer .container { width: 100%; }
+		/* Allow CTA links in light layer to be clickable; rest can pass through */
+		.partnership-hero .hero-layer-light { pointer-events: none; }
+		.partnership-hero .hero-layer-light a { pointer-events: auto; }
+		/* Dark layer text colors (white on dark BG) */
+		.partnership-hero .hero-layer-dark .headline-text { color: #ffffff; }
+		.partnership-hero .hero-layer-dark .headline-text em { color: #B7F7F3; }
+		.partnership-hero .hero-layer-dark .subtitle-text { color: rgba(255,255,255,0.85); }
+		.partnership-hero .hero-layer-dark .logo-side.athena .logo-label { color: rgba(255,255,255,0.85); }
+		.partnership-hero .hero-layer-dark .logo-side.thh .logo-label { color: rgba(255,255,255,0.85); }
+		/* Light layer text colors (dark blue on light BG) */
+		.partnership-hero .hero-layer-light .headline-text { color: #0A396D; }
+		.partnership-hero .hero-layer-light .headline-text em { color: #1899B5; }
+		.partnership-hero .hero-layer-light .subtitle-text { color: #555; }
+		.partnership-hero .hero-layer-light .logo-side.athena .logo-label { color: #0A396D; opacity: 0.85; }
+		.partnership-hero .hero-layer-light .logo-side.thh .logo-label { color: #0A396D; opacity: 0.85; }
+		/* Dark half (Athena) — seam at 51vw top, 46vw bottom of viewport */
+		.partnership-hero .split-dark {
+			position: absolute;
+			top: 0; left: 0; bottom: 0;
+			width: 55vw;
+			background: linear-gradient(160deg, #071e3a 0%, #0A396D 100%);
+			clip-path: polygon(0 0, 51vw 0, 46vw 100%, 0 100%);
+			z-index: 1;
+		}
+		/* Light half (TheHireHub) — seam at 51vw top, 46vw bottom of viewport */
+		.partnership-hero .split-light {
+			position: absolute;
+			top: 0; right: 0; bottom: 0;
+			width: 55vw;
+			background: linear-gradient(200deg, #ffffff 0%, #f0f7fd 100%);
+			clip-path: polygon(6vw 0, 100% 0, 100% 100%, 1vw 100%);
+			z-index: 1;
+		}
+		/* Seam hidden */
+		.partnership-hero .split-seam {
+			display: none;
+		}
+		/* Content layer above both halves */
+		.partnership-hero .hero-content {
+			position: relative;
+			z-index: 3;
+			width: 100%;
+		}
+		/* Logo row */
+		.partnership-hero .logos-row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			margin-bottom: 40px;
+		}
+		.partnership-hero .logo-side {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 14px;
+			min-width: 220px;
+		}
+		.partnership-hero .logo-side.athena img {
+			height: 88px;
+			object-fit: contain;
+		}
+		.partnership-hero .logo-side.thh img {
+			height: 60px;
+			object-fit: contain;
+		}
+		.partnership-hero .logo-side .logo-label {
+			font-family: 'Poppins', sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		.partnership-hero .logo-side.athena .logo-label {
+			color: rgba(255,255,255,0.85);
+		}
+		.partnership-hero .logo-side.thh .logo-label {
+			color: #0A396D;
+			opacity: 0.85;
+		}
+		.partnership-hero .logos-row .connector {
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			background: #2B7BD3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			color: #ffffff;
+			font-size: 22px;
+			font-weight: 700;
+			box-shadow: 0 6px 18px rgba(43,123,211,0.4), 0 0 0 6px rgba(43,123,211,0.12);
+		}
+		/* Headline */
+		.partnership-hero .headline-wrap {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.partnership-hero .headline-text {
+			font-family: 'Poppins', sans-serif;
+			font-size: 38px;
+			font-weight: 700;
+			line-height: 1.3;
+			margin: 0;
+		}
+		.partnership-hero .headline-text em {
+			font-style: normal;
+		}
+		/* Subtitle */
+		.partnership-hero .subtitle-wrap {
+			text-align: center;
+			margin-bottom: 32px;
+		}
+		.partnership-hero .subtitle-text {
+			font-family: 'Poppins', sans-serif;
+			font-size: 17px;
+			line-height: 1.6;
+			max-width: 660px;
+			margin: 0 auto;
+		}
+		/* CTA row */
+		.partnership-hero .cta-row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+		.partnership-hero .cta-row a {
+			display: inline-block;
+			padding: 12px 28px;
+			border-radius: 4px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 15px;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.2s;
+		}
+		.partnership-hero .cta-primary {
+			background: #2B7BD3;
+			color: #fff;
+			border: 2px solid #2B7BD3;
+			box-shadow: 0 4px 12px rgba(43,123,211,0.35);
+		}
+		.partnership-hero .cta-primary:hover {
+			background: #1561B0;
+			border-color: #1561B0;
+			color: #fff;
+		}
+		.partnership-hero .cta-secondary {
+			background: #0A396D;
+			color: #fff;
+			border: 2px solid #0A396D;
+		}
+		.partnership-hero .cta-secondary:hover {
+			background: #2B7BD3;
+			border-color: #2B7BD3;
+			color: #fff;
+		}
+
+		/* Section shared styles */
+		.p-section {
+			padding: 70px 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		.p-section h2 {
+			font-size: 30px;
+			font-weight: 700;
+			color: #1a1a2e;
+			margin-bottom: 16px;
+		}
+		.p-section h2 span {
+			color: #2B7BD3;
+		}
+		.p-section .section-lead {
+			font-size: 16px;
+			color: #555;
+			max-width: 720px;
+			line-height: 1.7;
+			margin-bottom: 40px;
+		}
+		.p-section.alt-bg {
+			background: #0A396D;
+		}
+		.p-section.alt-bg h2,
+		.p-section.alt-bg h2 span,
+		.p-section.alt-bg .section-lead,
+		.p-section.alt-bg p {
+			color: #ffffff;
+		}
+		.p-section.alt-bg h2 span {
+			color: #B7F7F3;
+		}
+
+		/* Story section */
+		.story-timeline {
+			position: relative;
+			padding-left: 40px;
+		}
+		.story-timeline::before {
+			content: '';
+			position: absolute;
+			left: 12px;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background: #2B7BD3;
+			opacity: 0.2;
+		}
+		.story-timeline .milestone {
+			position: relative;
+			margin-bottom: 36px;
+		}
+		.story-timeline .milestone::before {
+			content: '';
+			position: absolute;
+			left: -33px;
+			top: 6px;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #2B7BD3;
+			border: 3px solid #E8F4FD;
+		}
+		.story-timeline .milestone h4 {
+			font-size: 18px;
+			font-weight: 600;
+			color: #1a1a2e;
+			margin-bottom: 6px;
+		}
+		.story-timeline .milestone .year {
+			font-size: 13px;
+			color: #2B7BD3;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			margin-bottom: 4px;
+		}
+		.story-timeline .milestone p {
+			font-size: 15px;
+			color: #555;
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		/* How it works */
+		.how-card {
+			background: rgba(255,255,255,0.1);
+			border: 1px solid rgba(255,255,255,0.15);
+			border-radius: 8px;
+			padding: 32px 24px;
+			text-align: center;
+			height: 100%;
+			transition: background 0.2s;
+		}
+		.how-card:hover {
+			background: rgba(255,255,255,0.15);
+		}
+		.how-card .icon-wrap {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background: rgba(183,247,243,0.15);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			font-size: 24px;
+			color: #B7F7F3;
+		}
+		.how-card h4 {
+			font-size: 17px;
+			font-weight: 600;
+			color: #ffffff;
+			margin-bottom: 10px;
+		}
+		.how-card p {
+			font-size: 14px;
+			color: rgba(255,255,255,0.75);
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		/* Impact numbers */
+		.impact-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 24px;
+		}
+		.impact-card {
+			background: #fff;
+			border: 1px solid #e8e8e8;
+			border-radius: 8px;
+			padding: 28px 20px;
+			text-align: center;
+		}
+		.impact-card .number {
+			font-size: 36px;
+			font-weight: 700;
+			color: #2B7BD3;
+			line-height: 1.2;
+			margin-bottom: 8px;
+		}
+		.impact-card .label {
+			font-size: 14px;
+			color: #555;
+			line-height: 1.4;
+		}
+
+		/* Case studies */
+		.case-card {
+			background: #fff;
+			border: 1px solid #e8e8e8;
+			border-radius: 8px;
+			overflow: hidden;
+			height: 100%;
+		}
+		.case-card .case-header {
+			background: #2B7BD3;
+			color: #fff;
+			padding: 20px 24px;
+		}
+		.case-card .case-header .industry {
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			opacity: 0.8;
+			margin-bottom: 6px;
+		}
+		.case-card .case-header h4 {
+			font-size: 18px;
+			font-weight: 600;
+			margin: 0;
+			color: #fff;
+		}
+		.case-card .case-body {
+			padding: 24px;
+		}
+		.case-card .case-body h5 {
+			font-size: 14px;
+			font-weight: 600;
+			color: #1a1a2e;
+			margin-bottom: 8px;
+		}
+		.case-card .case-body p {
+			font-size: 14px;
+			color: #555;
+			line-height: 1.6;
+			margin-bottom: 16px;
+		}
+		.case-card .case-result {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 14px;
+			margin-bottom: 6px;
+		}
+		.case-card .case-result .result-icon {
+			color: #2B7BD3;
+			font-weight: 600;
+		}
+
+		/* Before/After comparison */
+		.comparison-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0;
+			border-radius: 8px;
+			overflow: hidden;
+			border: 1px solid rgba(255,255,255,0.15);
+		}
+		.comparison-table th {
+			padding: 16px 24px;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+		.comparison-table th:first-child {
+			background: rgba(255,255,255,0.08);
+			color: rgba(255,255,255,0.7);
+			text-align: left;
+		}
+		.comparison-table th:nth-child(2) {
+			background: rgba(255,255,255,0.05);
+			color: rgba(255,255,255,0.5);
+			text-align: center;
+		}
+		.comparison-table th:nth-child(3) {
+			background: #2B7BD3;
+			color: #fff;
+			text-align: center;
+		}
+		.comparison-table td {
+			padding: 14px 24px;
+			font-size: 14px;
+			color: rgba(255,255,255,0.8);
+			border-top: 1px solid rgba(255,255,255,0.08);
+		}
+		.comparison-table td:nth-child(2),
+		.comparison-table td:nth-child(3) {
+			text-align: center;
+		}
+		.comparison-table td:nth-child(3) {
+			color: #B7F7F3;
+			font-weight: 600;
+		}
+		.comparison-table tr:hover td {
+			background: rgba(255,255,255,0.05);
+		}
+
+		/* CTA section */
+		.p-cta-section {
+			background: #E8F4FD;
+			padding: 70px 0;
+			text-align: center;
+		}
+		.p-cta-section h2 {
+			font-family: 'Poppins', sans-serif;
+			font-size: 30px;
+			font-weight: 700;
+			color: #0A396D;
+			margin-bottom: 16px;
+		}
+		.p-cta-section p {
+			font-family: 'Poppins', sans-serif;
+			font-size: 16px;
+			color: #555;
+			max-width: 600px;
+			margin: 0 auto 30px;
+			line-height: 1.6;
+		}
+		.p-cta-section .cta-btn {
+			display: inline-block;
+			background: #0A396D;
+			color: #fff;
+			padding: 14px 32px;
+			border-radius: 4px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 15px;
+			font-weight: 600;
+			text-decoration: none;
+			transition: background 0.2s;
+		}
+		.p-cta-section .cta-btn:hover {
+			background: #2B7BD3;
+			color: #fff;
+		}
+
+		@media (max-width: 768px) {
+			.partnership-hero { min-height: auto; }
+			.partnership-hero .hero-layer { padding: 60px 0 40px; }
+			.partnership-hero .hero-layer-dark { clip-path: none; }
+			.partnership-hero .hero-layer-light { display: none; }
+			.partnership-hero .split-dark { width: 100%; clip-path: none; }
+			.partnership-hero .split-light { display: none; }
+			.partnership-hero .split-seam { display: none; }
+			.partnership-hero .headline-text { font-size: 26px; }
+			.partnership-hero .subtitle-text { font-size: 15px; }
+			.partnership-hero .logos-row { gap: 20px; }
+			.partnership-hero .logo-side { min-width: 120px; }
+			.partnership-hero .logo-side img { height: 36px; }
+			.partnership-hero .logos-row .connector { width: 36px; height: 36px; font-size: 14px; }
+			.impact-grid { grid-template-columns: repeat(2, 1fr); }
+			.comparison-table { font-size: 13px; }
+			.comparison-table th, .comparison-table td { padding: 10px 12px; }
+		}
+		@media (max-width: 480px) {
+			.partnership-hero .headline-text { font-size: 22px; }
+			.partnership-hero .subtitle-text { font-size: 14px; }
+		}
+	</style>
+</head>
+
+<body data-spy="scroll" data-target="#list-example" data-offset="280">
+
+	<header>
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-between">
+				<div class="logo">
+					<a href="index.html">
+					    <img src="admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png" class="img-fluid">
+						<img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid sticky-logo">
+					</a>
+				</div>
+				<div class="navigation">
+				    <div class="nav-open">
+				        <div class="hamburg-icon">
+    			        <div class="line line-1"></div>
+    			        <div class="line line-2"></div>
+    			        <div class="line line-3"></div>
+    			    </div>
+				    </div>
+					<nav>
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a href="differentiator.html">Differentiator</a></li>
+						<li><a href="search-services.html">Search Services</a></li>
+						<li><a href="consulting-services.html">Consulting Services</a></li>
+						<li><a href="ScenarioExpertise.html">Scenario Expertise</a></li>
+						<li><a href="Insights.html">Insights</a></li>
+						<li><a href="career.html">Careers</a></li>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<script>
+	    $('.nav-open').click(function(){
+	        if($(this).hasClass('open')){
+	            $(this).removeClass('open');
+	            $('.navigation nav').slideUp();
+	        } else {
+	            $(this).addClass('open');
+	            $('.navigation nav').slideDown();
+	        }
+	    });
+	</script>
+
+	<!-- Hero Section — Diagonal Split -->
+	<section class="partnership-hero">
+		<div class="split-dark"></div>
+		<div class="split-light"></div>
+		<div class="split-seam"></div>
+
+		<!-- Dark side layer: in flow, defines hero height, white text -->
+		<div class="hero-layer hero-layer-dark">
+			<div class="container hero-content">
+				<div class="logos-row">
+					<div class="logo-side athena">
+						<img src="admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png" alt="Athena Executive Search & Consulting">
+						<span class="logo-label">Est. 2009</span>
+					</div>
+					<div class="connector" aria-hidden="true"><i class="fas fa-plus"></i></div>
+					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="logo-side thh">
+						<img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai">
+						<span class="logo-label">AI Platform</span>
+					</a>
+				</div>
+				<div class="headline-wrap">
+					<h1 class="headline-text">Same Trusted Expertise.<br><em>Now Amplified by AI.</em></h1>
+				</div>
+				<div class="subtitle-wrap">
+					<p class="subtitle-text">Athena's 17+ years of executive search excellence, now powered by TheHireHub.ai's intelligent talent platform. Faster sourcing, deeper insights, better leadership hires.</p>
+				</div>
+				<div class="cta-row">
+					<a href="contact-us.html" class="cta-primary">Book a Discovery Call</a>
+					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="cta-secondary">Visit TheHireHub.ai</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Light side layer: absolute overlay, identical layout, dark blue text -->
+		<div class="hero-layer hero-layer-light" aria-hidden="true">
+			<div class="container hero-content">
+				<div class="logos-row">
+					<div class="logo-side athena">
+						<img src="admin/upload/home/logo/1632821673_a97f9fe84c6148592355.png" alt="">
+						<span class="logo-label">Est. 2009</span>
+					</div>
+					<div class="connector" aria-hidden="true"><i class="fas fa-plus"></i></div>
+					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="logo-side thh">
+						<img src="assets/images/thehirehub-logo.png" alt="">
+						<span class="logo-label">AI Platform</span>
+					</a>
+				</div>
+				<div class="headline-wrap">
+					<div class="headline-text">Same Trusted Expertise.<br><em>Now Amplified by AI.</em></div>
+				</div>
+				<div class="subtitle-wrap">
+					<p class="subtitle-text">Athena's 17+ years of executive search excellence, now powered by TheHireHub.ai's intelligent talent platform. Faster sourcing, deeper insights, better leadership hires.</p>
+				</div>
+				<div class="cta-row">
+					<a href="contact-us.html" class="cta-primary">Book a Discovery Call</a>
+					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="cta-secondary">Visit TheHireHub.ai</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- The Story Section -->
+	<section class="p-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<h2>The <span>Story</span></h2>
+					<p class="section-lead">Athena Executive Search & Consulting has been a trusted name in leadership hiring since 2009. As AI began reshaping how executive search is done, we made a deliberate choice &mdash; partner with the team building the most credible technology in this space.</p>
+					<p class="section-lead">That partner is TheHireHub.ai. Their platform is purpose-built for executive search, and we have integrated it into every Athena engagement. The result: our domain expertise, accelerated and sharpened by their technology.</p>
+				</div>
+				<div class="col-lg-6 offset-lg-1">
+					<div class="story-timeline">
+						<div class="milestone">
+							<div class="year">2009</div>
+							<h4>Athena Founded</h4>
+							<p>Established as a boutique executive search firm, specialising in C-suite and senior leadership placements across India and international markets.</p>
+						</div>
+						<div class="milestone">
+							<div class="year">2009 &ndash; 2023</div>
+							<h4>Building Domain Expertise</h4>
+							<p>400+ successful placements. Deep relationships with Fortune 500 companies, mid-market leaders, and PE/VC-backed firms across manufacturing, technology, healthcare, BFSI, and more.</p>
+						</div>
+						<div class="milestone">
+							<div class="year">2024</div>
+							<h4>The Partnership Begins</h4>
+							<p>Athena partners with TheHireHub.ai. Their AI-driven executive search platform is integrated into our practice &mdash; meeting 14 years of Athena's proprietary methodology and candidate intelligence.</p>
+						</div>
+						<div class="milestone">
+							<div class="year">2025</div>
+							<h4>Full Integration</h4>
+							<p>Every Athena search engagement now runs on TheHireHub.ai's platform. AI-assisted sourcing, intelligent matching, and data-backed decision support &mdash; embedded into how we work.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How TheHireHub Amplifies Athena -->
+	<section class="p-section alt-bg">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2>How TheHireHub.ai <span>Amplifies</span> Our Practice</h2>
+				<p class="section-lead" style="margin: 0 auto;">Every executive search engagement at Athena now leverages AI-powered capabilities that deliver results traditional methods cannot match.</p>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-brain"></i></div>
+						<h4>AI-Powered Sourcing</h4>
+						<p>Our platform scans millions of professional profiles across channels, identifying hidden talent that manual research would miss. What used to take weeks now takes hours.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-bullseye"></i></div>
+						<h4>Intelligent Matching</h4>
+						<p>AI models trained on Athena's 17+ years of placement data evaluate candidates on competencies, cultural fit, career trajectory, and leadership potential &mdash; not just keywords.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-chart-line"></i></div>
+						<h4>Data-Backed Insights</h4>
+						<p>Compensation benchmarking, talent market mapping, and competitive landscape analysis &mdash; delivered as actionable intelligence to support hiring decisions.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-tachometer-alt"></i></div>
+						<h4>Accelerated Timelines</h4>
+						<p>First shortlists delivered within days, not weeks. The platform reduces time-to-slate by up to 60%, without compromising on candidate quality.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-users"></i></div>
+						<h4>Human Expertise Layer</h4>
+						<p>AI does the heavy lifting; Athena's senior consultants do the judgment calls. Every shortlist is vetted by consultants who understand boardroom dynamics.</p>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="how-card">
+						<div class="icon-wrap"><i class="fas fa-lock"></i></div>
+						<h4>Confidential & Compliant</h4>
+						<p>Enterprise-grade data security. All candidate data is handled with the same discretion Athena has been known for, now with audit trails and compliance built in.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Impact Numbers -->
+	<section class="p-section">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2>The <span>Impact</span> So Far</h2>
+				<p class="section-lead" style="margin: 0 auto;">Since integrating TheHireHub.ai into our practice, the numbers speak for themselves.</p>
+			</div>
+			<div class="impact-grid">
+				<div class="impact-card">
+					<div class="number">60%</div>
+					<div class="label">Faster Time-to-Shortlist</div>
+				</div>
+				<div class="impact-card">
+					<div class="number">3x</div>
+					<div class="label">Wider Candidate Pool per Search</div>
+				</div>
+				<div class="impact-card">
+					<div class="number">92%</div>
+					<div class="label">Offer Acceptance Rate</div>
+				</div>
+				<div class="impact-card">
+					<div class="number">40%</div>
+					<div class="label">Reduction in Cost-per-Hire</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Before / After Comparison -->
+	<section class="p-section alt-bg">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2>Before &amp; After <span>TheHireHub.ai</span></h2>
+			</div>
+			<div class="table-responsive">
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th>Dimension</th>
+							<th>Traditional Search</th>
+							<th>With TheHireHub.ai</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Initial shortlist delivery</td>
+							<td>2 &ndash; 3 weeks</td>
+							<td>3 &ndash; 5 days</td>
+						</tr>
+						<tr>
+							<td>Candidate pool size</td>
+							<td>50 &ndash; 100 profiles</td>
+							<td>500+ AI-screened profiles</td>
+						</tr>
+						<tr>
+							<td>Sourcing channels</td>
+							<td>Network + databases</td>
+							<td>Network + databases + AI X-ray + passive talent signals</td>
+						</tr>
+						<tr>
+							<td>Compensation benchmarking</td>
+							<td>Manual market surveys</td>
+							<td>Real-time data-driven benchmarks</td>
+						</tr>
+						<tr>
+							<td>Candidate matching</td>
+							<td>Consultant judgement</td>
+							<td>AI scoring + consultant judgement</td>
+						</tr>
+						<tr>
+							<td>Progress visibility</td>
+							<td>Weekly email updates</td>
+							<td>Real-time dashboard access</td>
+						</tr>
+						<tr>
+							<td>Market intelligence</td>
+							<td>Provided on request</td>
+							<td>Built into every engagement</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- Case Studies -->
+	<section class="p-section">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2>Case <span>Studies</span></h2>
+				<p class="section-lead" style="margin: 0 auto;">Real engagements where TheHireHub.ai made a measurable difference.</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 mb-4">
+					<div class="case-card">
+						<div class="case-header">
+							<div class="industry">Manufacturing / Industrial</div>
+							<h4>CEO Search for a PE-Backed Industrial Group</h4>
+						</div>
+						<div class="case-body">
+							<h5>The Challenge</h5>
+							<p>A private equity firm needed a transformational CEO for a INR 2,000 Cr manufacturing group. The mandate required someone with P&L ownership at scale, board-level experience, and willingness to relocate to a Tier-2 city.</p>
+							<h5>How TheHireHub.ai Helped</h5>
+							<p>AI-powered sourcing identified 340+ potential candidates across India and the diaspora within 48 hours. The intelligent matching engine filtered down to 18 high-fit profiles based on leadership competencies, industry tenure, and relocation indicators.</p>
+							<h5>Results</h5>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Shortlist delivered in 5 days (vs. typical 3 weeks)</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Candidate accepted within 4 weeks of mandate start</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> 3 backup candidates maintained in pipeline</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="case-card">
+						<div class="case-header">
+							<div class="industry">Technology / SaaS</div>
+							<h4>CTO Hire for a Series B SaaS Company</h4>
+						</div>
+						<div class="case-body">
+							<h5>The Challenge</h5>
+							<p>A rapidly scaling SaaS company needed a CTO who could architect for 10x growth, lead a 120-person engineering team, and bring enterprise sales engineering experience. Previous attempts with generalist recruiters had failed.</p>
+							<h5>How TheHireHub.ai Helped</h5>
+							<p>The platform mapped the technology leadership landscape across Indian SaaS companies, identifying candidates with the specific combination of scaling experience and enterprise DNA. Compensation benchmarking ensured the offer was competitive without overshooting.</p>
+							<h5>Results</h5>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> 280+ candidates identified from niche SaaS ecosystem</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Placed in 6 weeks end-to-end</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Candidate still in role 18 months later</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="case-card">
+						<div class="case-header">
+							<div class="industry">Healthcare / Pharma</div>
+							<h4>India Country Head for a Global Pharma MNC</h4>
+						</div>
+						<div class="case-body">
+							<h5>The Challenge</h5>
+							<p>A Top 20 global pharma company was entering the Indian market and needed a Country Head with regulatory expertise, distribution network knowledge, and experience building teams from scratch in the Indian healthcare ecosystem.</p>
+							<h5>How TheHireHub.ai Helped</h5>
+							<p>AI sourcing combined with Athena's deep pharma network produced a candidate pool spanning Big Pharma leaders, Indian pharma veterans, and consulting-to-industry transitioners. The platform's market mapping provided real-time competitive intelligence on similar hires across the industry.</p>
+							<h5>Results</h5>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> 200+ profiles mapped across pharma leadership</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Client received market intelligence report within 1 week</div>
+							<div class="case-result"><span class="result-icon"><i class="fas fa-check-circle"></i></span> Offer accepted in 5 weeks from mandate start</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="p-cta-section">
+		<div class="container">
+			<h2>Ready to Experience the Difference?</h2>
+			<p>Whether you are hiring a CEO, building a leadership team, or expanding into new markets &mdash; Athena + TheHireHub.ai gives you an unfair advantage.</p>
+			<a href="contact-us.html" class="cta-btn">Start a Conversation</a>
+		</div>
+	</section>
+
+	<footer>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class="left">
+                <div class="footer-logo">
+                    <img src="admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid">
+                </div>
+                <div class="footer-subscribe">
+                    <div class="footer-subscribe-info">
+                        <p class="footer-link">Subscribe</p>
+                        <p class="footer-info">Select topics and stay current with our latest insights</p>
+                    </div>
+                    <form action="https://www.aesc.co.in/index.php/insert-user" id="form-filter" class="subscribe" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                    <div class="footer-subscribe-input">
+                        <label for="footer-email-input" class="sr-only" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0;">Email Address</label>
+                        <input type="email" id="footer-email-input" name="email_id" class="form-control" required placeholder="Email Address">
+                        <button class="subscribe-btn">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <div class="footer-logo">
+                        <div class="global-partners-block" style="display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Global Partners</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener" aria-label="Visit Penrhyn International" style="display:block;"><img src="assets/images/penrhyn-logo.png" class="img-fluid" alt="Penrhyn International" style="margin:0;max-height:85px;"></a></div>
+                        <div class="powered-by-block" style="margin-left:30px;display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" aria-label="Visit TheHireHub.ai" style="display:block;"><img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai" style="margin:0;height:54px;max-width:240px;object-fit:contain;display:block;"></a></div>
+                    </div>
+                    <div class="footer-quick-links">
+                        <div class="footer-bold-links">
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="LeadershipTeam.html"> Leadership Team</a></li>
+                            <li><a href="LifeatAthena.html">Life@Athena</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </div>
+                        <div class="footer-regular-links">
+                            <li><a href="ScenarioExpertise.html">Scenario Expertise</a></li>
+                            <li><a href="consulting-services.html">Consulting Services</a></li>
+                            <li><a href="search-services.html">Search Services</a></li>
+                        </div>
+                    </div>
+                    <div class="footer-social-logo">
+                        <a href="https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/" target="_blank">
+                        <i class="fab fa-linkedin" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                        <a href="https://twitter.com/aescindia/" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                        <a href="https://www.instagram.com/athena_aesc/?utm_medium=copy_link" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                        <a href="https://www.youtube.com/@athenaexecutivesearchconsu3242/featured" target="_blank">
+                        <i class="fab fa-youtube" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>&copy; Copyright Athena Executive Search &amp; Consulting. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 0){
+            $('header').addClass('sticky');
+        } else {
+            $('header').removeClass('sticky');
+        }
+    });
+    if($(window).scrollTop() > 0){
+        $('header').addClass('sticky');
+    }
+</script>
+
+</body>
+</html>
