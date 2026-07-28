@@ -18,3 +18,7 @@ index.php?debugbar
 graphify-out/
 deploy-ready/
 .superpowers/
+
+# scratch data (M&A migration)
+_ma_cards.json
+_ma_cards_final.json

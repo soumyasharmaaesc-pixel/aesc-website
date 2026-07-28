@@ -11,6 +11,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon.ico": "favicon.ico" });
 
@@ -28,6 +29,16 @@ export default function (eleventyConfig) {
     "src/LeadershipTeam.html": "LeadershipTeam.html",
     "src/LifeatAthena.html": "LifeatAthena.html",
     "src/news.html": "news.html",
+    "src/executive-search.html": "executive-search.html",
+    "src/board-member-search.html": "board-member-search.html",
+    "src/diversity-search.html": "diversity-search.html",
+    "src/talent-mapping.html": "talent-mapping.html",
+    "src/market-intelligence.html": "market-intelligence.html",
+    "src/compensation-benchmarking.html": "compensation-benchmarking.html",
+    "src/persona-due-diligence.html": "persona-due-diligence.html",
+    "src/india-entry.html": "india-entry.html",
+    "src/international-expansion.html": "international-expansion.html",
+    "src/transformation-transition.html": "transformation-transition.html",
     "src/ScenarioExpertise.html": "ScenarioExpertise.html",
     "src/search-services.html": "search-services.html",
     "src/thehirehub-partnership.html": "thehirehub-partnership.html"

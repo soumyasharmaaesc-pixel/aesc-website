@@ -1,0 +1,76 @@
+---
+pagination:
+  data: industryPages
+  size: 1
+  alias: page
+permalink: "/industries/{{ page.slug.current }}/"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ (page.seo and page.seo.metaTitle) or page.title }}"
+  description: "{{ (page.seo and page.seo.metaDescription) or page.intro }}"
+  canonicalUrl: "https://www.aesc.co.in/industries/{{ page.slug.current }}/"
+  ogType: "website"
+  bodyClass: "industry-page"
+  pageType: "industry"
+  h1: "{{ page.heroHeading }}"
+  breadcrumbName: "Industries"
+  breadcrumbPath: "/industries/"
+  faqs: "{{ page.faqs }}"
+---
+
+<section class="athena-section home-banner-section industry-banner">
+  <div class="service-banner-content swiper-slide-active">
+    <div class="home-banner-bg" style="background-image: url('/assets/images/scenario-expertise-hero.png');"></div>
+    <div class="container">
+      <div class="banner-content">
+        <div class="fade-up-effect">
+          <h1>{{ page.heroHeading }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="athena-section">
+  <div class="container">
+    <p class="lead">{{ page.intro }}</p>
+
+    {% if page.challenges and page.challenges.length %}
+    <div class="section-head pt-4"><h2>Leadership challenges in this sector</h2></div>
+    <div class="row">
+      {% for c in page.challenges %}
+      <div class="col-md-6 challenge-card">
+        <h3>{{ c.heading }}</h3>
+        <p>{{ c.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.roles and page.roles.length %}
+    <div class="section-head pt-4"><h2>Roles we place in this sector</h2></div>
+    <div class="sector-strip">
+      {% for r in page.roles %}
+      <a href="/services/{{ r.slug }}/">{{ r.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.faqs and page.faqs.length %}
+    <div class="section-head pt-4"><h2>Frequently asked questions</h2></div>
+    <div class="faq-list">
+      {% for f in page.faqs %}
+      <div class="faq-item">
+        <h3 class="faq-q">{{ f.question }}</h3>
+        <p class="faq-a">{{ f.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="section-head pt-4 cta-block">
+      <h2>Talk to our partners</h2>
+      <a href="/contact-us" class="btn-primary">Book a call</a>
+    </div>
+  </div>
+</section>

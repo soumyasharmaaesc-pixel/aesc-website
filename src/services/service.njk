@@ -1,0 +1,101 @@
+---
+pagination:
+  data: servicePages
+  size: 1
+  alias: page
+permalink: "/services/{{ page.slug.current }}/"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ (page.seo and page.seo.metaTitle) or page.title }}"
+  description: "{{ (page.seo and page.seo.metaDescription) or page.intro }}"
+  canonicalUrl: "https://www.aesc.co.in/services/{{ page.slug.current }}/"
+  ogType: "website"
+  bodyClass: "service-page"
+  pageType: "service"
+  h1: "{{ page.heroHeading }}"
+  breadcrumbName: "Services"
+  breadcrumbPath: "/services/"
+  faqs: "{{ page.faqs }}"
+---
+
+<section class="athena-section home-banner-section service-banner">
+  <div class="service-banner-content swiper-slide-active">
+    <div class="home-banner-bg" style="background-image: url('/assets/images/search-services-hero.png');"></div>
+    <div class="container">
+      <div class="banner-content">
+        <div class="fade-up-effect">
+          <h1>{{ page.heroHeading }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="athena-section">
+  <div class="container">
+    <p class="lead">{{ page.intro }}</p>
+
+    {% if page.whoWeSearchFor and page.whoWeSearchFor.length %}
+    <div class="section-head pt-4"><h2>Who we search for</h2></div>
+    <ul class="who-we-search-for">
+      {% for role in page.whoWeSearchFor %}<li>{{ role }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.process and page.process.length %}
+    <div class="section-head pt-4"><h2>How we work</h2></div>
+    <ol class="process-steps">
+      {% for s in page.process %}
+      <li><strong>{{ s.step }}</strong> — {{ s.detail }}</li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if page.differentiators and page.differentiators.length %}
+    <div class="section-head pt-4"><h2>What's different about Athena</h2></div>
+    <div class="row">
+      {% for d in page.differentiators %}
+      <div class="col-md-6 differentiator-card">
+        <h3>{{ d.heading }}</h3>
+        <p>{{ d.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.sectors and page.sectors.length %}
+    <div class="section-head pt-4"><h2>Sectors we know</h2></div>
+    <div class="sector-strip">
+      {% for sec in page.sectors %}
+      <a href="/industries/{{ sec.slug }}/">{{ sec.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.faqs and page.faqs.length %}
+    <div class="section-head pt-4"><h2>Frequently asked questions</h2></div>
+    <div class="faq-list">
+      {% for f in page.faqs %}
+      <div class="faq-item">
+        <h3 class="faq-q">{{ f.question }}</h3>
+        <p class="faq-a">{{ f.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="section-head pt-4 cta-block">
+      <h2>Talk to our partners</h2>
+      <a href="/contact-us" class="btn-primary">Book a call</a>
+    </div>
+
+    {% if page.relatedInsights and page.relatedInsights.length %}
+    <div class="section-head pt-4"><h2>Related insights</h2></div>
+    <ul class="related-insights">
+      {% for r in page.relatedInsights %}
+      <li><a href="/insights/{{ r.slug }}/">{{ r.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>

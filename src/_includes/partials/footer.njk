@@ -1,136 +1,62 @@
-<footer>
-    <div class="container">
-        <div class="d-flex flex-wrap">
-            <div class="left">
-                <div class="footer-logo">
-                    <img src="/admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" class="img-fluid">
-                </div>
-                <div class="footer-subscribe">
-                    <div class="footer-subscribe-info">
-                        <p class="footer-link">Subscribe</p>
-                        <p class="footer-info">Select topics and stay current with our latest insights</p>
-                    </div>
-                    <form action="https://www.aesc.co.in/index.php/insert-user" id="form-filter" class="subscribe" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-
-                    <div class="footer-subscribe-input">
-                        <input type="email"  name="email_id" class="form-control" required name="subscribe" placeholder="Email Address">
-                        <button class="subscribe-btn">Submit</button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-            <div class="right">
-                <div>
-                    <div class="footer-logo">
-                        <div class="global-partners-block" style="display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Global Partners</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener" aria-label="Visit Penrhyn International" style="display:block;"><img src="/assets/images/penrhyn-logo.png" class="img-fluid" alt="Penrhyn International" style="margin:0;max-height:85px;"></a></div>
-                        <div class="powered-by-block" style="margin-left:30px;display:inline-flex;flex-direction:column;align-items:center;"><span style="font-size:8px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-family:'Poppins',sans-serif;">Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" aria-label="Visit TheHireHub.ai" style="display:block;"><img src="/assets/images/thehirehub-logo.png" alt="TheHireHub.ai" style="margin:0;height:54px;max-width:240px;object-fit:contain;display:block;"></a></div>
-                    </div>
-                    <div class="footer-quick-links">
-                        <div class="footer-bold-links">
-                                                <li><a href="/about-us.html">About us</a></li>
-
-                                                    <li><a href="/LeadershipTeam.html"> Leadership Team</a></li>
-
-                                                    <li><a href="/LifeatAthena.html">Life@Athena</a></li>
-
-                                                    <li><a href="/contact-us.html">Contact Us</a></li>
-
-                                                </div>
-                        <div class="footer-regular-links">
-                                                <li><a href="/ScenarioExpertise.html">Scenario Expertise</a></li>
-
-                                                    <li><a href="/consulting-services.html">Consulting Services</a></li>
-
-                                                    <li><a href="/search-services.html">Search Services</a></li>
-
-                                                </div>
-                    </div>
-                    <div class="footer-social-logo">
-                    <!--    <img src="/images/footer-social.jpg" class="img-fluid">-->
-                                    <a href="https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/" target="_blank">
-                    <i class="fab fa-linkedin" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
-
-
-                                    <a href="https://twitter.com/aescindia/" target="_blank">
-                    <i class="fab fa-twitter" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
-
-
-                                    <a href="https://www.instagram.com/athena_aesc/?utm_medium=copy_link" target="_blank">
-                    <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
-
-
-                                    <a href="https://www.youtube.com/@athenaexecutivesearchconsu3242/featured" target="_blank">
-                    <i class="fab fa-youtube" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i></a>
-
-
-                                   <!--     <a href="https://twitter.com/aescindia/" target="_blank"  >-->
-               <!--  <i class="fab fa-twitter-square" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
-               <!--  </a>-->
-               <!--<a href="https://instagram.com/athena_aesc?utm_medium=copy_link" target="_blank" >   -->
-               <!--   <i class="fab fa-instagram" aria-hidden="true" style="text-shadow: 1px 1px 1px #ccc; font-size: 2em;"></i>-->
-               <!--    </a>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright text-center">
-            <p>© Copyright Athena Executive Search & Consulting. All Rights Reserved.</p>
-            <!--<p>Designed By <a href="#" style="color: #010534;">CyberWorx</a></p>-->
-        </div>
-    </div>
-</footer>
-
-<script src="/assets/js/toastr.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-<script>
-
-    $(window).on('load', function(){
-
-        $.fn.isInViewport = function() {
-            var elementTop = $(this).offset().top + $(window).height() / 4.5;
-            var elementBottom = elementTop + $(this).outerHeight();
-            var viewportTop = $(window).scrollTop() ;
-            var viewportBottom = viewportTop + $(window).height();
-            return elementTop < viewportBottom;
-        };
-
-
-        $(window).scroll(function(){
-
-            if($(window).scrollTop() > 0){
-                $('header').addClass('sticky')
-            }
-            else{
-                $('header').removeClass('sticky')
-            }
-
-            $('.athena-section').each(function(){
-                if($(this).isInViewport()){
-                    $(this).addClass('active')
-                }
-                else{
-                    // $(this).removeClass('active')
-                }
-            })
-
-        })
-
-
-        $('.athena-section').each(function(){
-            if($(this).isInViewport()){
-                $(this).addClass('active')
-            }
-            else{
-                // $(this).removeClass('active')
-            }
-        })
-
-        if($(window).scrollTop() > 0){
-            $('header').addClass('sticky')
-        }
-
-    })
-
-
-</script>
+<footer class="aesc-footer">
+	  <style>
+	    .aesc-footer{background:#04081e;color:#c7cce0;padding:clamp(54px,7vw,82px) 0 28px;font-family:'Inter',sans-serif;}
+	    .aesc-footer .fcont{max-width:1240px;margin:0 auto;padding:0 24px;}
+	    .aesc-footer a{text-decoration:none;}
+	    .aesc-footer .ft-top{display:grid;grid-template-columns:1.05fr 2fr;gap:48px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1);}
+	    .aesc-footer .ft-eyebrow{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:12px;}
+	    .aesc-footer .ft-news-h{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;color:#f4f6fc;font-size:21px;line-height:1.3;margin:0 0 20px;max-width:320px;letter-spacing:-.01em;}
+	    .aesc-footer .ft-form{display:flex;gap:10px;max-width:380px;flex-wrap:wrap;}
+	    .aesc-footer .ft-form input{flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 18px;color:#fff;font-size:14px;font-family:inherit;}
+	    .aesc-footer .ft-form input::placeholder{color:rgba(255,255,255,.5);}
+	    .aesc-footer .ft-form input:focus{outline:none;border-color:#fcb040;}
+	    .aesc-footer .ft-form button{background:#fcb040;color:#08122c;border:0;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(252,176,64,.4);}
+	    .aesc-footer .ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+	    .aesc-footer .ft-col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8b93ad;font-weight:600;margin:0 0 16px;}
+	    .aesc-footer .ft-col a{display:block;color:#c7cce0;font-size:14px;padding:6px 0;transition:color .2s ease,padding-left .2s ease;}
+	    .aesc-footer .ft-col a:hover{color:#fcb040;padding-left:3px;}
+	    .aesc-footer .ft-brand{padding:46px 0 40px;border-bottom:1px solid rgba(255,255,255,.1);}
+	    .aesc-footer .ft-brand h2{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;color:#fff;font-size:clamp(38px,8.5vw,116px);line-height:.98;letter-spacing:-.03em;margin:0;}
+	    .aesc-footer .ft-brand h2 .ft-hl{color:#fcb040;}
+	    .aesc-footer .ft-partners{display:flex;align-items:center;gap:44px;flex-wrap:wrap;padding:30px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+	    .aesc-footer .ft-partners .pblock{display:inline-flex;flex-direction:column;gap:6px;}
+	    .aesc-footer .ft-partners .pblock span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7f88a8;font-weight:600;}
+	    .aesc-footer .ft-partners img{max-height:46px;width:auto;object-fit:contain;}
+	    .aesc-footer .ft-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:26px;}
+	    .aesc-footer .ft-bottom .ft-logo img{max-height:58px;width:auto;background:#fff;border-radius:8px;padding:4px;}
+	    .aesc-footer .ft-legal{font-size:12.5px;color:#8b93ad;line-height:1.7;flex:1;min-width:240px;}
+	    .aesc-footer .ft-legal a{color:#c7cce0;} .aesc-footer .ft-legal a:hover{color:#fcb040;}
+	    .aesc-footer .ft-contact{display:inline-flex;align-items:center;gap:8px;background:#fcb040;color:#08122c;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-contact:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(252,176,64,.45);color:#08122c;}
+	    @media (max-width:900px){.aesc-footer .ft-top{grid-template-columns:1fr;gap:34px;}.aesc-footer .ft-cols{grid-template-columns:repeat(2,1fr);gap:22px 16px;}.aesc-footer .ft-bottom{flex-direction:column;align-items:flex-start;}}
+	  </style>
+	  <div class="fcont">
+	    <div class="ft-top">
+	      <div class="ft-news">
+	        <span class="ft-eyebrow">Stay informed</span>
+	        <p class="ft-news-h">Get Athena&rsquo;s latest executive search and leadership insights.</p>
+	        <form class="ft-form" action="https://www.aesc.co.in/index.php/insert-user" method="post" accept-charset="utf-8">
+	          <input type="email" name="email_id" placeholder="Your email address" required>
+	          <button type="submit">Subscribe</button>
+	        </form>
+	      </div>
+	      <div class="ft-cols">
+	        <div class="ft-col"><h4>Services</h4><a href="/search-services.html">Search Services</a><a href="/consulting-services.html">Consulting Services</a><a href="/ScenarioExpertise.html">Scenario Expertise</a></div>
+	        <div class="ft-col"><h4>Company</h4><a href="/about-us.html">About Us</a><a href="/differentiator.html">Differentiator</a><a href="/about-us.html#team">Leadership Team</a><a href="/about-us.html#life">Life@Athena</a></div>
+	        <div class="ft-col"><h4>Explore</h4><a href="/news.html">Insights</a><a href="/career.html">Careers</a><a href="/contact-us.html">Contact Us</a></div>
+	        <div class="ft-col"><h4>Follow us</h4><a href="https://www.linkedin.com/company/athena-executive-search-&-consulting-aesc-/" target="_blank" rel="noopener">LinkedIn</a><a href="https://twitter.com/aescindia/" target="_blank" rel="noopener">Twitter / X</a><a href="https://www.instagram.com/athena_aesc/?utm_medium=copy_link" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@athenaexecutivesearchconsu3242/featured" target="_blank" rel="noopener">YouTube</a></div>
+	      </div>
+	    </div>
+	    <div class="ft-brand"><h2>Where the world finds its <span class="ft-hl">leaders</span>.</h2></div>
+	    <div class="ft-partners">
+	      <div class="pblock"><span>Global Partner</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener"><img src="/assets/images/penrhyn-logo.png" alt="Penrhyn International"></a></div>
+	      <div class="pblock"><span>Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" style="font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em;color:#33cfe6;text-decoration:none;">TheHireHub.ai</a></div>
+	    </div>
+	    <div class="ft-bottom">
+	      <div class="ft-logo"><img src="https://www.aesc.co.in/admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" alt="Athena Executive Search & Consulting"></div>
+	      <div class="ft-legal">Proud AESC member firm &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
+	      <a class="ft-contact" href="/contact-us.html" data-contact-open>Contact Us &#8594;</a>
+	    </div>
+	  </div>
+	</footer>
