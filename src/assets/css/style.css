@@ -3022,3 +3022,25 @@ a.svcpg-card p{color:#5a6178;}
 
 .contact-page .ez-intro .ez-intro-wrap{max-width:1520px;}
 @media(max-width:1100px){.contact-page .ez-intro .ez-intro-wrap{max-width:none;}}
+
+/* ===== Careers · Submit-your-resume sourcing form ===== */
+.talent-lead{text-align:center;max-width:680px;margin:0 auto 40px;color:#5a6178;font-size:16.5px;line-height:1.75;}
+.talent-lead a{color:#c0871f;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(192,135,31,.35);}
+.talent-lead a:hover{border-bottom-color:#c0871f;}
+.talent-form{max-width:860px;margin:0 auto;background:#fff;border:1px solid #e4e8f2;border-radius:18px;padding:clamp(26px,4vw,44px);box-shadow:0 24px 60px -32px rgba(1,5,52,.28);}
+.tf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 24px;}
+.tf-field{display:flex;flex-direction:column;gap:8px;}
+.tf-field.tf-full{grid-column:1 / -1;}
+.tf-label{font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.02em;color:#3a4160;text-transform:none;}
+.tf-label span{color:#c0871f;}
+.tf-input,.tf-select,.tf-textarea{width:100%;font-family:'Inter',sans-serif;font-size:15px;color:#0f1633;background:#f7f9fd;border:1px solid #d8deec;border-radius:11px;padding:12px 14px;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;}
+.tf-input::placeholder,.tf-textarea::placeholder{color:#9aa2ba;}
+.tf-textarea{resize:vertical;min-height:104px;line-height:1.6;}
+.tf-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='12'%20height='8'%20viewBox='0%200%2012%208'%3E%3Cpath%20fill='%235a6178'%20d='M6%208L0%200h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:38px;cursor:pointer;}
+.tf-input:focus,.tf-select:focus,.tf-textarea:focus{outline:none;border-color:#fcb040;background:#fff;box-shadow:0 0 0 3px rgba(252,176,64,.18);}
+.tf-actions{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
+.tf-note{margin:0;max-width:560px;color:#7a8199;font-size:13.5px;line-height:1.65;}
+.tf-note a{color:#c0871f;font-weight:600;text-decoration:none;}
+.tf-note a:hover{text-decoration:underline;}
+.tf-note strong{color:#3a4160;}
+@media (max-width:640px){.tf-grid{grid-template-columns:1fr;}}
