@@ -18,15 +18,10 @@
       '<div class="xi-panel">' +
         '<button class="xi-x" type="button" aria-label="Close" data-xi-close>&#215;</button>' +
         '<span class="xi-eyebrow">Before you go</span>' +
-        '<h2 class="xi-title" id="xi-t">The leader you need <em>isn&rsquo;t</em> looking for a job.</h2>' +
-        '<p class="xi-sub">The strongest candidates are employed, discreet and will never answer a job post. Reaching them is the whole job &mdash; and it is exactly what we do.</p>' +
-        '<ul class="xi-points">' +
-          '<li><b>We go to them</b><span>Mapped and approached directly, not waiting in an inbox</span></li>' +
-          '<li><b>Partner-led throughout</b><span>No juniors, no handoffs, no portal in between</span></li>' +
-          '<li><b>A reply within a day</b><span>From a partner, personally and in confidence</span></li>' +
-        '</ul>' +
-        '<a class="xi-cta" href="contact-us.html">Start a confidential conversation <span aria-hidden="true">&#8594;</span></a>' +
-        '<span class="xi-fine">Two minutes now can save a six-month search. No newsletter, no automated follow-up.</span>' +
+      '<h2 class="xi-title" id="xi-t">The leader you need <em>isn&rsquo;t</em> looking for a job.</h2>' +
+      '<p class="xi-sub">The best are employed, discreet and never answer a job post. Reaching them is the whole job.</p>' +
+      '<span class="xi-meta">Partner-led &middot; Confidential &middot; Reply within a day</span>' +
+      '<a class="xi-cta" href="contact-us.html">Start a confidential conversation <span aria-hidden="true">&#8594;</span></a>' +
       '</div>';
     document.body.appendChild(el);
     el.addEventListener('click', function (e) {
@@ -67,7 +62,12 @@
     show();
   });
 
-  // 2. Back navigation: catch the first back press.
+  // 2. Tab switch / window blur: fire when the page is hidden, so it is waiting on return.
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && armed && !shown) show();
+  });
+
+  // 3. Back navigation: catch the first back press.
   try {
     history.pushState({ xi: 1 }, '', location.href);
     window.addEventListener('popstate', function () {
