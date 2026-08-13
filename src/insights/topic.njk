@@ -1,0 +1,62 @@
+---
+pagination:
+  data: topics
+  size: 1
+  alias: topic
+permalink: "/insights/{{ topic.slug }}/index.html"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ topic.title | safe }} | Insights | Athena Executive Search"
+  description: "{{ topic.blurb }}"
+  canonicalUrl: "https://www.aesc.co.in/insights/{{ topic.slug }}/"
+ogType: "website"
+bodyClass: "insights-page"
+---
+{% set posts = samplePosts %}
+{% set inTopic = [] %}
+{% for p in posts %}{% if p.topic == topic.slug %}{% set inTopic = (inTopic.push(p), inTopic) %}{% endif %}{% endfor %}
+
+<section class="res-hero">
+  <div class="res-wrap">
+    <a class="res-back" href="/insights/">&#8592; All insights</a>
+    <span class="eyebrow">Insights</span>
+    <h1>{{ topic.title | safe }}</h1>
+    <div class="res-rule"></div>
+    <p>{{ topic.blurb }}</p>
+  </div>
+</section>
+
+<section class="athena-section res-sec">
+  <div class="res-wrap">
+    {% if inTopic.length %}
+    <div class="res-grid">
+      {% for post in inTopic %}
+      <a class="res-card" href="{{ post.url }}">
+        <span class="res-card-img"><img src="{{ post.heroUrl }}" alt="" loading="lazy"></span>
+        <span class="res-card-body">
+          <span class="res-chip"><i></i>{{ post.category.title }}</span>
+          <span class="res-card-t">{{ post.title }}</span>
+          <span class="res-card-x">{{ post.excerpt }}</span>
+          <span class="res-meta">{{ post.publishedAt | date }} <b>&middot;</b> {{ post.readTime }} min read</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="res-empty">
+      <h2>Nothing published here yet</h2>
+      <p>We are writing the first pieces for this topic. In the meantime, browse everything we have published.</p>
+      <a class="ez-btn ez-btn-primary" href="/insights/">All insights <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    {% endif %}
+
+    <div class="res-othertopics">
+      <h3>Other topics</h3>
+      <div class="res-topic-row">
+        {% for t in topics %}{% if t.slug != topic.slug %}
+        <a class="res-topic-mini" href="/insights/{{ t.slug }}/">{{ t.title | safe }} <span aria-hidden="true">&#8594;</span></a>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

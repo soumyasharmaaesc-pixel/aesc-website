@@ -45,7 +45,7 @@
         left: 0;
         top: 100%;
         display: none;
-        background-color: #010534;
+        background-color: #040d27;
         padding: 10px 0;
         height:100vh;
     }
@@ -211,11 +211,11 @@
     }
 
     header.sticky .navigation .line {
-        background-color: #010534;
+        background-color: #040d27;
     }
 
     header.sticky .navigation .nav-open {
-        border-color: #010534;
+        border-color: #040d27;
     }
 
     .navigation li.header-contact-btn a {

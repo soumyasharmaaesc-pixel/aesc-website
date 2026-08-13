@@ -1,9 +1,9 @@
 ---
-permalink: "/insights/index.html"
+permalink: "/blogs.html"
 layout: layouts/base.njk
-title: "Insights & Leadership Resources | Athena Executive Search"
-description: "Reports, blogs and leadership perspectives from Athena Executive Search on hiring, succession and the forces reshaping how organisations grow."
-canonicalUrl: "https://www.aesc.co.in/insights/"
+title: "Leadership & Hiring Blog | Athena Executive Search"
+description: "Practical articles from Athena's search partners on executive hiring, leadership assessment, succession and building senior teams."
+canonicalUrl: "https://www.aesc.co.in/blogs.html"
 ogType: "website"
 bodyClass: "insights-page"
 ---
@@ -12,9 +12,9 @@ bodyClass: "insights-page"
 <section class="res-hero">
   <div class="res-wrap">
     <span class="eyebrow">Resources</span>
-    <h1>Insights</h1>
+    <h1>Blogs</h1>
     <div class="res-rule"></div>
-    <p>Perspectives on leadership, talent and the forces reshaping how organisations grow.</p>
+    <p>Practical notes from our partners on hiring, assessing and keeping senior leaders.</p>
   </div>
 </section>
 
@@ -51,27 +51,8 @@ bodyClass: "insights-page"
       </aside>
     </div>
 
-    <div class="res-topics">
-      <div class="res-topics-head">
-        <h2>Explore by topic</h2>
-        <p>Four themes we publish on, drawn from the mandates we run.</p>
-      </div>
-      <div class="res-topic-grid">
-        {% for t in topics %}
-        <a class="res-topic" href="/insights/{{ t.slug }}/">
-          <span class="res-topic-img"><img src="{{ t.image }}" alt="" loading="lazy"></span>
-          <span class="res-topic-body">
-            <span class="res-topic-t">{{ t.title | safe }}</span>
-            <span class="res-topic-x">{{ t.blurb }}</span>
-            <span class="res-topic-go">Explore <span aria-hidden="true">&#8594;</span></span>
-          </span>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-
     <div class="res-row-head">
-      <h2>Founders corner</h2>
+      <h2>All articles</h2>
       <div class="res-arrows"><button class="res-arw" data-dir="-1" aria-label="Previous">&#8592;</button><button class="res-arw" data-dir="1" aria-label="Next">&#8594;</button></div>
     </div>
     <div class="res-grid" id="resGrid">

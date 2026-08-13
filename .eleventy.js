@@ -23,6 +23,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/about-us.html": "about-us.html",
     "src/career.html": "career.html",
+    "src/case-studies.html": "case-studies.html",
+    "src/resources.html": "resources.html",
     "src/consulting-services.html": "consulting-services.html",
     "src/contact-us.html": "contact-us.html",
     "src/differentiator.html": "differentiator.html",

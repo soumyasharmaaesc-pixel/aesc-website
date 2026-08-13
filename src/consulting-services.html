@@ -57,13 +57,13 @@
 	    .navigation li{margin-left:22px !important;white-space:nowrap;}
 	    .navigation li a{white-space:nowrap !important;}
 	  }
-	  .nav-cta{display:inline-flex;align-items:center;white-space:nowrap;align-self:center;background:#fcb040;color:#010534 !important;font-weight:700;font-size:13.5px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(252,176,64,.32);max-width:0;padding:11px 0;margin-left:0;opacity:0;overflow:hidden;pointer-events:none;cursor:pointer;transition:max-width .45s cubic-bezier(.2,.7,.2,1),padding .4s ease,margin .4s ease,opacity .3s ease,box-shadow .25s ease;}
+	  .nav-cta{display:inline-flex;align-items:center;white-space:nowrap;align-self:center;background:#fcb040;color:#040d27 !important;font-weight:700;font-size:13.5px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(252,176,64,.32);max-width:0;padding:11px 0;margin-left:0;opacity:0;overflow:hidden;pointer-events:none;cursor:pointer;transition:max-width .45s cubic-bezier(.2,.7,.2,1),padding .4s ease,margin .4s ease,opacity .3s ease,box-shadow .25s ease;}
 	  header.sticky .nav-cta{max-width:260px;padding:12px 26px;margin-left:24px;opacity:1;pointer-events:auto;}
-	  header.sticky .nav-cta:hover{box-shadow:0 12px 30px rgba(252,176,64,.55);color:#010534 !important;}
+	  header.sticky .nav-cta:hover{box-shadow:0 12px 30px rgba(252,176,64,.55);color:#040d27 !important;}
 	  @media (max-width:991px){.nav-cta{display:none !important;}}
 	  .navigation li.has-dd{position:static;}
 	  .navigation li.has-dd > a .dd-caret{font-style:normal;font-size:9px;margin-left:5px;color:#c0871f;vertical-align:middle;}
-	  .navigation li.has-dd .dd{position:absolute;top:100%;left:0;right:0;background:linear-gradient(180deg,#010534 0%,#0a1140 100%);border-top:1px solid rgba(252,176,64,.35);box-shadow:0 40px 80px rgba(1,5,52,.5);opacity:0;visibility:hidden;clip-path:inset(0 0 100% 0);transition:opacity .3s ease,clip-path .45s cubic-bezier(.2,.7,.2,1),visibility .3s;z-index:350;}
+	  .navigation li.has-dd .dd{position:absolute;top:100%;left:0;right:0;background:#040d27;border-top:1px solid rgba(252,176,64,.35);box-shadow:0 40px 80px rgba(4,13,39,.5);opacity:0;visibility:hidden;clip-path:inset(0 0 100% 0);transition:opacity .3s ease,clip-path .45s cubic-bezier(.2,.7,.2,1),visibility .3s;z-index:350;}
 	  .navigation li.has-dd:hover .dd{opacity:1;visibility:visible;clip-path:inset(0 0 0 0);}
 	  .navigation .dd .dd-inner{max-width:1420px;margin:0 auto;padding:50px 52px 54px;min-height:412px;display:grid;grid-template-columns:0.62fr 1.15fr 1.5fr;gap:46px;align-items:stretch;}
 	  .navigation .dd .dd-label{display:block;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:28px;}
@@ -80,14 +80,14 @@
 	  .navigation .dd .dd-group a:not(.dd-h){display:block;font-size:16px;line-height:1.35;color:rgba(255,255,255,.78) !important;padding:7px 0 !important;text-decoration:none;white-space:normal !important;transition:color .2s ease,padding-left .2s ease;}
 	  .navigation .dd .dd-group a:not(.dd-h):hover{color:#fcb040 !important;padding-left:4px !important;}
 	  .navigation .dd .dd-feat{display:flex;flex-direction:column;gap:14px;}
-	  .navigation .dd .ddf{position:relative;display:block;border-radius:14px;overflow:hidden;flex:1;min-height:0;background:#0a1140 center/cover no-repeat;text-decoration:none;}
-	  .navigation .dd .ddf::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,30,.15),rgba(4,8,30,.62));transition:background .35s ease;}
-	  .navigation .dd .ddf:hover::before{background:linear-gradient(180deg,rgba(4,8,30,.4),rgba(4,8,30,.9));}
+	  .navigation .dd .ddf{position:relative;display:block;border-radius:14px;overflow:hidden;flex:1;min-height:0;background:#040d27 center/cover no-repeat;text-decoration:none;}
+	  .navigation .dd .ddf::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,13,39,.15),rgba(4,13,39,.62));transition:background .35s ease;}
+	  .navigation .dd .ddf:hover::before{background:linear-gradient(180deg,rgba(4,13,39,.4),rgba(4,13,39,.9));}
 	  .navigation .dd .ddf-ov{position:absolute;inset:0;z-index:1;padding:26px 26px;display:flex;flex-direction:column;justify-content:flex-end;}
 	  .navigation .dd .ddf-tag{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fcb040;font-weight:700;margin-bottom:9px;}
 	  .navigation .dd .ddf-t{color:#fff;font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;line-height:1.3;max-width:94%;white-space:normal;transform:translateY(6px);opacity:.92;transition:transform .35s,opacity .35s;}
 	  .navigation .dd .ddf:hover .ddf-t{transform:none;opacity:1;}
-	  .navigation .dd .ddf-arrow{position:absolute;top:13px;right:13px;z-index:2;width:28px;height:28px;border-radius:50%;background:#fff;color:#010534;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;}
+	  .navigation .dd .ddf-arrow{position:absolute;top:13px;right:13px;z-index:2;width:28px;height:28px;border-radius:50%;background:#fff;color:#040d27;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;}
 	  .navigation .dd .ddf:hover .ddf-arrow{opacity:1;transform:none;}
 	  @media (max-width:991px){.navigation li.has-dd .dd{display:none;}}
 	  </style>
@@ -109,11 +109,11 @@
 				    </div>
 					<nav>
 						<li class="has-dd"><a href="about-us.html">About Us <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">About Us</h4><p class="dd-desc">Who we are: our story, our people and our culture.</p><a class="dd-know" href="/about-us.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="about-us.html">About Athena</a><a href="about-us.html#team">Leadership Team</a><a href="about-us.html#life">Life@Athena</a></div></div></div><div class="dd-feat"><a class="ddf" href="about-us.html" style="background-image:url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">About Athena</span><span class="ddf-t">A global executive search and leadership consulting firm.</span></div></a></div></div></div></li>
-						<li class="has-dd"><a href="differentiator.html">Differentiator <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Differentiator</h4><p class="dd-desc">What sets Athena apart in executive search.</p><a class="dd-know" href="/differentiator.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="differentiator.html">What sets us apart</a><a href="differentiator.html">Our track record</a><a href="differentiator.html">AESC certification</a></div></div></div><div class="dd-feat"><a class="ddf" href="differentiator.html" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">The Athena difference</span><span class="ddf-t">Boutique focus, global reach, partner-led.</span></div></a></div></div></div></li>
+						<li class="has-dd"><a href="differentiator.html">Differentiator <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Differentiator</h4><p class="dd-desc">What sets Athena apart in executive search.</p><a class="dd-know" href="/differentiator.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="differentiator.html">What sets us apart</a><a href="differentiator.html">Our track record</a><a href="differentiator.html">Our standards</a></div></div></div><div class="dd-feat"><a class="ddf" href="differentiator.html" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">The Athena difference</span><span class="ddf-t">Boutique focus, global reach, partner-led.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="search-services.html">Search Services <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Search Services</h4><p class="dd-desc">Retained search for the CEO, board and C-suite roles that define your company.</p><a class="dd-know" href="/search-services.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="executive-search.html">Executive Search</a><a href="board-member-search.html">Board Member Search</a><a href="diversity-search.html">Diversity Search</a></div></div></div><div class="dd-feat"><a class="ddf" href="search-services.html" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Search Services</span><span class="ddf-t">Find the leaders who shape your future.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="consulting-services.html">Consulting &amp; Advisory <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Consulting &amp; Advisory</h4><p class="dd-desc">Talent mapping, market intelligence and benchmarking that sharpen every leadership call.</p><a class="dd-know" href="/consulting-services.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="talent-mapping.html">Talent Mapping</a><a href="market-intelligence.html">Market Intelligence</a><a href="compensation-benchmarking.html">Compensation Benchmarking</a><a href="persona-due-diligence.html">Persona Due Diligence</a></div></div></div><div class="dd-feat"><a class="ddf" href="consulting-services.html" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Consulting &amp; Advisory</span><span class="ddf-t">Intelligence that de-risks leadership decisions.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="ScenarioExpertise.html">Scenario Expertise <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Scenario Expertise</h4><p class="dd-desc">Specialist partners for India entry, international expansion, transformation and transition.</p><a class="dd-know" href="/ScenarioExpertise.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="india-entry.html">India Entry</a><a href="international-expansion.html">International Expansion</a><a href="transformation-transition.html">Transformation &amp; Transition</a></div></div></div><div class="dd-feat"><a class="ddf" href="ScenarioExpertise.html" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Scenario Expertise</span><span class="ddf-t">Enter new markets with conviction.</span></div></a></div></div></div></li>
-						<li class="has-dd"><a href="news.html">Insights <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Insights</h4><p class="dd-desc">Reports, blogs and leadership perspectives.</p><a class="dd-know" href="/news.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="news.html">Latest insights</a><a href="news.html#ma-updates">M&amp;A Updates</a><a href="news.html">Leadership reports</a></div></div></div><div class="dd-feat"><a class="ddf" href="news.html" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Latest from Athena</span><span class="ddf-t">Weekly M&amp;A deal tracker and leadership insights.</span></div></a></div></div></div></li>
+						<li class="has-dd"><a href="resources.html">Resources <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Resources</h4><p class="dd-desc">Insights, blogs, case studies and the weekly M&amp;A reports.</p><a class="dd-know" href="/resources.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="insights/">Insights</a><a href="blogs.html">Blogs</a><a href="case-studies.html">Case Studies</a><a href="news.html#ma-updates">M&amp;A Reports</a></div></div></div><div class="dd-feat"><a class="ddf" href="news.html" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Latest from Athena</span><span class="ddf-t">Weekly M&amp;A deal tracker and leadership insights.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="career.html">Careers <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Careers</h4><p class="dd-desc">Join a team where excellence is simply the default.</p><a class="dd-know" href="/career.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="career.html#apply">Submit your resume</a><a href="about-us.html#life">Life@Athena</a><a href="differentiator.html">Why Athena</a></div></div></div><div class="dd-feat"><a class="ddf" href="career.html" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Life at Athena</span><span class="ddf-t">Build your career in global executive search.</span></div></a></div></div></div></li>
 						<li class="nav-contact"><a href="contact-us.html">Contact Us</a></li>
 						<a class="nav-cta" href="contact-us.html" data-contact-open>Talk to our partners</a>
@@ -153,7 +153,7 @@
 			align-items: center;
 			gap: 4px;
 			color: #fff;
-			background: #010534;
+			background: #040d27;
 			font-size: 12px;
 			font-weight: 600;
 			font-family: 'Inter', sans-serif;
@@ -163,7 +163,7 @@
 			transition: background 0.2s, gap 0.2s;
 		}
 		.thh-announcement-bar a.thh-learn-more:hover {
-			background: #010534;
+			background: #040d27;
 			gap: 8px;
 			color: #fff;
 		}
@@ -230,7 +230,7 @@
 				</a>
 				<span class="thh-separator" style="color: #d0d0d0; margin: 0 2px; font-size: 14px;">|</span>
 				<span class="thh-tagline" style="
-					color: #010534;
+					color: #040d27;
 					font-size: 13px;
 					font-family: 'Inter', sans-serif;
 					font-weight: 400;
@@ -289,7 +289,7 @@
 
 	<section class="athena-section aesc-stats-section">
 	  <style>
-	    .aesc-stats-section{background:#010534;padding:64px 0;}
+	    .aesc-stats-section{background:#040d27;padding:64px 0;}
 	    .aesc-stats-section .container{max-width:1160px;margin:0 auto;padding:0 20px;}
 	    .aesc-stats-head{text-align:center;margin-bottom:40px;}
 	    .aesc-stats-head .eyebrow{display:inline-block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:10px;}
@@ -334,12 +334,12 @@
 	    .aesc-offerings-section .container{max-width:1160px;margin:0 auto;padding:0 20px;}
 	    .aesc-off-head{text-align:center;margin-bottom:48px;}
 	    .aesc-off-head .eyebrow{display:inline-block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:10px;}
-	    .aesc-off-head h2{color:#010534;font-size:34px;font-weight:600;margin:0;}
+	    .aesc-off-head h2{color:#040d27;font-size:34px;font-weight:600;margin:0;}
 	    .aesc-off-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
 	    .aesc-off-card{position:relative;background:#fff;border:1px solid #e7e8ee;border-radius:18px;padding:34px 32px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
-	    .aesc-off-card:hover{transform:translateY(-5px);box-shadow:0 20px 46px rgba(1,5,52,.10);border-color:#fcb040;}
+	    .aesc-off-card:hover{transform:translateY(-5px);box-shadow:0 20px 46px rgba(4,13,39,.10);border-color:#fcb040;}
 	    .aesc-off-ico{width:52px;height:52px;border-radius:14px;background:rgba(252,176,64,.15);color:#fcb040;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
-	    .aesc-off-card h3{color:#010534;font-size:21px;font-weight:600;margin:0 0 16px;}
+	    .aesc-off-card h3{color:#040d27;font-size:21px;font-weight:600;margin:0 0 16px;}
 	    .aesc-off-card ul{list-style:none;margin:0;padding:0;}
 	    .aesc-off-card ul li{position:relative;padding-left:22px;margin-bottom:12px;color:#4a5160;font-size:14.5px;line-height:1.6;}
 	    .aesc-off-card ul li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:#fcb040;}
@@ -392,16 +392,16 @@
 	  <style>
 	    .aesc-clarity-section{background:#ffffff;padding:84px 0;}
 	    .aesc-clarity-section .container{max-width:1180px;margin:0 auto;padding:0 20px;}
-	    .aesc-clarity-pill{display:inline-block;border:1px solid #d9dbe4;border-radius:999px;padding:6px 16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#010534;font-weight:600;margin-bottom:28px;}
+	    .aesc-clarity-pill{display:inline-block;border:1px solid #d9dbe4;border-radius:999px;padding:6px 16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#040d27;font-weight:600;margin-bottom:28px;}
 	    .aesc-clarity-top{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end;margin-bottom:44px;}
-	    .aesc-clarity-top h2{color:#010534;font-size:44px;line-height:1.1;font-weight:700;margin:0;letter-spacing:-.01em;}
+	    .aesc-clarity-top h2{color:#040d27;font-size:44px;line-height:1.1;font-weight:700;margin:0;letter-spacing:-.01em;}
 	    .aesc-clarity-top p{color:#6b7280;font-size:15.5px;line-height:1.7;margin:0;}
 	    .aesc-clarity-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:34px;border-top:1px solid #ececf1;margin-bottom:44px;}
 	    .aesc-clarity-col .idx{color:#b3b6c2;font-size:13px;font-weight:600;margin-bottom:14px;}
-	    .aesc-clarity-col h3{color:#010534;font-size:19px;font-weight:600;margin:0 0 10px;}
+	    .aesc-clarity-col h3{color:#040d27;font-size:19px;font-weight:600;margin:0 0 10px;}
 	    .aesc-clarity-col p{color:#6b7280;font-size:14.5px;line-height:1.65;margin:0;}
 	    .aesc-clarity-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-	    .aesc-cc{position:relative;border-radius:22px;padding:26px;min-height:270px;color:#fff;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 46px rgba(1,5,52,.16);}
+	    .aesc-cc{position:relative;border-radius:22px;padding:26px;min-height:270px;color:#fff;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 46px rgba(4,13,39,.16);}
 	    .aesc-cc .cc-top{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;opacity:.95;margin-bottom:auto;}
 	    .aesc-cc .cc-dot{width:9px;height:9px;border-radius:50%;background:#fcb040;box-shadow:0 0 10px #fcb040;}
 	    .aesc-cc .cc-big{font-size:44px;font-weight:700;line-height:1;margin:0 0 4px;}
@@ -409,8 +409,8 @@
 	    .aesc-cc .cc-row{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.18);padding-top:12px;font-size:13px;}
 	    .aesc-cc .cc-row span{opacity:.75;}
 	    .aesc-cc .cc-row b{display:block;font-size:16px;font-weight:600;margin-top:3px;opacity:1;}
-	    .aesc-cc1{background:linear-gradient(160deg,#010534 0%,#0a1550 100%);}
-	    .aesc-cc2{background:linear-gradient(160deg,#12224f 0%,#050a26 100%);}
+	    .aesc-cc1{background:#040d27;}
+	    .aesc-cc2{background:linear-gradient(160deg,#040d27 0%,#050a26 100%);}
 	    .aesc-cc3{background:linear-gradient(160deg,#c98f2e 0%,#7a5314 100%);}
 	    .aesc-cc3::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 1.1px, transparent 1.2px);background-size:14px 14px;opacity:.5;pointer-events:none;}
 	    .aesc-cc3 .cc-inner{position:relative;z-index:1;}
@@ -426,7 +426,7 @@
 	    .aesc-clarity-cards.in .aesc-cc2{animation:aesc-float 6s ease-in-out -2s infinite;}
 	    .aesc-clarity-cards.in .aesc-cc3{animation:aesc-float 6s ease-in-out -4s infinite;}
 	    @keyframes aesc-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
-	    .aesc-cc:hover{box-shadow:0 28px 60px rgba(1,5,52,.30);}
+	    .aesc-cc:hover{box-shadow:0 28px 60px rgba(4,13,39,.30);}
 	    @media (prefers-reduced-motion:reduce){.aesc-clarity-section .aesc-reveal,.aesc-clarity-cards .aesc-cc{opacity:1;transform:none;}.aesc-clarity-cards.in .aesc-cc1,.aesc-clarity-cards.in .aesc-cc2,.aesc-clarity-cards.in .aesc-cc3{animation:none;}}
 	  </style>
 	  <div class="container">
@@ -474,8 +474,8 @@
 		    <div class="background-A-svg">
 	        <svg xmlns="http://www.w3.org/2000/svg" width="699" height="699" viewBox="0 0 699 699">
               <g id="Group_292" data-name="Group 292" transform="translate(-495.218 -2162.218)" opacity="1">
-                <path id="svg-inner-A" data-name="Path 2510" d="M129.876,95.195,43.537,267.135H0L129.876,0l129.14,267.135H214.742Z" transform="translate(711.011 2366.067) rotate(0)" fill="#010534" opacity="0.11"/>
-                <g id="Ellipse_73" data-name="Ellipse 73" transform="translate(495.218 2162.218)" fill="none" stroke="#010534" stroke-width="2" opacity="0.28">
+                <path id="svg-inner-A" data-name="Path 2510" d="M129.876,95.195,43.537,267.135H0L129.876,0l129.14,267.135H214.742Z" transform="translate(711.011 2366.067) rotate(0)" fill="#040d27" opacity="0.11"/>
+                <g id="Ellipse_73" data-name="Ellipse 73" transform="translate(495.218 2162.218)" fill="none" stroke="#040d27" stroke-width="2" opacity="0.28">
                   <circle cx="349.5" cy="349.5" r="349.5" stroke="none"/>
                   <circle cx="349.5" cy="349.5" r="348.5" fill="none"/>
                 </g>
@@ -499,9 +499,9 @@
                         <div class="card-header" id="heading3">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">In what scenarios is the ATSS solution applicable –</span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -515,9 +515,9 @@
                         <div class="card-header" id="heading4">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">What is the differentiator of Athena's Compensation and competitive benchmarking solution?</span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -531,9 +531,9 @@
                         <div class="card-header" id="heading5">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">  How did Persona Due Diligence emerge as a practice pillar with Athena? </span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -548,9 +548,9 @@
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">Our performance management processes work</span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -564,9 +564,9 @@
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">We know how to make your employee experience as good as your customer experience</span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -580,9 +580,9 @@
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#010534"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.554" height="19.098" viewBox="0 0 12.554 19.098"><defs><filter id="Path_2493"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="3" result="blur"/><feFlood flood-opacity="0.161" result="color"/><feComposite operator="out" in="SourceGraphic" in2="blur"/><feComposite operator="in" in="color"/><feComposite operator="in" in2="SourceGraphic"/></filter></defs><g data-type="innerShadowGroup"><path id="Path_2493-2" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.618)" fill="#040d27"/><g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_2493)"><path id="Path_2493-3" data-name="Path 2493" d="M500.31,391.653l3.107,5.264a2.436,2.436,0,0,1,.127,2.082l-3.275,5.936c-.689,1.677.706,3.509,1.892,2.485l9.761-8.6a2.216,2.216,0,0,0-.206-3.29l-9.847-6.769C500.575,388.038,499.43,390.161,500.31,391.653Z" transform="translate(-500 -388.62)" fill="#fff"/></g></g></svg>
                                     <span class="card-head">We know how to make your employee experience as good as your customer experience</span>
-                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#04081e" stroke="#04081e" stroke-width="1"/></svg></span>
+                                    <span class="arrow-down"><svg xmlns="http://www.w3.org/2000/svg" width="12.315" height="12.701" viewBox="0 0 12.315 12.701"><path id="Path_2494" data-name="Path 2494" d="M5.374,7.115,1.8,0H0L5.374,11.054,10.718,0H8.886Z" transform="translate(0.799 0.5)" fill="#040d27" stroke="#040d27" stroke-width="1"/></svg></span>
                                 </button>
                             </h5>
                         </div>
@@ -686,12 +686,12 @@
 	    .aesc-advantage-section .container{max-width:1160px;margin:0 auto;padding:0 20px;}
 	    .aesc-adv-head{text-align:center;margin-bottom:46px;}
 	    .aesc-adv-head .eyebrow{display:inline-block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:10px;}
-	    .aesc-adv-head h2{color:#010534;font-size:32px;font-weight:600;margin:0;}
+	    .aesc-adv-head h2{color:#040d27;font-size:32px;font-weight:600;margin:0;}
 	    .aesc-adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 	    .aesc-adv-card{background:#fff;border:1px solid #e7e8ee;border-radius:16px;padding:30px 26px;transition:transform .25s ease,box-shadow .25s ease;}
-	    .aesc-adv-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(1,5,52,.10);}
+	    .aesc-adv-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(4,13,39,.10);}
 	    .aesc-adv-card .ico{width:46px;height:46px;border-radius:12px;background:rgba(252,176,64,.15);color:#fcb040;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px;}
-	    .aesc-adv-card h3{color:#010534;font-size:18px;font-weight:600;margin:0 0 10px;}
+	    .aesc-adv-card h3{color:#040d27;font-size:18px;font-weight:600;margin:0 0 10px;}
 	    .aesc-adv-card p{color:#565656;font-size:14.5px;line-height:1.65;margin:0;}
 	    @media (max-width:980px){.aesc-adv-grid{grid-template-columns:repeat(2,1fr);}}
 	    @media (max-width:560px){.aesc-adv-grid{grid-template-columns:1fr;}}
@@ -732,7 +732,7 @@
         <div class="cs-body">
           <h3>Scaling a global tech giant&rsquo;s operations in India</h3>
           <p>One of the world&rsquo;s largest content platforms planned to hire roughly 800 people in India in a single year, with future investment riding on the outcome.</p>
-          <ul class="cs-facts"><li><b>Scope</b><span>Monetisation team build-out</span></li><li><b>Method</b><span>AESC-certified search process</span></li><li><b>Outcome</b><span>Hiring targets achieved</span></li></ul>
+          <ul class="cs-facts"><li><b>Scope</b><span>Monetisation team build-out</span></li><li><b>Method</b><span>Search process to AESC standards</span></li><li><b>Outcome</b><span>Hiring targets achieved</span></li></ul>
           <span class="cs-link">Read the case study <span aria-hidden="true">&#8594;</span></span>
         </div>
       </a>
@@ -775,10 +775,10 @@
     					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
     					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
     					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
-    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
-    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
     					    </g>
-    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
     					  </g>
     					</svg>
     				</a>
@@ -788,10 +788,10 @@
     					<svg xmlns="http://www.w3.org/2000/svg" width="21.448" height="18.123" viewBox="0 0 21.448 18.123">
     					  <g id="Group_177" data-name="Group 177" transform="translate(-619 -571.938)">
     					    <g id="Group_176" data-name="Group 176" transform="translate(631.239 574.06)">
-    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
-    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_12" data-name="Line 12" x2="7.088" y2="6.94" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
+    					      <line id="Line_13" data-name="Line 13" y1="6.94" x2="7.088" transform="translate(0 6.94)" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
     					    </g>
-    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#010534" stroke-linecap="round" stroke-width="3"/>
+    					    <line id="Line_34" data-name="Line 34" x1="16" transform="translate(620.5 581.183)" fill="none" stroke="#040d27" stroke-linecap="round" stroke-width="3"/>
     					  </g>
     					</svg>
     				</a>
@@ -803,7 +803,7 @@
 	
 	<footer class="aesc-footer">
 	  <style>
-	    .aesc-footer{background:#04081e;color:#c7cce0;padding:clamp(54px,7vw,82px) 0 28px;font-family:'Inter',sans-serif;}
+	    .aesc-footer{background:#040d27;color:#c7cce0;padding:clamp(54px,7vw,82px) 0 28px;font-family:'Inter',sans-serif;}
 	    .aesc-footer .fcont{max-width:1240px;margin:0 auto;padding:0 24px;}
 	    .aesc-footer a{text-decoration:none;}
 	    .aesc-footer .ft-top{display:grid;grid-template-columns:1.05fr 2fr;gap:48px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1);}
@@ -813,7 +813,7 @@
 	    .aesc-footer .ft-form input{flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 18px;color:#fff;font-size:14px;font-family:inherit;}
 	    .aesc-footer .ft-form input::placeholder{color:rgba(255,255,255,.5);}
 	    .aesc-footer .ft-form input:focus{outline:none;border-color:#fcb040;}
-	    .aesc-footer .ft-form button{background:#fcb040;color:#010534;border:0;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-form button{background:#fcb040;color:#040d27;border:0;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
 	    .aesc-footer .ft-form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(252,176,64,.4);}
 	    .aesc-footer .ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 	    .aesc-footer .ft-col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8b93ad;font-weight:600;margin:0 0 16px;}
@@ -830,8 +830,8 @@
 	    .aesc-footer .ft-bottom .ft-logo img{max-height:58px;width:auto;background:#fff;border-radius:8px;padding:4px;}
 	    .aesc-footer .ft-legal{font-size:12.5px;color:#8b93ad;line-height:1.7;flex:1;min-width:240px;}
 	    .aesc-footer .ft-legal a{color:#c7cce0;} .aesc-footer .ft-legal a:hover{color:#fcb040;}
-	    .aesc-footer .ft-contact{display:inline-flex;align-items:center;gap:8px;background:#fcb040;color:#010534;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
-	    .aesc-footer .ft-contact:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(252,176,64,.45);color:#010534;}
+	    .aesc-footer .ft-contact{display:inline-flex;align-items:center;gap:8px;background:#fcb040;color:#040d27;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-contact:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(252,176,64,.45);color:#040d27;}
 	    @media (max-width:900px){.aesc-footer .ft-top{grid-template-columns:1fr;gap:34px;}.aesc-footer .ft-cols{grid-template-columns:repeat(2,1fr);gap:22px 16px;}.aesc-footer .ft-bottom{flex-direction:column;align-items:flex-start;}}
 	  </style>
 	  <div class="fcont">
@@ -858,7 +858,7 @@
 	    </div>
 	    <div class="ft-bottom">
 	      <div class="ft-logo"><img src="https://www.aesc.co.in/admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" alt="Athena Executive Search & Consulting"></div>
-	      <div class="ft-legal">Proud AESC member firm &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
+	      <div class="ft-legal">Search practice aligned to AESC professional standards &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
 	      <a class="ft-contact" href="contact-us.html" data-contact-open>Contact Us &#8594;</a>
 	    </div>
 	  </div>
@@ -1034,16 +1034,16 @@
 	    @keyframes ct-in{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
 	    .ct-modal .ct-close{position:absolute;top:14px;right:16px;background:none;border:0;font-size:26px;line-height:1;color:#9aa0b0;cursor:pointer;padding:4px;}
 	    .ct-modal .ct-eyebrow{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#c0871f;font-weight:600;margin-bottom:8px;}
-	    .ct-modal .ct-title{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;color:#0a1140;margin:0 0 20px;letter-spacing:-.01em;line-height:1.2;}
+	    .ct-modal .ct-title{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;color:#040d27;margin:0 0 20px;letter-spacing:-.01em;line-height:1.2;}
 	    .ct-modal .ct-tabs{display:flex;gap:6px;background:#f1f3f9;padding:5px;border-radius:12px;margin-bottom:18px;}
 	    .ct-modal .ct-tab{flex:1;border:0;background:none;padding:9px;border-radius:8px;font-weight:600;font-size:13.5px;color:#5a6178;cursor:pointer;transition:background .2s,color .2s;font-family:inherit;}
-	    .ct-modal .ct-tab.active{background:#fff;color:#0a1140;box-shadow:0 2px 8px rgba(1,5,52,.08);}
+	    .ct-modal .ct-tab.active{background:#fff;color:#040d27;box-shadow:0 2px 8px rgba(4,13,39,.08);}
 	    .ct-modal .ct-form{display:flex;flex-direction:column;gap:12px;}
-	    .ct-modal .ct-form input,.ct-modal .ct-form textarea{width:100%;border:1px solid rgba(1,5,52,.15);border-radius:10px;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#0a1140;background:#fbfbfd;transition:border-color .2s,box-shadow .2s;}
+	    .ct-modal .ct-form input,.ct-modal .ct-form textarea{width:100%;border:1px solid rgba(4,13,39,.15);border-radius:10px;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#040d27;background:#fbfbfd;transition:border-color .2s,box-shadow .2s;}
 	    .ct-modal .ct-form input:focus,.ct-modal .ct-form textarea:focus{outline:none;border-color:#fcb040;box-shadow:0 0 0 3px rgba(252,176,64,.18);}
 	    .ct-modal .ct-row{display:flex;gap:10px;}
 	    .ct-modal .ct-row input{flex:1;}
-	    .ct-modal .ct-submit{margin-top:4px;background:#fcb040;color:#010534;border:0;font-weight:700;font-size:14.5px;padding:14px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;}
+	    .ct-modal .ct-submit{margin-top:4px;background:#fcb040;color:#040d27;border:0;font-weight:700;font-size:14.5px;padding:14px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;}
 	    .ct-modal .ct-submit:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(252,176,64,.4);}
 	    .ct-modal .ct-fine{margin:8px 0 0;font-size:12px;color:#8a90a2;text-align:center;}
 	  </style>

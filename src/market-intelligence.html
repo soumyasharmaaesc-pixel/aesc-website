@@ -61,13 +61,13 @@
 	    .navigation li{margin-left:22px !important;white-space:nowrap;}
 	    .navigation li a{white-space:nowrap !important;}
 	  }
-	  .nav-cta{display:inline-flex;align-items:center;white-space:nowrap;align-self:center;background:#fcb040;color:#010534 !important;font-weight:700;font-size:13.5px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(252,176,64,.32);max-width:0;padding:11px 0;margin-left:0;opacity:0;overflow:hidden;pointer-events:none;cursor:pointer;transition:max-width .45s cubic-bezier(.2,.7,.2,1),padding .4s ease,margin .4s ease,opacity .3s ease,box-shadow .25s ease;}
+	  .nav-cta{display:inline-flex;align-items:center;white-space:nowrap;align-self:center;background:#fcb040;color:#040d27 !important;font-weight:700;font-size:13.5px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(252,176,64,.32);max-width:0;padding:11px 0;margin-left:0;opacity:0;overflow:hidden;pointer-events:none;cursor:pointer;transition:max-width .45s cubic-bezier(.2,.7,.2,1),padding .4s ease,margin .4s ease,opacity .3s ease,box-shadow .25s ease;}
 	  header.sticky .nav-cta{max-width:260px;padding:12px 26px;margin-left:24px;opacity:1;pointer-events:auto;}
-	  header.sticky .nav-cta:hover{box-shadow:0 12px 30px rgba(252,176,64,.55);color:#010534 !important;}
+	  header.sticky .nav-cta:hover{box-shadow:0 12px 30px rgba(252,176,64,.55);color:#040d27 !important;}
 	  @media (max-width:991px){.nav-cta{display:none !important;}}
 	  .navigation li.has-dd{position:static;}
 	  .navigation li.has-dd > a .dd-caret{font-style:normal;font-size:9px;margin-left:5px;color:#c0871f;vertical-align:middle;}
-	  .navigation li.has-dd .dd{position:absolute;top:100%;left:0;right:0;background:linear-gradient(180deg,#010534 0%,#0a1140 100%);border-top:1px solid rgba(252,176,64,.35);box-shadow:0 40px 80px rgba(1,5,52,.5);opacity:0;visibility:hidden;clip-path:inset(0 0 100% 0);transition:opacity .3s ease,clip-path .45s cubic-bezier(.2,.7,.2,1),visibility .3s;z-index:350;}
+	  .navigation li.has-dd .dd{position:absolute;top:100%;left:0;right:0;background:#040d27;border-top:1px solid rgba(252,176,64,.35);box-shadow:0 40px 80px rgba(4,13,39,.5);opacity:0;visibility:hidden;clip-path:inset(0 0 100% 0);transition:opacity .3s ease,clip-path .45s cubic-bezier(.2,.7,.2,1),visibility .3s;z-index:350;}
 	  .navigation li.has-dd:hover .dd{opacity:1;visibility:visible;clip-path:inset(0 0 0 0);}
 	  .navigation .dd .dd-inner{max-width:1420px;margin:0 auto;padding:50px 52px 54px;min-height:412px;display:grid;grid-template-columns:0.62fr 1.15fr 1.5fr;gap:46px;align-items:stretch;}
 	  .navigation .dd .dd-label{display:block;font-size:14px;letter-spacing:.26em;text-transform:uppercase;color:#fcb040;font-weight:600;margin-bottom:28px;}
@@ -84,14 +84,14 @@
 	  .navigation .dd .dd-group a:not(.dd-h){display:block;font-size:16px;line-height:1.35;color:rgba(255,255,255,.78) !important;padding:7px 0 !important;text-decoration:none;white-space:normal !important;transition:color .2s ease,padding-left .2s ease;}
 	  .navigation .dd .dd-group a:not(.dd-h):hover{color:#fcb040 !important;padding-left:4px !important;}
 	  .navigation .dd .dd-feat{display:flex;flex-direction:column;gap:14px;}
-	  .navigation .dd .ddf{position:relative;display:block;border-radius:14px;overflow:hidden;flex:1;min-height:0;background:#0a1140 center/cover no-repeat;text-decoration:none;}
-	  .navigation .dd .ddf::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,8,30,.15),rgba(4,8,30,.62));transition:background .35s ease;}
-	  .navigation .dd .ddf:hover::before{background:linear-gradient(180deg,rgba(4,8,30,.4),rgba(4,8,30,.9));}
+	  .navigation .dd .ddf{position:relative;display:block;border-radius:14px;overflow:hidden;flex:1;min-height:0;background:#040d27 center/cover no-repeat;text-decoration:none;}
+	  .navigation .dd .ddf::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,13,39,.15),rgba(4,13,39,.62));transition:background .35s ease;}
+	  .navigation .dd .ddf:hover::before{background:linear-gradient(180deg,rgba(4,13,39,.4),rgba(4,13,39,.9));}
 	  .navigation .dd .ddf-ov{position:absolute;inset:0;z-index:1;padding:26px 26px;display:flex;flex-direction:column;justify-content:flex-end;}
 	  .navigation .dd .ddf-tag{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fcb040;font-weight:700;margin-bottom:9px;}
 	  .navigation .dd .ddf-t{color:#fff;font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;line-height:1.3;max-width:94%;white-space:normal;transform:translateY(6px);opacity:.92;transition:transform .35s,opacity .35s;}
 	  .navigation .dd .ddf:hover .ddf-t{transform:none;opacity:1;}
-	  .navigation .dd .ddf-arrow{position:absolute;top:13px;right:13px;z-index:2;width:28px;height:28px;border-radius:50%;background:#fff;color:#010534;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;}
+	  .navigation .dd .ddf-arrow{position:absolute;top:13px;right:13px;z-index:2;width:28px;height:28px;border-radius:50%;background:#fff;color:#040d27;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;}
 	  .navigation .dd .ddf:hover .ddf-arrow{opacity:1;transform:none;}
 	  @media (max-width:991px){.navigation li.has-dd .dd{display:none;}}
 	  </style>
@@ -113,11 +113,11 @@
 				    </div>
 					<nav>
 						<li class="has-dd"><a href="about-us.html">About Us <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">About Us</h4><p class="dd-desc">Who we are: our story, our people and our culture.</p><a class="dd-know" href="/about-us.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="about-us.html">About Athena</a><a href="about-us.html#team">Leadership Team</a><a href="about-us.html#life">Life@Athena</a></div></div></div><div class="dd-feat"><a class="ddf" href="about-us.html" style="background-image:url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">About Athena</span><span class="ddf-t">A global executive search and leadership consulting firm.</span></div></a></div></div></div></li>
-						<li class="has-dd"><a href="differentiator.html">Differentiator <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Differentiator</h4><p class="dd-desc">What sets Athena apart in executive search.</p><a class="dd-know" href="/differentiator.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="differentiator.html">What sets us apart</a><a href="differentiator.html">Our track record</a><a href="differentiator.html">AESC certification</a></div></div></div><div class="dd-feat"><a class="ddf" href="differentiator.html" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">The Athena difference</span><span class="ddf-t">Boutique focus, global reach, partner-led.</span></div></a></div></div></div></li>
+						<li class="has-dd"><a href="differentiator.html">Differentiator <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Differentiator</h4><p class="dd-desc">What sets Athena apart in executive search.</p><a class="dd-know" href="/differentiator.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="differentiator.html">What sets us apart</a><a href="differentiator.html">Our track record</a><a href="differentiator.html">Our standards</a></div></div></div><div class="dd-feat"><a class="ddf" href="differentiator.html" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">The Athena difference</span><span class="ddf-t">Boutique focus, global reach, partner-led.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="search-services.html">Search Services <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Search Services</h4><p class="dd-desc">Retained search for the CEO, board and C-suite roles that define your company.</p><a class="dd-know" href="/search-services.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="executive-search.html">Executive Search</a><a href="board-member-search.html">Board Member Search</a><a href="diversity-search.html">Diversity Search</a></div></div></div><div class="dd-feat"><a class="ddf" href="search-services.html" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Search Services</span><span class="ddf-t">Find the leaders who shape your future.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="consulting-services.html">Consulting &amp; Advisory <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Consulting &amp; Advisory</h4><p class="dd-desc">Talent mapping, market intelligence and benchmarking that sharpen every leadership call.</p><a class="dd-know" href="/consulting-services.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="talent-mapping.html">Talent Mapping</a><a href="market-intelligence.html">Market Intelligence</a><a href="compensation-benchmarking.html">Compensation Benchmarking</a><a href="persona-due-diligence.html">Persona Due Diligence</a></div></div></div><div class="dd-feat"><a class="ddf" href="consulting-services.html" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Consulting &amp; Advisory</span><span class="ddf-t">Intelligence that de-risks leadership decisions.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="ScenarioExpertise.html">Scenario Expertise <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Scenario Expertise</h4><p class="dd-desc">Specialist partners for India entry, international expansion, transformation and transition.</p><a class="dd-know" href="/ScenarioExpertise.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="india-entry.html">India Entry</a><a href="international-expansion.html">International Expansion</a><a href="transformation-transition.html">Transformation &amp; Transition</a></div></div></div><div class="dd-feat"><a class="ddf" href="ScenarioExpertise.html" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Scenario Expertise</span><span class="ddf-t">Enter new markets with conviction.</span></div></a></div></div></div></li>
-						<li class="has-dd"><a href="news.html">Insights <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Insights</h4><p class="dd-desc">Reports, blogs and leadership perspectives.</p><a class="dd-know" href="/news.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="news.html">Latest insights</a><a href="news.html#ma-updates">M&amp;A Updates</a><a href="news.html">Leadership reports</a></div></div></div><div class="dd-feat"><a class="ddf" href="news.html" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Latest from Athena</span><span class="ddf-t">Weekly M&amp;A deal tracker and leadership insights.</span></div></a></div></div></div></li>
+						<li class="has-dd"><a href="resources.html">Resources <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Resources</h4><p class="dd-desc">Insights, blogs, case studies and the weekly M&amp;A reports.</p><a class="dd-know" href="/resources.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="insights/">Insights</a><a href="blogs.html">Blogs</a><a href="case-studies.html">Case Studies</a><a href="news.html#ma-updates">M&amp;A Reports</a></div></div></div><div class="dd-feat"><a class="ddf" href="news.html" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Latest from Athena</span><span class="ddf-t">Weekly M&amp;A deal tracker and leadership insights.</span></div></a></div></div></div></li>
 						<li class="has-dd"><a href="career.html">Careers <i class="dd-caret">&#9662;</i></a><div class="dd"><div class="dd-inner"><div class="dd-main"><h4 class="dd-mt">Careers</h4><p class="dd-desc">Join a team where excellence is simply the default.</p><a class="dd-know" href="/career.html">Know more &#8594;</a></div><div class="dd-cols"><div class="dd-groups"><div class="dd-group"><a href="career.html#apply">Submit your resume</a><a href="about-us.html#life">Life@Athena</a><a href="differentiator.html">Why Athena</a></div></div></div><div class="dd-feat"><a class="ddf" href="career.html" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=560&q=72')"><span class="ddf-arrow">&#8594;</span><div class="ddf-ov"><span class="ddf-tag">Life at Athena</span><span class="ddf-t">Build your career in global executive search.</span></div></a></div></div></div></li>
 						<li class="nav-contact"><a href="contact-us.html">Contact Us</a></li>
 						<a class="nav-cta" href="contact-us.html" data-contact-open>Talk to our partners</a>
@@ -157,7 +157,7 @@
 			align-items: center;
 			gap: 4px;
 			color: #fff;
-			background: #010534;
+			background: #040d27;
 			font-size: 12px;
 			font-weight: 600;
 			font-family: 'Inter', sans-serif;
@@ -167,7 +167,7 @@
 			transition: background 0.2s, gap 0.2s;
 		}
 		.thh-announcement-bar a.thh-learn-more:hover {
-			background: #010534;
+			background: #040d27;
 			gap: 8px;
 			color: #fff;
 		}
@@ -234,7 +234,7 @@
 				</a>
 				<span class="thh-separator" style="color: #d0d0d0; margin: 0 2px; font-size: 14px;">|</span>
 				<span class="thh-tagline" style="
-					color: #010534;
+					color: #040d27;
 					font-size: 13px;
 					font-family: 'Inter', sans-serif;
 					font-weight: 400;
@@ -300,7 +300,7 @@
 <script>document.querySelectorAll(".ez-faq .fq-q").forEach(function(q){q.addEventListener("click",function(){q.parentElement.classList.toggle("on");});});</script>
 <footer class="aesc-footer">
 	  <style>
-	    .aesc-footer{background:#04081e;color:#c7cce0;padding:clamp(54px,7vw,82px) 0 28px;font-family:'Inter',sans-serif;}
+	    .aesc-footer{background:#040d27;color:#c7cce0;padding:clamp(54px,7vw,82px) 0 28px;font-family:'Inter',sans-serif;}
 	    .aesc-footer .fcont{max-width:1240px;margin:0 auto;padding:0 24px;}
 	    .aesc-footer a{text-decoration:none;}
 	    .aesc-footer .ft-top{display:grid;grid-template-columns:1.05fr 2fr;gap:48px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1);}
@@ -310,7 +310,7 @@
 	    .aesc-footer .ft-form input{flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 18px;color:#fff;font-size:14px;font-family:inherit;}
 	    .aesc-footer .ft-form input::placeholder{color:rgba(255,255,255,.5);}
 	    .aesc-footer .ft-form input:focus{outline:none;border-color:#fcb040;}
-	    .aesc-footer .ft-form button{background:#fcb040;color:#010534;border:0;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-form button{background:#fcb040;color:#040d27;border:0;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
 	    .aesc-footer .ft-form button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(252,176,64,.4);}
 	    .aesc-footer .ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 	    .aesc-footer .ft-col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8b93ad;font-weight:600;margin:0 0 16px;}
@@ -327,8 +327,8 @@
 	    .aesc-footer .ft-bottom .ft-logo img{max-height:58px;width:auto;background:#fff;border-radius:8px;padding:4px;}
 	    .aesc-footer .ft-legal{font-size:12.5px;color:#8b93ad;line-height:1.7;flex:1;min-width:240px;}
 	    .aesc-footer .ft-legal a{color:#c7cce0;} .aesc-footer .ft-legal a:hover{color:#fcb040;}
-	    .aesc-footer .ft-contact{display:inline-flex;align-items:center;gap:8px;background:#fcb040;color:#010534;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
-	    .aesc-footer .ft-contact:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(252,176,64,.45);color:#010534;}
+	    .aesc-footer .ft-contact{display:inline-flex;align-items:center;gap:8px;background:#fcb040;color:#040d27;font-weight:700;font-size:14px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;}
+	    .aesc-footer .ft-contact:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(252,176,64,.45);color:#040d27;}
 	    @media (max-width:900px){.aesc-footer .ft-top{grid-template-columns:1fr;gap:34px;}.aesc-footer .ft-cols{grid-template-columns:repeat(2,1fr);gap:22px 16px;}.aesc-footer .ft-bottom{flex-direction:column;align-items:flex-start;}}
 	  </style>
 	  <div class="fcont">
@@ -355,7 +355,7 @@
 	    </div>
 	    <div class="ft-bottom">
 	      <div class="ft-logo"><img src="https://www.aesc.co.in/admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" alt="Athena Executive Search & Consulting"></div>
-	      <div class="ft-legal">Proud AESC member firm &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
+	      <div class="ft-legal">Search practice aligned to AESC professional standards &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
 	      <a class="ft-contact" href="contact-us.html" data-contact-open>Contact Us &#8594;</a>
 	    </div>
 	  </div>
@@ -531,16 +531,16 @@
 	    @keyframes ct-in{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
 	    .ct-modal .ct-close{position:absolute;top:14px;right:16px;background:none;border:0;font-size:26px;line-height:1;color:#9aa0b0;cursor:pointer;padding:4px;}
 	    .ct-modal .ct-eyebrow{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#c0871f;font-weight:600;margin-bottom:8px;}
-	    .ct-modal .ct-title{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;color:#0a1140;margin:0 0 20px;letter-spacing:-.01em;line-height:1.2;}
+	    .ct-modal .ct-title{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:22px;color:#040d27;margin:0 0 20px;letter-spacing:-.01em;line-height:1.2;}
 	    .ct-modal .ct-tabs{display:flex;gap:6px;background:#f1f3f9;padding:5px;border-radius:12px;margin-bottom:18px;}
 	    .ct-modal .ct-tab{flex:1;border:0;background:none;padding:9px;border-radius:8px;font-weight:600;font-size:13.5px;color:#5a6178;cursor:pointer;transition:background .2s,color .2s;font-family:inherit;}
-	    .ct-modal .ct-tab.active{background:#fff;color:#0a1140;box-shadow:0 2px 8px rgba(1,5,52,.08);}
+	    .ct-modal .ct-tab.active{background:#fff;color:#040d27;box-shadow:0 2px 8px rgba(4,13,39,.08);}
 	    .ct-modal .ct-form{display:flex;flex-direction:column;gap:12px;}
-	    .ct-modal .ct-form input,.ct-modal .ct-form textarea{width:100%;border:1px solid rgba(1,5,52,.15);border-radius:10px;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#0a1140;background:#fbfbfd;transition:border-color .2s,box-shadow .2s;}
+	    .ct-modal .ct-form input,.ct-modal .ct-form textarea{width:100%;border:1px solid rgba(4,13,39,.15);border-radius:10px;padding:12px 14px;font-size:14.5px;font-family:inherit;color:#040d27;background:#fbfbfd;transition:border-color .2s,box-shadow .2s;}
 	    .ct-modal .ct-form input:focus,.ct-modal .ct-form textarea:focus{outline:none;border-color:#fcb040;box-shadow:0 0 0 3px rgba(252,176,64,.18);}
 	    .ct-modal .ct-row{display:flex;gap:10px;}
 	    .ct-modal .ct-row input{flex:1;}
-	    .ct-modal .ct-submit{margin-top:4px;background:#fcb040;color:#010534;border:0;font-weight:700;font-size:14.5px;padding:14px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;}
+	    .ct-modal .ct-submit{margin-top:4px;background:#fcb040;color:#040d27;border:0;font-weight:700;font-size:14.5px;padding:14px;border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;}
 	    .ct-modal .ct-submit:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(252,176,64,.4);}
 	    .ct-modal .ct-fine{margin:8px 0 0;font-size:12px;color:#8a90a2;text-align:center;}
 	  </style>
