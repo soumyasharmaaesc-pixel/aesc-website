@@ -309,14 +309,7 @@
   </div>
 </section>
 
-	<section class="ez-stats">
-  <div class="ez-stats-wrap">
-    <div class="ez-stat"><b>20</b><span>Years of expertise</span></div>
-    <div class="ez-stat"><b>3</b><span>Continents served: APAC, EMEA, Americas</span></div>
-    <div class="ez-stat"><b>100%</b><span>Partner-led, retained mandates</span></div>
-    <div class="ez-stat"><b>Global</b><span>Boutique focus, real reach</span></div>
-  </div>
-</section>
+	<section class="ez-stats scorecard"><div class="sc-wrap"><div class="sc-head"><span class="sc-eyebrow">At a glance</span><h2 class="sc-title">The Athena scorecard</h2><span class="sc-note">Updated for 2026</span></div><div class="sc-grid"><div class="sc-cell"><span class="sc-k">Experience</span><b class="sc-v">20<em>+ yrs</em></b><span class="sc-d">Retained executive search and leadership consulting</span><span class="sc-bar"><i style="--w:92%"></i></span></div><div class="sc-cell"><span class="sc-k">Reach</span><b class="sc-v">3<em> continents</em></b><span class="sc-d">APAC, EMEA and the Americas, partners in 45 countries</span><span class="sc-bar"><i style="--w:78%"></i></span></div><div class="sc-cell"><span class="sc-k">Delivery</span><b class="sc-v">100<em>%</em></b><span class="sc-d">Partner-led, retained mandates from brief to close</span><span class="sc-bar"><i style="--w:100%"></i></span></div><div class="sc-cell"><span class="sc-k">Model</span><b class="sc-v">Boutique</b><span class="sc-d">Global standards, senior attention on every search</span><span class="sc-bar"><i style="--w:86%"></i></span></div></div></div></section>
 
 		<section class="ez-bento" id="differentiator">
   <div class="ez-bento-wrap">
@@ -862,5 +855,12 @@ gsap.registerPlugin(ScrollTrigger);
 })();
 </script>
 <script>document.querySelectorAll(".ez-faq .fq-q").forEach(function(q){q.addEventListener("click",function(){q.parentElement.classList.toggle("on");});});</script>
+<script>
+(function(){
+  var sc=document.querySelector(".scorecard"); if(!sc) return;
+  if(!("IntersectionObserver" in window)){sc.classList.add("in");return;}
+  new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target);}});},{threshold:.3}).observe(sc);
+})();
+</script>
 </body>
 </html>

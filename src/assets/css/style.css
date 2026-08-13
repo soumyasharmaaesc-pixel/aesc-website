@@ -3809,3 +3809,45 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
   .ez-feat .ef-media .ef-img{animation:none;opacity:0;transform:scale(1.04);}
   .ez-feat .ef-media .ef-img:nth-child(1){opacity:1;}
 }
+/* scenario media now holds photography, not cut-out graphics */
+.scn-media{padding:0;background:#040d27;border:0;overflow:hidden;border-radius:20px;
+  box-shadow:0 30px 70px -34px rgba(4,13,39,.45);}
+.scn-media img{width:100%;max-width:none;height:100%;min-height:320px;object-fit:cover;display:block;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+.scn-row:hover .scn-media img{transform:scale(1.05);}
+@media (max-width:960px){.scn-media img{min-height:240px;}}
+
+/* ===== The Athena scorecard ===== */
+.ez-stats.scorecard{background:#040d27;padding:clamp(56px,7vw,86px) 0;}
+.scorecard .sc-wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+.scorecard .sc-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
+.scorecard .sc-eyebrow{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:#fcb040;}
+.scorecard .sc-title{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);color:#fff;margin:0;letter-spacing:-.02em;}
+.scorecard .sc-note{margin-left:auto;font-size:11.5px;color:rgba(255,255,255,.42);letter-spacing:.06em;}
+/* the panel itself */
+.scorecard .sc-grid{display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid rgba(255,255,255,.14);border-radius:16px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  box-shadow:0 30px 70px -34px rgba(2,6,24,.7),inset 0 1px 0 rgba(255,255,255,.14);}
+.scorecard .sc-cell{padding:24px 22px 22px;border-left:1px solid rgba(255,255,255,.10);
+  display:flex;flex-direction:column;gap:9px;transition:background .3s ease;}
+.scorecard .sc-cell:first-child{border-left:0;}
+.scorecard .sc-cell:hover{background:rgba(252,176,64,.06);}
+.scorecard .sc-k{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45);}
+.scorecard .sc-v{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,42px);
+  line-height:1;color:#fcb040;letter-spacing:-.03em;}
+.scorecard .sc-v em{font-style:normal;font-size:.42em;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:0;margin-left:3px;}
+.scorecard .sc-d{font-size:12.8px;line-height:1.6;color:rgba(255,255,255,.72);flex:1;}
+/* the score bar */
+.scorecard .sc-bar{display:block;height:3px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:4px;}
+.scorecard .sc-bar i{display:block;height:100%;width:0;border-radius:2px;
+  background:linear-gradient(90deg,#fcb040,#ffd68a);transition:width 1.2s cubic-bezier(.2,.7,.2,1);}
+.scorecard.in .sc-bar i{width:var(--w);}
+@media (max-width:900px){.scorecard .sc-grid{grid-template-columns:repeat(2,1fr);}
+  .scorecard .sc-cell:nth-child(3){border-left:0;}
+  .scorecard .sc-cell:nth-child(n+3){border-top:1px solid rgba(255,255,255,.10);}}
+@media (max-width:560px){.scorecard .sc-grid{grid-template-columns:1fr;}
+  .scorecard .sc-cell{border-left:0;border-top:1px solid rgba(255,255,255,.10);}
+  .scorecard .sc-cell:first-child{border-top:0;}}
+@media (prefers-reduced-motion:reduce){.scorecard .sc-bar i{transition:none;width:var(--w);}}
