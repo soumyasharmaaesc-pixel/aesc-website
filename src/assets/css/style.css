@@ -3851,3 +3851,6 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
   .scorecard .sc-cell{border-left:0;border-top:1px solid rgba(255,255,255,.10);}
   .scorecard .sc-cell:first-child{border-top:0;}}
 @media (prefers-reduced-motion:reduce){.scorecard .sc-bar i{transition:none;width:var(--w);}}
+/* FAQ heading · two-rule treatment, consistent site-wide */
+.ez-faq .ez-faq-head .cs-rule{width:56px;height:3px;background:#fcb040;border-radius:2px;margin:14px auto 0;}
+.ez-faq .ez-faq-head h2::after{margin-bottom:0;}
