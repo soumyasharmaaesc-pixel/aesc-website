@@ -22,3 +22,7 @@ deploy-ready/
 # scratch data (M&A migration)
 _ma_cards.json
 _ma_cards_final.json
+
+# stray editor/backup files
+*.bak
+*.tmp

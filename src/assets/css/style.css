@@ -3908,3 +3908,59 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
   transition:background .2s ease,transform .2s ease;}
 .subx-cta:hover{background:#ffc367;transform:translateY(-1px);}
 .subx-cta svg{flex:0 0 auto;}
+
+/* ===== Milestones timeline · motion pass ===== */
+
+/* The spine draws itself downward as the section enters. */
+.ez-process.anim .pflow::before{transform:translateX(-50%) scaleY(0);transform-origin:top center;
+  transition:transform 1.5s cubic-bezier(.22,.61,.36,1);}
+.ez-process.anim .pflow.in::before{transform:translateX(-50%) scaleY(1);}
+@media (max-width:900px){
+  .ez-process.anim .pflow::before{transform:scaleY(0);}
+  .ez-process.anim .pflow.in::before{transform:scaleY(1);}
+}
+
+/* Connector dot lands after its row, with one gold ring pushing outward. */
+.ez-process.anim .prow::after{opacity:0;transform:translate(-50%,-50%) scale(.2);
+  transition:opacity .4s ease .34s,transform .5s cubic-bezier(.34,1.56,.64,1) .34s;}
+.ez-process .prow.in::after{opacity:1;transform:translate(-50%,-50%) scale(1);}
+@media (max-width:900px){
+  .ez-process .prow::after{transform:translate(0,-50%) scale(.2);}
+  .ez-process .prow.in::after{transform:translate(0,-50%) scale(1);}
+}
+
+/* Card contents rise in sequence once the card itself has arrived. */
+.ez-process.anim .pstep .p-ic,
+.ez-process.anim .pstep .p-num,
+.ez-process.anim .pstep .p-title,
+.ez-process.anim .pstep .p-desc{opacity:0;transform:translateY(12px);
+  transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1);}
+.ez-process .prow.in .pstep .p-ic{transition-delay:.18s;}
+.ez-process .prow.in .pstep .p-num{transition-delay:.26s;}
+.ez-process .prow.in .pstep .p-title{transition-delay:.32s;}
+.ez-process .prow.in .pstep .p-desc{transition-delay:.40s;}
+.ez-process .prow.in .pstep .p-ic,
+.ez-process .prow.in .pstep .p-num,
+.ez-process .prow.in .pstep .p-title,
+.ez-process .prow.in .pstep .p-desc{opacity:1;transform:none;}
+
+/* Card lifts slightly on hover, gold edge picks up. */
+.ez-process .pstep{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease,border-color .4s ease;}
+.ez-process .pstep:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(4,13,39,.13);
+  border-color:rgba(252,176,64,.5);}
+.ez-process .pstep:hover .p-ic{background:rgba(252,176,64,.24);transform:scale(1.06) rotate(-3deg);}
+.ez-process .p-ic{transition:background .35s ease,transform .35s cubic-bezier(.34,1.56,.64,1);}
+
+/* The ghost numeral drifts up a touch as it fades in, and tracks the hover. */
+.ez-process.anim .p-ghost{transform:scale(.86) translateY(18px);}
+.ez-process .prow.in .p-ghost{transform:scale(1) translateY(0);}
+.ez-process .prow:hover .p-ghost{-webkit-text-stroke-color:rgba(192,135,31,.85);
+  transition:-webkit-text-stroke-color .35s ease;}
+
+@media (prefers-reduced-motion:reduce){
+  .ez-process .pflow::before{transform:translateX(-50%) scaleY(1) !important;transition:none !important;}
+  .ez-process .prow::after,
+  .ez-process .pstep .p-ic,.ez-process .pstep .p-num,
+  .ez-process .pstep .p-title,.ez-process .pstep .p-desc{opacity:1 !important;transform:none !important;transition:none !important;}
+  .ez-process .pstep:hover{transform:none;}
+}

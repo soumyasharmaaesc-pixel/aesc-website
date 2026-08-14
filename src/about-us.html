@@ -839,13 +839,51 @@ gsap.registerPlugin(ScrollTrigger);
 <script defer src="assets/js/subscribe.js"></script>
 <script>
 (function(){
-  var flow=document.querySelector('.ez-process .pflow');
-  var rows=[].slice.call(document.querySelectorAll('.ez-process .prow'));
+  var sec=document.querySelector('.ez-process');
+  if(!sec) return;
+  var flow=sec.querySelector('.pflow');
+  var rows=[].slice.call(sec.querySelectorAll('.prow'));
   if(!flow||!rows.length) return;
-  if(!('IntersectionObserver' in window)){flow.classList.add('in');rows.forEach(function(r){r.classList.add('in');});return;}
+  sec.classList.add('anim');
+
+  function revealAll(){
+    flow.classList.add('in');
+    rows.forEach(function(r){r.classList.add('in');});
+  }
+
+  // Geometry check. Runs on scroll and as an IntersectionObserver backstop, so a
+  // row can never stay hidden if the observer does not fire (background tab,
+  // restored session, older browser).
+  function check(){
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var f = flow.getBoundingClientRect();
+    if(f.top < vh && f.bottom > 0) flow.classList.add('in');
+    var shown = 0;
+    rows.forEach(function(r, i){
+      if(r.classList.contains('in')) return;
+      var b = r.getBoundingClientRect();
+      if(b.top < vh - 60 && b.bottom > 0){
+        setTimeout(function(){r.classList.add('in');}, shown++ * 140);
+      }
+    });
+    if(rows.every(function(r){return r.classList.contains('in');})){
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ ticking = false; check(); });
+  }
+
+  if(!('IntersectionObserver' in window)){ revealAll(); return; }
+
   new IntersectionObserver(function(es,o){
     es.forEach(function(e){ if(e.isIntersecting){ flow.classList.add('in'); o.unobserve(e.target); } });
-  },{threshold:.08}).observe(flow);
+  },{threshold:.02}).observe(flow);
+
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(e.isIntersecting){
@@ -854,8 +892,20 @@ gsap.registerPlugin(ScrollTrigger);
         io.unobserve(e.target);
       }
     });
-  },{threshold:.2});
+  },{threshold:.15});
   rows.forEach(function(r){io.observe(r);});
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'visible') check();
+  });
+  check();
+
+  // Last resort: nothing should ever stay invisible.
+  setTimeout(function(){
+    if(!rows.some(function(r){return r.classList.contains('in');})) revealAll();
+  }, 6000);
 })();
 </script>
 <script>document.querySelectorAll(".ez-faq .fq-q").forEach(function(q){q.addEventListener("click",function(){q.parentElement.classList.toggle("on");});});</script>
