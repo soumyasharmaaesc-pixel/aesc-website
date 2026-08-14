@@ -3878,3 +3878,33 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
 .mkt-list li{font-size:13.5px;font-weight:600;color:#040d27;background:#fff;border:1px solid #d8deec;
   border-radius:999px;padding:9px 16px;transition:border-color .2s ease,background .2s ease,transform .2s ease;}
 .mkt-list li:hover{border-color:#fcb040;background:#fff8ec;transform:translateY(-2px);}
+
+/* ===== Subscribe confirmation toast ===== */
+.subx-toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,18px);z-index:9999;
+  display:flex;align-items:flex-start;gap:13px;max-width:min(430px,calc(100vw - 32px));
+  padding:15px 16px;background:#040d27;border:1px solid rgba(252,176,64,.34);
+  box-shadow:0 18px 48px rgba(4,13,39,.42);opacity:0;visibility:hidden;
+  transition:opacity .28s ease,transform .28s ease,visibility .28s;}
+.subx-toast.is-on{opacity:1;visibility:visible;transform:translate(-50%,0);}
+.subx-ic{flex:0 0 auto;display:grid;place-items:center;width:28px;height:28px;
+  background:#fcb040;color:#040d27;border-radius:50%;margin-top:1px;}
+.subx-txt{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.subx-txt strong{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:14.5px;color:#fff;letter-spacing:-.01em;}
+.subx-txt em{font-style:normal;font-size:13px;line-height:1.55;color:#aab3cc;word-break:break-word;}
+.subx-x{flex:0 0 auto;background:none;border:0;color:#7f88a8;font-size:19px;line-height:1;
+  cursor:pointer;padding:0 2px;transition:color .2s ease;}
+.subx-x:hover{color:#fff;}
+.subx-toast.is-error{border-color:rgba(255,255,255,.2);}
+.subx-toast.is-error .subx-ic{background:#e3e7f2;color:#040d27;}
+@media (prefers-reduced-motion:reduce){.subx-toast{transition:opacity .01s;}}
+@media (max-width:520px){.subx-toast{left:16px;right:16px;transform:translate(0,18px);max-width:none;}
+  .subx-toast.is-on{transform:translate(0,0);}}
+
+/* LinkedIn CTA inside the confirmation toast */
+.subx-body{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.subx-cta{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:10px;
+  padding:8px 14px;background:#fcb040;color:#040d27;border-radius:2px;text-decoration:none;
+  font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.01em;
+  transition:background .2s ease,transform .2s ease;}
+.subx-cta:hover{background:#ffc367;transform:translateY(-1px);}
+.subx-cta svg{flex:0 0 auto;}
