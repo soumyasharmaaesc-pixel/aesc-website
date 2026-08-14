@@ -258,7 +258,7 @@
 	    })
 	</script>	
 	<section class="ez-hero">
-  <img class="ez-hero-img" src="assets/images/search-services-hero.png" alt="Athena Executive Search &mdash; Contact">
+  <img class="ez-hero-img" src="assets/images/ai/lobby-dusk.jpg" alt="Athena Executive Search &mdash; Contact"><div class="ez-hero-video" aria-hidden="true"><video class="ehv" autoplay muted loop playsinline preload="auto" poster="assets/images/search-services-hero.png"><source src="assets/videos/hero-loop.mp4" type="video/mp4"></video></div>
   <div class="ez-scrim"></div>
   <div class="ez-hero-inner">
     <span class="ez-eyebrow">Get in touch</span>
@@ -346,7 +346,16 @@
         <div class="om-label"><span class="om-dot"></span><div><h4>Dubai, UAE</h4><p>Our Middle East office</p></div></div>
       </div>
     </div>
-  </div>
+  
+    <div class="mkt-band" id="markets">
+      <div class="mkt-head">
+        <span class="eyebrow">Where we work</span>
+        <h3>Every market we have worked in</h3>
+        <p>Twenty markets, run out of two offices in Gurgaon and Dubai. Where we do not sit, we reach through <a href="https://www.penrhyn.com" target="_blank" rel="noopener">Penrhyn International</a>, the global network of retained search firms in which Athena is the exclusive India member. Tell us your market and we will tell you who leads it.</p>
+      </div>
+      <ul class="mkt-list"><li>India</li><li>United Arab Emirates</li><li>Saudi Arabia</li><li>Israel</li><li>China</li><li>Hong Kong</li><li>Singapore</li><li>Philippines</li><li>Japan</li><li>Australia</li><li>United Kingdom</li><li>France</li><li>Germany</li><li>Netherlands</li><li>Italy</li><li>Spain</li><li>United States</li><li>Canada</li><li>Haiti</li><li>South Africa</li></ul>
+    </div>
+</div>
 </section>
 <section class="athena-section ctx-stats">
   <div class="ctx-stats-wrap">
@@ -395,6 +404,9 @@
 	    .aesc-footer .ft-partners .pblock{display:inline-flex;flex-direction:column;gap:6px;}
 	    .aesc-footer .ft-partners .pblock span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#7f88a8;font-weight:600;}
 	    .aesc-footer .ft-partners img{max-height:46px;width:auto;object-fit:contain;}
+.ft-partners .pplate{display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border-radius:4px;padding:9px 14px;line-height:0;transition:transform .25s ease,box-shadow .25s ease;}
+.ft-partners .pplate img{max-height:34px;}
+.ft-partners .pplate:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.28);}
 	    .aesc-footer .ft-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:26px;}
 	    .aesc-footer .ft-bottom .ft-logo img{max-height:58px;width:auto;background:#fff;border-radius:8px;padding:4px;}
 	    .aesc-footer .ft-legal{font-size:12.5px;color:#8b93ad;line-height:1.7;flex:1;min-width:240px;}
@@ -423,7 +435,7 @@
 	    <div class="ft-brand"><h2>Where the world finds its <span class="ft-hl">leaders</span>.</h2></div>
 	    <div class="ft-partners">
 	      <div class="pblock"><span>Global Partner</span><a href="https://www.penrhyn.com" target="_blank" rel="noopener"><img src="assets/images/penrhyn-logo.png" alt="Penrhyn International"></a></div>
-	      <div class="pblock"><span>Powered by</span><a href="https://www.thehirehub.ai" target="_blank" rel="noopener" style="font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em;color:#33cfe6;text-decoration:none;">TheHireHub.ai</a></div>
+	      <div class="pblock"><span>Powered by</span><a class="pplate" href="https://www.thehirehub.ai" target="_blank" rel="noopener" aria-label="TheHireHub.AI"><img src="assets/images/thehirehub-logo-full.png" alt="TheHireHub.AI"></a></div>
 	    </div>
 	    <div class="ft-bottom">
 	      <div class="ft-logo"><img src="https://www.aesc.co.in/admin/upload/home/favicon/1632720199_a4de114ec1b8c3954ab6.jpg" alt="Athena Executive Search & Consulting"></div>
@@ -599,5 +611,14 @@
 	  </script>
 	</div>
 	<script>document.querySelectorAll(".ez-faq .fq-q").forEach(function(q){q.addEventListener("click",function(){q.parentElement.classList.toggle("on");});});</script>
+<script>
+(function(){
+  var v=document.querySelector(".contact-page .ehv"); if(!v) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){ v.remove(); return; }
+  v.muted=true; v.playsInline=true;
+  var p=v.play(); if(p&&p.catch) p.catch(function(){});
+  document.addEventListener("visibilitychange",function(){ if(!document.hidden){var q=v.play(); if(q&&q.catch) q.catch(function(){});} });
+})();
+</script>
 </body>
 </html>
