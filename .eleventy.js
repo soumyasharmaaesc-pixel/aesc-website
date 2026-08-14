@@ -1,5 +1,14 @@
 import { renderPortableText, imageUrl } from './src/_lib/portableText.js';
 
+// Node 15+ terminates the process on an unhandled promise rejection. During
+// `--serve` that silently kills the dev server mid-session, so a transient
+// network blip while fetching CMS data takes the whole preview down. Log and
+// keep running instead.
+process.on('unhandledRejection', (reason) => {
+  console.warn('[eleventy] Unhandled rejection (kept alive):', reason && reason.message ? reason.message : reason);
+});
+
+
 export default function (eleventyConfig) {
   // Nunjucks filters for blog templates
   eleventyConfig.addFilter('portableText', renderPortableText);

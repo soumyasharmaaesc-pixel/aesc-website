@@ -18,10 +18,30 @@ const QUERY = `
 `;
 
 export default async function () {
-  const client = getClient();
-  const posts = await client.fetch(QUERY);
-  return posts.map((p) => ({
-    ...p,
-    url: `/insights/${p.slug.current}/`
-  }));
+  let client;
+  try {
+    client = getClient();
+  } catch (err) {
+    console.warn('[blogPosts] Sanity is not configured, continuing without posts:', err.message);
+    return [];
+  }
+
+  let posts;
+  try {
+    posts = await client.fetch(QUERY);
+  } catch (err) {
+    // A transient Sanity/network failure must never take the build (or the dev
+    // server) down. Return an empty list and let the templates render without posts.
+    console.warn('[blogPosts] Sanity fetch failed, continuing without posts:', err.message);
+    return [];
+  }
+
+  if (!Array.isArray(posts)) return [];
+
+  return posts
+    .filter((p) => p && p.slug && p.slug.current)
+    .map((p) => ({
+      ...p,
+      url: `/insights/${p.slug.current}/`
+    }));
 }
