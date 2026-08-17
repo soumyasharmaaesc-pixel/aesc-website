@@ -67,6 +67,18 @@
     if (document.hidden && armed && !shown) show();
   });
 
+
+  // 4. Hover on the "Know More" partnership button. Fires once per session, so a
+  //    second hover leaves the button clickable rather than re-opening the panel
+  //    every time the cursor crosses it.
+  document.addEventListener('mouseover', function (e) {
+    if (!armed || shown) return;
+    var t = e.target;
+    if (!t || !t.closest) return;
+    if (!t.closest('.thh-learn-more')) return;
+    show();
+  });
+
   // 3. Back navigation: catch the first back press.
   try {
     history.pushState({ xi: 1 }, '', location.href);

@@ -3974,3 +3974,6 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
 .talent-form input[type="file"]::file-selector-button{margin-right:12px;padding:8px 14px;border:0;border-radius:999px;
   background:#040d27;color:#fff;font-weight:600;font-size:13px;cursor:pointer;}
 .talent-form .tf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+/* M&A archive: editions are request-only since the source PDFs were lost */
+.ma-request-note{width:100%;margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#5a6178;}

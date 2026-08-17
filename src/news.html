@@ -639,6 +639,7 @@
 	        <button type="button" class="ma-pill" data-filter="2022" aria-pressed="false">2022</button>
 	      </div>
 	      <p class="ma-status" role="status" aria-live="polite">Showing 39 editions.</p>
+	      <p class="ma-request-note">Editions are sent on request &mdash; pick one and we will email it to you.</p>
 	    </div>
 
 	    <div class="ma-grid">
@@ -1729,5 +1730,24 @@ if(location.hash==='#ma-updates'){window.addEventListener('load',function(){setT
 window.addEventListener('hashchange',jump);})();</script>
 	<script defer src="assets/js/exit-intent.js"></script>
 <script defer src="assets/js/subscribe.js"></script>
+
+<script id="maRequestNotice">
+(function(){
+  // These editions are request-only: the source PDFs were lost in the CMS
+  // migration. Tell the visitor what a click actually does, so a machine with
+  // no mail client configured does not look like a broken link.
+  document.addEventListener('click', function(e){
+    var card = e.target.closest && e.target.closest('a.ma-card');
+    if(!card) return;
+    if(window.AthenaConfirm){
+      window.AthenaConfirm(
+        'Opening your email app',
+        'This edition is sent on request. We have pre-filled an email to info@aesc.co.in naming it \u2014 just hit send.',
+        {cta:false}
+      );
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>

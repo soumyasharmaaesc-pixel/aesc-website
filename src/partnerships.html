@@ -235,9 +235,12 @@
     pointer-events:none;background:radial-gradient(ellipse at 50% 35%,rgba(252,176,64,.16) 0%,rgba(79,216,232,.08) 42%,transparent 72%);}
   .pn-hero .pn-wrap{position:relative;z-index:2;}
   .pn-eyebrow{display:inline-block;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:#fcb040;font-weight:700;margin-bottom:20px;}
-  .pn-h1{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;font-size:clamp(32px,5.2vw,60px);
-    line-height:1.08;letter-spacing:-.025em;margin:0 0 22px;color:#fff;max-width:16ch;}
-  .pn-hl{color:#fcb040;}
+  .pn-h1{font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:clamp(27px,3.4vw,42px);
+    line-height:1.24;letter-spacing:-.015em;margin:0 0 20px;color:#fff;max-width:24ch;}
+  .pn-hl{color:#fff;position:relative;white-space:nowrap;}
+  .pn-hl::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:#fcb040;
+    transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.2,.7,.2,1) .5s;}
+  .pn-hero.in .pn-hl::after{transform:scaleX(1);}
   .pn-lede{font-size:clamp(16px,1.5vw,18.5px);line-height:1.72;color:rgba(255,255,255,.82);max-width:60ch;margin:0 0 34px;}
   .pn-hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:clamp(38px,5vw,56px);}
   .pn-hero-facts{list-style:none;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,58px);margin:0;padding:26px 0 0;
@@ -320,6 +323,73 @@
     line-height:1.2;letter-spacing:-.02em;margin:0 0 12px;color:#fff;}
   .pn-band p{color:rgba(255,255,255,.74);font-size:16px;margin:0 0 26px;}
 
+
+
+  /* hero video + readability scrim */
+  .pn-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .pn-hero-scrim{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(100deg,rgba(4,13,39,.94) 0%,rgba(4,13,39,.88) 38%,rgba(4,13,39,.62) 68%,rgba(4,13,39,.5) 100%);}
+  .pn-hero-glow{z-index:1;}
+
+  /* floating cards - slow, small, out of phase so it reads as drift not bounce */
+  @keyframes pnFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+  .pn-sec.in .pn-model{animation:pnFloat 7.5s ease-in-out infinite;}
+  .pn-sec.in .pn-model:nth-child(2){animation-duration:8.6s;animation-delay:-2.4s;}
+  .pn-sec.in .pn-model:nth-child(3){animation-duration:9.4s;animation-delay:-4.8s;}
+  .pn-sec.in .pn-who{animation:pnFloat 8.2s ease-in-out infinite;}
+  .pn-sec.in .pn-who:nth-child(2){animation-duration:9.1s;animation-delay:-1.8s;}
+  .pn-sec.in .pn-who:nth-child(3){animation-duration:7.9s;animation-delay:-3.6s;}
+  .pn-sec.in .pn-who:nth-child(4){animation-duration:8.8s;animation-delay:-5.2s;}
+  /* hover takes over cleanly - no fighting between animation and transform */
+  .pn-model:hover,.pn-who:hover{animation-play-state:paused;}
+
+  @media (prefers-reduced-motion:reduce){
+    .pn-hero-video{display:none;}
+    .pn-sec.in .pn-model,.pn-sec.in .pn-who{animation:none;}
+  }
+
+  /* Athena blue as a secondary accent + entrance motion */
+  .pn-hero{--pn-blue:#4fd8e8;}
+  .pn-hero-glow{background:radial-gradient(ellipse at 38% 30%,rgba(79,216,232,.20) 0%,rgba(252,176,64,.10) 44%,transparent 72%);}
+  .pn-eyebrow{position:relative;padding-left:34px;}
+  .pn-eyebrow::before{content:"";position:absolute;left:0;top:50%;width:24px;height:2px;background:#4fd8e8;transform:translateY(-50%);}
+  .pn-hero-facts strong{color:#4fd8e8;}
+  .pn-model:nth-child(2) .pn-model-num{-webkit-text-stroke-color:rgba(28,150,168,.6);}
+  .pn-model:nth-child(2) .pn-model-sub{color:#1c96a8;}
+  .pn-model:nth-child(2) .pn-list li::before{border-color:#1c96a8;}
+  .pn-model:nth-child(2):hover{border-color:rgba(28,150,168,.55);}
+  .pn-who:nth-child(3) .pn-who-ic{background:rgba(79,216,232,.16);color:#127c8c;}
+  .pn-step-n{background:#0d2a4a;}
+  .pn-band{background:linear-gradient(120deg,#040d27 0%,#071a3d 60%,#0a2b4d 100%);}
+
+  /* scroll reveals */
+  .pn-reveal{opacity:0;transform:translateY(22px);
+    transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+  .pn-reveal.in{opacity:1;transform:none;}
+  .pn-who,.pn-model,.pn-bring-item,.pn-steps li{opacity:0;transform:translateY(18px);
+    transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
+  .pn-sec.in .pn-who,.pn-sec.in .pn-model,.pn-sec.in .pn-bring-item,.pn-sec.in .pn-steps li{opacity:1;transform:none;}
+  .pn-sec.in .pn-who:nth-child(2),.pn-sec.in .pn-model:nth-child(2),
+  .pn-sec.in .pn-bring-item:nth-child(2),.pn-sec.in .pn-steps li:nth-child(2){transition-delay:.09s;}
+  .pn-sec.in .pn-who:nth-child(3),.pn-sec.in .pn-model:nth-child(3),
+  .pn-sec.in .pn-bring-item:nth-child(3),.pn-sec.in .pn-steps li:nth-child(3){transition-delay:.18s;}
+  .pn-sec.in .pn-who:nth-child(4),.pn-sec.in .pn-bring-item:nth-child(4),
+  .pn-sec.in .pn-steps li:nth-child(4){transition-delay:.27s;}
+  .pn-hero .pn-eyebrow,.pn-hero .pn-h1,.pn-hero .pn-lede,.pn-hero .pn-hero-cta,.pn-hero .pn-hero-facts{
+    opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+  .pn-hero.in .pn-eyebrow{opacity:1;transform:none;}
+  .pn-hero.in .pn-h1{opacity:1;transform:none;transition-delay:.09s;}
+  .pn-hero.in .pn-lede{opacity:1;transform:none;transition-delay:.18s;}
+  .pn-hero.in .pn-hero-cta{opacity:1;transform:none;transition-delay:.26s;}
+  .pn-hero.in .pn-hero-facts{opacity:1;transform:none;transition-delay:.34s;}
+
+  @media (prefers-reduced-motion:reduce){
+    .pn-reveal,.pn-who,.pn-model,.pn-bring-item,.pn-steps li,
+    .pn-hero .pn-eyebrow,.pn-hero .pn-h1,.pn-hero .pn-lede,.pn-hero .pn-hero-cta,.pn-hero .pn-hero-facts{
+      opacity:1 !important;transform:none !important;transition:none !important;}
+    .pn-hl::after{transform:scaleX(1) !important;transition:none !important;}
+  }
+
   @media (max-width:700px){
     .pn-form{grid-template-columns:1fr;}
     .pn-btn{width:100%;justify-content:center;}
@@ -332,10 +402,15 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.aesc.co.in/partnerships.html#page", "url": "https://www.aesc.co.in/partnerships.html", "name": "Partner With Athena Executive Search", "description": "Referral partnerships, India market entry and platform integrations with Athena Executive Search & Consulting."}, {"@type": "Service", "name": "Executive Search Partnerships", "serviceType": "Executive search partnership", "provider": {"@type": "Organization", "name": "Athena Executive Search & Consulting", "url": "https://www.aesc.co.in/"}, "areaServed": ["India", "United Arab Emirates", "Asia Pacific", "EMEA", "Americas"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Partnership models", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Referral partnership"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "India market entry partnership"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Platform and technology integration"}}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you take our client relationship?", "acceptedAnswer": {"@type": "Answer", "text": "No. The referral agreement states in writing that the client relationship remains yours. We can run the mandate visibly as your partner or stay entirely behind the scenes, and we do not approach referred clients independently during or after the term."}}, {"@type": "Question", "name": "What does the revenue share look like?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the model, how much of the process you carry, and the volume you expect. We agree it in writing before the first introduction rather than quoting a number that would not survive contact with your actual business."}}, {"@type": "Question", "name": "We are a platform, not a search firm. Does that matter?", "acceptedAnswer": {"@type": "Answer", "text": "It is the point. Platforms are built for volume and speed; retained search is built for confidentiality and off-market reach. Partnering is usually faster and cheaper than building a search desk you would then have to manage."}}, {"@type": "Question", "name": "How quickly can an India market-entry engagement start?", "acceptedAnswer": {"@type": "Answer", "text": "Market intelligence and compensation benchmarking can begin within days. A country head search is a full retained process and should be planned as such."}}, {"@type": "Question", "name": "What happens to the data we share?", "acceptedAnswer": {"@type": "Answer", "text": "Candidate and client data is handled under written terms agreed at the outset, with India's DPDP Act and GDPR both accounted for where they apply."}}, {"@type": "Question", "name": "Do you work with our competitors?", "acceptedAnswer": {"@type": "Answer", "text": "We will tell you plainly if there is a conflict. We do not offer blanket category exclusivity, but off-limits arrangements can be written into the agreement for named accounts."}}]}]}</script>
 <section class="pn-hero">
-  <div class="pn-hero-glow" aria-hidden="true"></div>
+  <video class="pn-hero-video" autoplay muted loop playsinline preload="auto"
+         poster="assets/images/search-services-hero.png" aria-hidden="true">
+      <source src="assets/videos/hero-loop.mp4" type="video/mp4">
+    </video>
+    <div class="pn-hero-scrim" aria-hidden="true"></div>
+    <div class="pn-hero-glow" aria-hidden="true"></div>
   <div class="pn-wrap">
     <span class="pn-eyebrow">Partnerships</span>
-    <h1 class="pn-h1">The executive search layer<br><span class="pn-hl">your platform doesn&rsquo;t have.</span></h1>
+    <h1 class="pn-h1">The executive search layer<br>your platform <span class="pn-hl">doesn&rsquo;t have</span>.</h1>
     <p class="pn-lede">Recruitment platforms, HR-tech vendors and overseas firms send us the mandates they cannot serve. We run them partner-led and confidential, under your relationship or ours. You keep the client.</p>
     <div class="pn-hero-cta">
       <a class="pn-btn pn-btn-gold" href="#enquire">Start a partnership conversation <span aria-hidden="true">&#8594;</span></a>
@@ -488,7 +563,7 @@
   </div>
 </section>
 
-<section class="pn-sec pn-alt" id="faq">
+<section class="pn-sec pn-alt ez-faq" id="faq">
   <div class="pn-wrap pn-narrow">
     <div class="pn-head"><span class="pn-kicker">Questions partners ask</span><h2>Before you get in touch</h2></div>
     <div class="ez-faq-list">
@@ -833,6 +908,49 @@ document.querySelectorAll("#faq .fq-q").forEach(function(q){
     f.reset();
     if(btn){ btn.blur(); }
   });
+})();
+</script>
+
+<script>
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('.pn-hero,.pn-sec,.pn-band'));
+  if(!secs.length) return;
+  function showAll(){ secs.forEach(function(x){x.classList.add('in');}); }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ showAll(); return; }
+  function check(){
+    var vh=window.innerHeight||document.documentElement.clientHeight;
+    secs.forEach(function(x){
+      if(x.classList.contains('in')) return;
+      var b=x.getBoundingClientRect();
+      if(b.top < vh-70 && b.bottom > 0) x.classList.add('in');
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.06});
+    secs.forEach(function(x){io.observe(x);});
+  }
+  var t=false;
+  window.addEventListener('scroll',function(){ if(t)return; t=true; requestAnimationFrame(function(){t=false;check();}); },{passive:true});
+  window.addEventListener('resize',check,{passive:true});
+  document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='visible') check(); });
+  check();
+  setTimeout(function(){ if(!secs.some(function(x){return x.classList.contains('in');})) showAll(); },6000);
+})();
+</script>
+
+<script>
+(function(){
+  var v=document.querySelector('.pn-hero-video'); if(!v) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ v.pause(); return; }
+  var play=function(){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); };
+  document.addEventListener('visibilitychange',function(){ document.hidden ? v.pause() : play(); });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.isIntersecting ? play() : v.pause(); });
+    },{threshold:.05}).observe(v);
+  }
 })();
 </script>
 </body>

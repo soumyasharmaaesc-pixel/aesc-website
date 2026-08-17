@@ -26,3 +26,7 @@ _ma_cards_final.json
 # stray editor/backup files
 *.bak
 *.tmp
+
+# M&A PDF recovery in progress - these are empty placeholders until the
+# Internet Archive is back up. Remove this line once the real files land.
+src/assets/ma-pdf/
