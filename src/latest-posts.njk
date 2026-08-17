@@ -1,0 +1,24 @@
+---
+permalink: /assets/data/latest-posts.json
+eleventyExcludeFromCollections: true
+---
+{%- set picked = [] -%}
+{%- for p in blogPosts -%}
+  {%- if picked.length < 3
+      and "smoke test" not in (p.title | lower)
+      and "test post" not in (p.title | lower)
+      and "lorem" not in (p.title | lower) -%}
+    {%- set picked = (picked.push(p), picked) -%}
+  {%- endif -%}
+{%- endfor -%}
+[
+{%- for p in picked %}
+  {
+    "title": {{ p.title | dump | safe }},
+    "url": {{ p.url | dump | safe }},
+    "excerpt": {{ (p.excerpt or "") | dump | safe }},
+    "category": {{ (p.category.title if p.category else "Insight") | dump | safe }},
+    "date": {{ (p.publishedAt | date) | dump | safe }}
+  }{{ "," if not loop.last }}
+{%- endfor %}
+]

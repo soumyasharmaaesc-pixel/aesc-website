@@ -724,13 +724,43 @@
 	    @media (max-width:860px){.featured-insights-section .fi-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
 	  </style>
 	  <div class="container">
-	    <div class="fi-head"><span class="eyebrow">Insights</span><h2>Latest from Athena</h2></div>
-	    <div class="fi-grid">
+	    <div class="fi-head" id="fiHead"><span class="eyebrow">Deal intelligence</span><h2>From the M&amp;A deal tracker</h2></div>
+	    <div class="fi-grid" id="fiGrid">
 	      <a class="fi-card" href="news.html#ma-updates"><div class="fi-thumb"><svg class="fi-a" viewBox="0 0 478.449 493.442" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)"/></svg><span class="fi-kicker">M&amp;A Update</span><span class="fi-week">Week of Oct 14</span></div><div class="fi-body"><span class="fi-type">Weekly deal tracker</span><h3 class="fi-title">Oct 14 to 20, 2023</h3><p class="fi-desc">Medical devices, IT services, supply chain and hospitals &amp; healthcare deals.</p><span class="fi-more">Open the archive &#8594;</span></div></a>
 	      <a class="fi-card" href="news.html#ma-updates"><div class="fi-thumb"><svg class="fi-a" viewBox="0 0 478.449 493.442" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)"/></svg><span class="fi-kicker">M&amp;A Update</span><span class="fi-week">Week of Oct 7</span></div><div class="fi-body"><span class="fi-type">Weekly deal tracker</span><h3 class="fi-title">Oct 7 to 13, 2023</h3><p class="fi-desc">HealthTech, telecommunications and IT services &amp; consulting deals.</p><span class="fi-more">Open the archive &#8594;</span></div></a>
 	      <a class="fi-card" href="news.html#ma-updates"><div class="fi-thumb"><svg class="fi-a" viewBox="0 0 478.449 493.442" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)"/></svg><span class="fi-kicker">M&amp;A Update</span><span class="fi-week">Week of Sep 30</span></div><div class="fi-body"><span class="fi-type">Weekly deal tracker</span><h3 class="fi-title">Sep 30 to Oct 6, 2023</h3><p class="fi-desc">Food delivery, risk advisory, pharma manufacturing and gaming deals.</p><span class="fi-more">Open the archive &#8594;</span></div></a>
 	    </div>
 	    <div class="fi-cta"><a href="insights/">View all insights &#8594;</a></div>
+	  <script>
+	  (function(){
+	    var grid=document.getElementById('fiGrid'), head=document.getElementById('fiHead');
+	    if(!grid||!head||!window.fetch) return;
+	    fetch('assets/data/latest-posts.json',{cache:'no-cache'})
+	      .then(function(r){ return r.ok ? r.json() : []; })
+	      .then(function(posts){
+	        if(!Array.isArray(posts) || !posts.length) return;   // no posts yet: keep the M&A archive
+	        head.innerHTML='<span class="eyebrow">Insights</span><h2>Latest from Athena</h2>';
+	        grid.innerHTML=posts.map(function(p){
+	          var esc=function(t){var d=document.createElement('div');d.textContent=t||'';return d.innerHTML;};
+	          return '<a class="fi-card" href="'+esc(p.url)+'">'+
+	            '<div class="fi-thumb">'+
+	              '<svg class="fi-a" viewBox="0 0 478.449 493.442" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+
+	              '<path d="M-2357.429,209.463l-159.481,317.6h-80.424l239.905-493.442,238.544,493.442h-81.787Z" transform="translate(2597.334 -33.623)"/></svg>'+
+	              '<span class="fi-kicker">'+esc(p.category)+'</span>'+
+	              '<span class="fi-week">'+esc(p.date)+'</span>'+
+	            '</div>'+
+	            '<div class="fi-body">'+
+	              '<span class="fi-type">Insight</span>'+
+	              '<h3 class="fi-title">'+esc(p.title)+'</h3>'+
+	              '<p class="fi-desc">'+esc(p.excerpt)+'</p>'+
+	              '<span class="fi-more">Read the piece &#8594;</span>'+
+	            '</div></a>';
+	        }).join('');
+	      })
+	      .catch(function(){});   /* stay on the archive cards if anything fails */
+	  })();
+	  </script>
+
 	  </div>
 	</section>
 	<section class="athena-section get-in-touch-section">

@@ -301,7 +301,7 @@
       <div class="tn-perk"><span class="tn-dot"></span><b>Quarterly Career Brief</b><span>Live mandates and a nudge to keep your profile current, four times a year.</span></div>
     </div>
 
-    <form class="talent-form" id="talentForm" novalidate>
+    <form class="talent-form" id="talentForm" method="post" action="#" novalidate autocomplete="on">
       <div class="tf-grid">
         <div class="tf-field"><label class="tf-label" for="tf-name">Full name <span>*</span></label><input class="tf-input" id="tf-name" name="name" type="text" required></div>
         <div class="tf-field"><label class="tf-label" for="tf-email">Email <span>*</span></label><input class="tf-input" id="tf-email" name="email" type="email" required></div>
@@ -315,7 +315,14 @@
         <div class="tf-field"><label class="tf-label" for="tf-linkedin">LinkedIn profile</label><input class="tf-input" id="tf-linkedin" name="linkedin" type="url" placeholder="linkedin.com/in/&hellip;"></div>
         <div class="tf-field tf-full"><label class="tf-label" for="tf-note">Anything you&rsquo;d like us to know</label><textarea class="tf-textarea" id="tf-note" name="note" rows="4" placeholder="A short note on what you are looking for."></textarea></div>
       </div>
-      <div class="tf-actions">
+      <div class="tf-field tf-full">
+          <label for="tfResume">Attach your CV <span class="tf-hint">PDF or Word, up to 5 MB</span></label>
+          <input type="file" id="tfResume" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        </div>
+        <div class="tf-hp" aria-hidden="true">
+          <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="tf-actions">
         <button class="ez-btn ez-btn-primary" type="submit">Submit your resume <span aria-hidden="true">&#8594;</span></button>
         <p class="tf-note">On submit, an email opens pre-filled &mdash; simply <strong>attach your CV</strong> and send. Prefer email directly? Write to <a href="mailto:talent@aesc.co.in">talent@aesc.co.in</a>.</p>
         <p class="tf-consent">By submitting, you join the Athena Talent Network and agree to receive our quarterly Career Brief with live mandates and profile-refresh reminders. Your profile may be considered for opportunities across Athena and its group companies, including TheHireHub.ai and Aira. You can opt out at any time.</p>
@@ -325,34 +332,84 @@
 </section>
 <script>
 (function(){
-  var f=document.getElementById('talentForm');if(!f)return;
-  f.addEventListener('submit',function(e){
+  var f=document.getElementById('talentForm'); if(!f) return;
+  var btn=f.querySelector('button[type="submit"]');
+  var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el&&el.value?el.value.trim():'';};
+
+  function mailtoFallback(){
+    if(window.AthenaConfirm){
+      window.AthenaConfirm('Opening your email app','Direct submission is unavailable here, so we have pre-filled an email to talent@aesc.co.in instead.',{cta:false});
+    }
+    var lines=[
+      'Full name: '+(g('name')||'-'), 'Email: '+(g('email')||'-'),
+      'Phone / WhatsApp: '+(g('phone')||'-'), 'Current location: '+(g('location')||'-'),
+      'Current company: '+(g('company')||'-'), 'Current title: '+(g('title')||'-'),
+      'Total experience: '+(g('experience')||'-'), 'Notice period: '+(g('notice')||'-'),
+      'Area of interest: '+(g('function')||'-'), 'LinkedIn: '+(g('linkedin')||'-'),
+      '', 'Note: '+(g('note')||'-'), '', '(Please attach your CV to this email before sending.)'
+    ].join('\n');
+    window.location.href='mailto:talent@aesc.co.in?subject='+
+      encodeURIComponent('Resume submission - '+(g('name')||''))+'&body='+encodeURIComponent(lines);
+  }
+
+  function readFile(input){
+    return new Promise(function(resolve){
+      var file=input && input.files && input.files[0];
+      if(!file) return resolve(null);
+      if(file.size > 5*1024*1024){ resolve({tooBig:true}); return; }
+      var r=new FileReader();
+      r.onload=function(){ resolve({data:r.result, name:file.name}); };
+      r.onerror=function(){ resolve(null); };
+      r.readAsDataURL(file);
+    });
+  }
+
+  f.addEventListener('submit', function(e){
     e.preventDefault();
-    if(!f.checkValidity()){f.reportValidity&&f.reportValidity();return;}
-    var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el&&el.value.trim()?el.value.trim():'-';};
-    var name=g('name');
-    var subj='Resume submission '+(name!=='-'?'- '+name:'');
-    var body=[
-      'Full name: '+g('name'),
-      'Email: '+g('email'),
-      'Phone / WhatsApp: '+g('phone'),
-      'Current location: '+g('location'),
-      'Current company: '+g('company'),
-      'Current title: '+g('title'),
-      'Total experience: '+g('experience'),
-      'Notice period: '+g('notice'),
-      'Area of interest: '+g('function'),
-      'LinkedIn: '+g('linkedin'),
-      '',
-      'Note:',
-      g('note'),
-      '',
-      '(Please attach your CV to this email before sending.)'
-    ].join('
-');
-    window.location.href='mailto:talent@aesc.co.in?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
-    if(window.AthenaConfirm){window.AthenaConfirm('Profile received','You are in the Athena Talent Network. Mandates get matched against it first.');}
-    f.reset();
+    if(!f.checkValidity()){
+      var bad=f.querySelector(':invalid');
+      if(bad){
+        bad.scrollIntoView({block:'center', behavior:'smooth'});
+        setTimeout(function(){ bad.focus(); }, 260);
+        var lbl=f.querySelector('label[for="'+bad.id+'"]');
+        var what=(lbl?lbl.textContent:bad.name||'a field').replace(/\*/g,'').trim();
+        if(window.AthenaConfirm) window.AthenaConfirm('Almost there','Please fill in '+what.toLowerCase()+' before submitting.',{error:true,cta:false});
+      }
+      f.reportValidity && f.reportValidity();
+      return;
+    }
+
+    var label = btn ? btn.textContent : '';
+    if(btn){ btn.disabled=true; btn.textContent='Sending'; }
+
+    readFile(f.querySelector('input[name="resume"]')).then(function(file){
+      if(file && file.tooBig){
+        if(window.AthenaConfirm) window.AthenaConfirm('That file is too large','Please attach a CV under 5 MB.',{error:true,cta:false});
+        if(btn){ btn.disabled=false; btn.textContent=label; }
+        return;
+      }
+      var payload={
+        name:g('name'), email:g('email'), phone:g('phone'), location:g('location'),
+        company:g('company'), title:g('title'), experience:g('experience'),
+        notice:g('notice'), function:g('function'), linkedin:g('linkedin'), note:g('note'),
+        company_website:g('company_website'), source:'career.html'
+      };
+      if(file && file.data){ payload.resume=file.data; payload.resumeName=file.name; }
+
+      return fetch('/api/talent-submission',{
+        method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
+      }).then(function(r){ return r.json().catch(function(){return {ok:false};}); })
+        .then(function(res){
+          if(res && res.ok){
+            f.reset();
+            if(window.AthenaConfirm) window.AthenaConfirm('Profile received','You are in the Athena Talent Network. Mandates get matched against it first.');
+          } else {
+            mailtoFallback();   /* storage unavailable: never lose the candidate */
+          }
+        })
+        .catch(function(){ mailtoFallback(); })
+        .then(function(){ if(btn){ btn.disabled=false; btn.textContent=label; } });
+    });
   });
 })();
 </script>

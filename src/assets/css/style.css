@@ -3964,3 +3964,13 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
   .ez-process .pstep .p-title,.ez-process .pstep .p-desc{opacity:1 !important;transform:none !important;transition:none !important;}
   .ez-process .pstep:hover{transform:none;}
 }
+
+/* Talent form: CV upload + bot honeypot */
+.talent-form .tf-full{grid-column:1 / -1;}
+.talent-form .tf-hint{font-weight:400;color:#7a8299;font-size:12.5px;margin-left:6px;}
+.talent-form input[type="file"]{width:100%;padding:12px 14px;border:1px dashed #c8cfe0;border-radius:10px;
+  background:#f7f8fc;font-size:14px;color:#414a63;cursor:pointer;transition:border-color .2s ease,background .2s ease;}
+.talent-form input[type="file"]:hover{border-color:#fcb040;background:#fffaf1;}
+.talent-form input[type="file"]::file-selector-button{margin-right:12px;padding:8px 14px;border:0;border-radius:999px;
+  background:#040d27;color:#fff;font-weight:600;font-size:13px;cursor:pointer;}
+.talent-form .tf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}

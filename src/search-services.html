@@ -42,6 +42,40 @@
 	<link rel="stylesheet" href="assets/css/toastr.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e324576f90f192340b679ea3/8706279ae665a2ad7c60d183a.js");</script>    
+
+<style>
+  /* ===== Search Services hero - video read through the letterforms ===== */
+  .kohero{position:relative;width:100%;height:clamp(430px,64vh,660px);overflow:hidden;background:#0b1533;
+    display:flex;align-items:center;justify-content:center;}
+  .kohero .ko-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;}
+
+  .kohero .ko-h1{position:absolute;inset:0;margin:0;z-index:2;}
+  .kohero .ko-svg{width:100%;height:100%;display:block;}
+  .kohero .ko-text{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;
+    font-size:54px;text-anchor:middle;}
+
+  .kohero .ko-foot{position:absolute;left:0;right:0;bottom:0;z-index:3;
+    max-width:1200px;margin:0 auto;padding:0 40px clamp(46px,6vw,74px);width:100%;text-align:center;}
+  .kohero .ko-eyebrow{display:block;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.34em;
+    text-transform:uppercase;color:#c0871f;font-weight:700;}
+  .kohero .ko-accent{display:inline-block;width:64px;height:3px;background:#fcb040;border-radius:2px;margin-top:14px;}
+
+  @media (max-width:991px){
+    .kohero{height:clamp(320px,48vh,430px);}
+    .kohero .ko-foot{padding-left:24px;padding-right:24px;}
+  }
+
+  /* No mask support: fall back to a plain tinted hero with white type. */
+  @supports not (mask: url(#koMask)){
+    .kohero .ko-svg{display:none;}
+    .kohero::after{content:"Executive & Board Search Services";position:absolute;inset:0;z-index:2;
+      display:flex;align-items:center;justify-content:center;text-align:center;padding:0 8vw;
+      background:rgba(4,13,39,.55);color:#fff;
+      font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;
+      font-size:clamp(34px,5.6vw,68px);line-height:1.06;letter-spacing:-.02em;}
+  }
+  @media (prefers-reduced-motion:reduce){ .kohero .ko-video{display:none;} }
+</style>
 </head>
 <body>
 	
@@ -254,13 +288,32 @@
 	        }
 	    })
 	</script>	
-	<section class="ez-hero">
-  <img class="ez-hero-img" src="assets/images/search-services-hero.png" alt="Athena Executive Search &mdash; Search Services">
-  <div class="ez-scrim"></div>
-  <div class="ez-hero-inner">
-    <span class="ez-eyebrow">Our Services</span>
-    <h1>Executive &amp; Board Search Services</h1>
-    <span class="ez-accent"></span>
+	<section class="ez-hero kohero">
+  <video class="ko-video" autoplay muted loop playsinline preload="auto"
+         poster="assets/images/search-services-hero.png" aria-hidden="true">
+    <source src="assets/videos/hero-loop.mp4" type="video/mp4">
+  </video>
+
+  <!-- White translucent sheet with the wordmark punched out of it, so the
+       video plays inside the letterforms. Real text, so it still indexes. -->
+  <h1 class="ko-h1">
+    <svg class="ko-svg" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" role="img"
+         aria-label="Executive and Board Search Services">
+      <defs>
+        <mask id="koMask" maskUnits="userSpaceOnUse" x="-3000" y="-3000" width="7000" height="7000">
+          <rect x="-3000" y="-3000" width="7000" height="7000" fill="#fff"/>
+          <text x="500" y="128" class="ko-text" textLength="530" lengthAdjust="spacing" fill="#000">EXECUTIVE &amp; BOARD</text>
+          <text x="500" y="192" class="ko-text" textLength="530" lengthAdjust="spacing" fill="#000">SEARCH SERVICES</text>
+        </mask>
+      </defs>
+      <!-- oversized so the sheet still covers the full hero once the viewBox is letterboxed -->
+      <rect x="-3000" y="-3000" width="7000" height="7000" fill="#ffffff" fill-opacity=".88" mask="url(#koMask)"/>
+    </svg>
+  </h1>
+
+  <div class="ko-foot">
+    <span class="ko-eyebrow">Our Services</span>
+    <span class="ko-accent"></span>
   </div>
 </section>
 
@@ -777,5 +830,19 @@
 	</div>
 		<script defer src="assets/js/exit-intent.js"></script>
 <script defer src="assets/js/subscribe.js"></script>
+
+<script>
+(function(){
+  var v=document.querySelector('.kohero .ko-video'); if(!v) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ v.pause(); return; }
+  function sync(){ if(document.hidden){ v.pause(); } else { var p=v.play(); if(p&&p.catch) p.catch(function(){}); } }
+  document.addEventListener('visibilitychange', sync);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else { v.pause(); } });
+    },{threshold:.05}).observe(v);
+  }
+})();
+</script>
 </body>
 </html>

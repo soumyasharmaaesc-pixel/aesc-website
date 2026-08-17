@@ -567,6 +567,55 @@
 			.partnership-hero .headline-text { font-size: 22px; }
 			.partnership-hero .subtitle-text { font-size: 14px; }
 		}
+	
+		/* ===== Partnership hero (rebuilt: single dark surface, no clipped duplicate layers) ===== */
+		.partnership-hero{position:relative;background:#040d27;overflow:hidden;
+			/* top pad clears the fixed announcement bar + nav */
+			padding:clamp(150px,15vw,214px) 0 clamp(64px,7vw,96px);}
+		.partnership-hero .ph-glow{position:absolute;top:-30%;left:50%;transform:translateX(-50%);
+			width:min(1100px,120%);height:120%;pointer-events:none;
+			background:radial-gradient(ellipse at 50% 35%,rgba(45,212,229,.16) 0%,rgba(252,176,64,.07) 38%,transparent 70%);}
+		.partnership-hero .ph-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:0 20px;text-align:center;}
+
+		.ph-lockup{display:flex;align-items:center;justify-content:center;gap:clamp(20px,3.4vw,44px);margin-bottom:clamp(30px,4vw,44px);flex-wrap:wrap;}
+		.ph-brand{display:flex;flex-direction:column;align-items:center;gap:11px;text-decoration:none;}
+		.ph-plate{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:4px;
+			padding:14px 20px;min-height:74px;line-height:0;
+			transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease;}
+		.ph-plate img{max-height:46px;width:auto;}
+		a.ph-brand:hover .ph-plate{transform:translateY(-3px);box-shadow:0 14px 34px rgba(0,0,0,.34);}
+		.ph-label{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#8f99b8;font-weight:700;}
+		a.ph-brand:hover .ph-label{color:#fcb040;}
+		.ph-plus{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+			background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+			color:#fcb040;font-size:22px;font-weight:300;line-height:1;margin-bottom:26px;}
+
+		.ph-h1{font-family:'Libre Franklin','Inter',sans-serif;font-weight:800;
+			font-size:clamp(30px,4.6vw,54px);line-height:1.12;letter-spacing:-.02em;color:#fff;margin:0 0 20px;}
+		.ph-hl{color:#4fd8e8;}
+		.ph-sub{font-size:clamp(15px,1.4vw,17.5px);line-height:1.7;color:rgba(255,255,255,.8);
+			max-width:640px;margin:0 auto clamp(28px,3.4vw,38px);}
+
+		.ph-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+		.ph-btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:999px;
+			font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:14.5px;text-decoration:none;
+			transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease,border-color .25s ease;}
+		.ph-btn-gold{background:#fcb040;color:#040d27;border:2px solid #fcb040;box-shadow:0 10px 26px rgba(252,176,64,.3);}
+		.ph-btn-gold:hover{background:#ffc367;border-color:#ffc367;color:#040d27;transform:translateY(-2px);box-shadow:0 16px 36px rgba(252,176,64,.45);}
+		.ph-btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.32);}
+		.ph-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);color:#fff;transform:translateY(-2px);}
+
+		@media (max-width:991px){
+			.partnership-hero{padding-top:132px;}
+		}
+		@media (max-width:600px){
+			.ph-plus{margin-bottom:0;}
+			.ph-btn{width:100%;justify-content:center;}
+		}
+		@media (prefers-reduced-motion:reduce){
+			.ph-plate,.ph-btn{transition:none;}
+			a.ph-brand:hover .ph-plate,.ph-btn:hover{transform:none;}
+		}
 	</style>
 </head>
 
@@ -783,61 +832,24 @@
 
 	<!-- Hero Section — Diagonal Split -->
 	<section class="partnership-hero">
-		<div class="split-dark"></div>
-		<div class="split-light"></div>
-		<div class="split-seam"></div>
-
-		<!-- Dark side layer: in flow, defines hero height, white text -->
-		<div class="hero-layer hero-layer-dark">
-			<div class="container hero-content">
-				<div class="logos-row">
-					<div class="logo-side athena">
-						<img src="assets/images/aesc-logo-full.jpg" alt="Athena Executive Search & Consulting">
-						<span class="logo-label">Est. 2009</span>
-					</div>
-					<div class="connector" aria-hidden="true"><i class="fas fa-plus"></i></div>
-					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="logo-side thh">
-						<img src="assets/images/thehirehub-logo.png" alt="TheHireHub.ai">
-						<span class="logo-label">AI Platform</span>
-					</a>
+		<div class="ph-glow" aria-hidden="true"></div>
+		<div class="container ph-inner">
+			<div class="ph-lockup">
+				<div class="ph-brand">
+					<span class="ph-plate"><img src="assets/images/aesc-logo-full.jpg" alt="Athena Executive Search &amp; Consulting"></span>
+					<span class="ph-label">Est. 2009</span>
 				</div>
-				<div class="headline-wrap">
-					<h1 class="headline-text">Same Trusted Expertise.<br><em>Now Amplified by AI.</em></h1>
-				</div>
-				<div class="subtitle-wrap">
-					<p class="subtitle-text">Athena's 17+ years of executive search excellence, now powered by TheHireHub.ai's intelligent talent platform. Faster sourcing, deeper insights, better leadership hires.</p>
-				</div>
-				<div class="cta-row">
-					<a href="contact-us.html" class="cta-primary">Book a Discovery Call</a>
-					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="cta-secondary">Visit TheHireHub.ai</a>
-				</div>
+				<span class="ph-plus" aria-hidden="true">+</span>
+				<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="ph-brand">
+					<span class="ph-plate"><img src="assets/images/thehirehub-logo-full.png" alt="TheHireHub.AI"></span>
+					<span class="ph-label">AI Platform</span>
+				</a>
 			</div>
-		</div>
-
-		<!-- Light side layer: absolute overlay, identical layout, dark blue text -->
-		<div class="hero-layer hero-layer-light" aria-hidden="true">
-			<div class="container hero-content">
-				<div class="logos-row">
-					<div class="logo-side athena">
-						<img src="assets/images/aesc-logo-full.jpg" alt="">
-						<span class="logo-label">Est. 2009</span>
-					</div>
-					<div class="connector" aria-hidden="true"><i class="fas fa-plus"></i></div>
-					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="logo-side thh">
-						<img src="assets/images/thehirehub-logo.png" alt="">
-						<span class="logo-label">AI Platform</span>
-					</a>
-				</div>
-				<div class="headline-wrap">
-					<div class="headline-text">Same Trusted Expertise.<br><em>Now Amplified by AI.</em></div>
-				</div>
-				<div class="subtitle-wrap">
-					<p class="subtitle-text">Athena's 17+ years of executive search excellence, now powered by TheHireHub.ai's intelligent talent platform. Faster sourcing, deeper insights, better leadership hires.</p>
-				</div>
-				<div class="cta-row">
-					<a href="contact-us.html" class="cta-primary">Book a Discovery Call</a>
-					<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="cta-secondary">Visit TheHireHub.ai</a>
-				</div>
+			<h1 class="ph-h1">Same trusted expertise.<br><span class="ph-hl">Now amplified by AI.</span></h1>
+			<p class="ph-sub">Athena&rsquo;s 17+ years of executive search excellence, now powered by TheHireHub.ai&rsquo;s intelligent talent platform. Faster sourcing, deeper insight, better leadership hires.</p>
+			<div class="ph-ctas">
+				<a href="contact-us.html" class="ph-btn ph-btn-gold">Book a discovery call <span aria-hidden="true">&#8594;</span></a>
+				<a href="https://www.thehirehub.ai" target="_blank" rel="noopener" class="ph-btn ph-btn-ghost">Visit TheHireHub.ai</a>
 			</div>
 		</div>
 	</section>
