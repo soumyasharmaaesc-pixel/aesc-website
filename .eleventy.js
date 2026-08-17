@@ -53,7 +53,8 @@ export default function (eleventyConfig) {
     "src/transformation-transition.html": "transformation-transition.html",
     "src/ScenarioExpertise.html": "ScenarioExpertise.html",
     "src/search-services.html": "search-services.html",
-    "src/thehirehub-partnership.html": "thehirehub-partnership.html"
+    "src/thehirehub-partnership.html": "thehirehub-partnership.html",
+    "src/partnerships.html": "partnerships.html"
   });
 
   return {
