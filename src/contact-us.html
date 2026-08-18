@@ -307,7 +307,7 @@
     <div class="ctx-formcard">
       <h3 class="cfc-h">Send us a message</h3>
       <p class="cfc-sub">Tell us a little about the role or challenge. We will come back to you personally.</p>
-      <form class="cfc-form" id="ctxForm" novalidate>
+      <form class="cfc-form" id="ctxForm" method="post" action="#" novalidate>
         <div class="cfc-field"><label for="cf-name">Your name <span>*</span></label><input id="cf-name" name="name" type="text" placeholder="Enter your name" required></div>
         <div class="cfc-field"><label for="cf-email">Your email <span>*</span></label><input id="cf-email" name="email" type="email" placeholder="Enter your email" required></div>
         <div class="cfc-field"><label for="cf-company">Company</label><input id="cf-company" name="company" type="text" placeholder="Your organisation"></div>
@@ -321,16 +321,52 @@
 </section>
 <script>
 (function(){
-  var f=document.getElementById('ctxForm');if(!f)return;
+  var f=document.getElementById('ctxForm'); if(!f) return;
+  var btn=f.querySelector('button[type="submit"]');
+  var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el&&el.value?el.value.trim():'';};
+
+  function mailtoFallback(){
+    var lines=[
+      'Name: '+(g('name')||'-'), 'Email: '+(g('email')||'-'), 'Phone: '+(g('phone')||'-'),
+      'Company: '+(g('company')||'-'), 'How can we help: '+(g('help')||'-'), '',
+      'Message:', (g('message')||'-')
+    ].join('\n');
+    if(window.AthenaConfirm) window.AthenaConfirm('Opening your email app','Direct sending is unavailable here, so we have pre-filled an email to info@aesc.co.in instead.',{cta:false});
+    window.location.href='mailto:info@aesc.co.in?subject='+
+      encodeURIComponent('Enquiry from '+(g('name')||'the website'))+'&body='+encodeURIComponent(lines);
+  }
+
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!f.checkValidity()){f.reportValidity&&f.reportValidity();return;}
-    var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el&&el.value.trim()?el.value.trim():'-';};
-    var subj='Enquiry from '+g('name');
-    var body=['Name: '+g('name'),'Email: '+g('email'),'Company: '+g('company'),'Interest: '+g('help'),'','Message:',g('message')].join('\n');
-    window.location.href='mailto:info@aesc.co.in?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
-    if(window.AthenaConfirm){window.AthenaConfirm('Message on its way','We reply within one business day. While you wait, take The Brief with you.');}
-    f.reset();
+    if(!f.checkValidity()){
+      var bad=f.querySelector(':invalid');
+      if(bad){
+        bad.scrollIntoView({block:'center',behavior:'smooth'});
+        setTimeout(function(){bad.focus();},260);
+        var lbl=f.querySelector('label[for="'+bad.id+'"]');
+        var what=(lbl?lbl.textContent:'a field').replace(/\*/g,'').trim();
+        if(window.AthenaConfirm) window.AthenaConfirm('Almost there','Please fill in '+what.toLowerCase()+' before sending.',{error:true,cta:false});
+      }
+      f.reportValidity && f.reportValidity();
+      return;
+    }
+    var label=btn?btn.textContent:'';
+    if(btn){ btn.disabled=true; btn.textContent='Sending'; }
+    fetch('/api/contact-submission',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        name:g('name'), email:g('email'), company:g('company'),
+        help:g('help'), message:g('message'), source:'contact-us.html'
+      })
+    }).then(function(r){ return r.json().catch(function(){return {ok:false};}); })
+      .then(function(res){
+        if(res && res.ok){
+          f.reset();
+          if(window.AthenaConfirm) window.AthenaConfirm('Message received','A partner replies within one business day.');
+        } else { mailtoFallback(); }
+      })
+      .catch(function(){ mailtoFallback(); })
+      .then(function(){ if(btn){ btn.disabled=false; btn.textContent=label; } });
   });
 })();
 </script>
@@ -370,7 +406,7 @@
         <div class="cst"><b>20+</b><span>Years of experience and expertise in executive search</span></div>
         <div class="cst"><b>1,000+</b><span>Leadership mandates delivered</span></div>
         <div class="cst"><b>2</b><span>Offices: Gurgaon and Dubai</span></div>
-        <div class="cst"><b>AESC</b><span>Professional standards applied</span></div>
+        <div class="cst"><b>8+ yrs</b><span>Member firm of the AESC</span></div>
       </div>
     </div>
     <div class="cst-media"><img src="assets/images/differentiator-hero.png" alt="Athena Executive Search leadership advisory" loading="lazy"></div>
@@ -441,7 +477,7 @@
 	    </div>
 	    <div class="ft-bottom">
 	      <div class="ft-logo"><img src="assets/images/aesc-logo-full.jpg" alt="Athena Executive Search & Consulting"></div>
-	      <div class="ft-legal">Search practice aligned to AESC professional standards &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
+	      <div class="ft-legal">8+ years a member firm of the Association of Executive Search Consultants &nbsp;&middot;&nbsp; <a href="mailto:info@aesc.co.in">info@aesc.co.in</a><br>&copy; 2026 Athena Executive Search &amp; Consulting. All rights reserved.</div>
 	      <a class="ft-contact" href="contact-us.html" data-contact-open>Contact Us &#8594;</a>
 	    </div>
 	  </div>
@@ -589,7 +625,7 @@
 	      <button type="button" class="ct-tab active" data-tab="note">Send a note</button>
 	      <button type="button" class="ct-tab" data-tab="call">Schedule a call</button>
 	    </div>
-	    <form class="ct-form" data-mode="note">
+	    <form class="ct-form" data-mode="note" method="post" action="#">
 	      <input type="text" name="name" placeholder="Your name" required>
 	      <input type="email" name="email" placeholder="Your email" required>
 	      <textarea class="ct-note-field" name="message" rows="3" placeholder="What role are you hiring for? (optional)"></textarea>

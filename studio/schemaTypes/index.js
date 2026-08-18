@@ -4,6 +4,7 @@ import blogPost from './blogPost'
 import servicePage from './servicePage'
 import industryPage from './industryPage'
 import talentSubmission from './talentSubmission'
+import contactSubmission from './contactSubmission'
 import seo from './objects/seo'
 
-export const schemaTypes = [author, category, blogPost, servicePage, industryPage, talentSubmission, seo]
+export const schemaTypes = [author, category, blogPost, servicePage, industryPage, talentSubmission, contactSubmission, seo]

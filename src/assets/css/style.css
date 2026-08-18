@@ -3977,3 +3977,20 @@ h1.ins-cut{margin:0;font-weight:inherit;font-size:inherit;line-height:inherit;}
 
 /* M&A archive: editions are request-only since the source PDFs were lost */
 .ma-request-note{width:100%;margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#5a6178;}
+
+/* ===== Toast readability fix =====
+   The text wrapper was renamed .subx-txt -> .subx-body when the LinkedIn CTA
+   was added, but the colour rules still targeted the old class, so the title
+   and body rendered uncoloured and <em> fell back to browser-default italic.
+   Both names are covered here so neither can drift again. */
+.subx-toast .subx-body,.subx-toast .subx-txt{display:flex;flex-direction:column;gap:5px;min-width:0;}
+.subx-toast .subx-body strong,.subx-toast .subx-txt strong{
+  font-family:'Libre Franklin','Inter',sans-serif;font-weight:700;font-size:15.5px;line-height:1.35;
+  color:#ffffff;letter-spacing:-.01em;}
+.subx-toast .subx-body em,.subx-toast .subx-txt em{
+  font-style:normal;font-size:14px;line-height:1.6;color:#dfe4f0;word-break:break-word;}
+.subx-toast{padding:17px 18px;gap:14px;max-width:min(460px,calc(100vw - 32px));
+  background:#071031;border:1px solid rgba(252,176,64,.42);box-shadow:0 22px 56px rgba(0,0,0,.5);}
+.subx-toast .subx-x{color:#aab3cc;font-size:20px;}
+.subx-toast .subx-x:hover{color:#fff;}
+.subx-toast.is-error{border-color:rgba(255,255,255,.34);}
